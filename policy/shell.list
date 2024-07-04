@@ -1,0 +1,67 @@
+{
+	"type":"SHELL_LIST",
+	"subtype":"SCRIPT"
+}
+{
+	"match_name":"test_start",
+	"script":"yes | ",
+	"delay":500000,
+   	"next_match":"clear_process",
+    	"next_match_name":"shell"
+}
+{
+	"match_name":"clear_process",
+	"script":"pkill -9 envset_proc",
+	"delay":500000,
+   	"next_match":"item_start"
+        "next_match_name":"shell"
+}
+{
+	"match_name":"item_start",
+	"script":"sh /root/cube-shell/run_cube.sh /root/cube-shell/exec_def/_trigger.def trigger.msg ctrl_exit.msg",
+	"delay":500000,
+   	"next_match":"verify_start",
+        "next_match_name":"shell"
+}
+{
+	"match_name":"verify_start",
+	"script":"sh /root/2024buildup/run_cube.sh /root/2024buildup/exec_def/_verify_proxy.def",
+	"delay":500000,
+   	"next_match":"center_start",
+        "next_match_name":"shell"
+}
+{
+	"match_name":"server_start",
+	"script":"sh /root/2024buildup/run_cube.sh /root/2024buildup/exec_def/_center.def",
+	"delay":500000,
+   	"next_match":"plc_loader_start",
+        "next_match_name":"shell"
+}
+{
+	"match_name":"plc_loader_start",
+	"script":"sh /root/2024buildup/run_cube.sh /root/2024buildup/exec_def/_plc_loader.def",
+	"delay":5000000,
+    	"next_match":"user_login",
+    	"next_match_name":"shell"
+}
+{
+	"match_name":"user_login",
+	"script":"sh /root/2024buildup/run_cube.sh /root/2024buildup/exec_def/_engineer_user.def login.msg ctrl_exit.msg",
+	"delay":5000000,
+    	"next_match":"code_upload",
+    	"next_match_name":"shell"
+}
+{
+	"match_name":"code_upload",
+	"script":"sh /root/2024buildup/run_cube.sh /root/2024buildup/exec_def/_engineer_user.def code_upload.msg ctrl_exit.msg",
+	"delay":5000000,
+    	"next_match":"clear_rootproc",
+    	"next_match_name":"shell"
+}
+{
+	"match_name":"clear_rootproc",
+	"script":"pkill -9 envset_proc",
+	"delay":500,
+    	"next_match":"",
+    	"next_match_name":"shell"
+}
