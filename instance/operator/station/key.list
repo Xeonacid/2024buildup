@@ -1,0 +1,20 @@
+{
+	"type":"GENERAL_RETURN",
+	"subtype":"UUID"
+}
+{
+	"name":"1",
+	"return_value":"1b483aa95573a38b95f9f866ff7586ade43a686f165fd7875125583cf4a73de4",
+}
+{
+	"name":"2",
+	"return_value":"7a4d7b56552b0d20c1f7566eacdfb5232e627c537aba89143a17fc7a92007f6a",
+}
+{
+	"name":"3",
+	"return_value":"660ca5ea8b7b7f4256d2bdf30a829da85820376020c1167ee232cc74ed6a126f",
+}
+{
+	"name":"4",
+	"return_value":"8b4877c3ffbda4dfe506785e8cbeedeb7364b50b2b8b4a0fc4c0d53a1bae0fc7",
+}

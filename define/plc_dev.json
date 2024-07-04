@@ -1,0 +1,71 @@
+{
+	"head":
+	{
+		"name":"dtype_plc_device",
+		"type":"TYPELIST"
+	},
+	"record":
+	{
+		"elem_no":1,
+		"elemlist":
+		[
+			"PLC_DEVICE=0x22020",
+		]
+	}
+}
+{
+	"head":
+	{
+		"name":"subtype_plc_device",
+		"type":"SUBTYPELIST"
+	},
+	"record":
+	{
+		"type":"PLC_DEVICE",
+		"elem_no":1,
+		"elemlist":
+		[
+			"REGISTER"
+		]
+	}
+}
+{
+	"head":
+	{
+		"name":"enum_modbus_register_type",
+		"type":"NAMELIST"
+	},
+	"record":
+	{
+		"elem_no":4,
+		"elemlist":
+		[
+            		"COILS=0x01",
+            		"DISCRETE_INPUT",
+            		"INPUT_REGISTER",
+            		"HOLDING_REGISTER"
+		]
+	}
+}
+{
+	"head":
+	{
+		"name":"plc_device_register",
+		"type":"RECORDTYPE"
+	},
+	"record":
+	{
+		"type":"PLC_DEVICE",
+		"subtype":"REGISTER",
+		"struct_desc":
+		{
+			"elem_desc":
+			[
+				{"name":"plc_devname","type":"ESTRING","size":32},
+				{"name":"type","type":"ENUM","ref_name":"enum_modbus_register_type"},
+				{"name":"addr","type":"INT"},
+				{"name":"register_desc","type":"ESTRING","size":32}
+			]
+		}
+	}
+}

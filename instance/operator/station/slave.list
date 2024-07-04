@@ -1,0 +1,9 @@
+{
+	"type":"MODBUS_STATE",
+	"subtype":"SLAVE"
+}
+{
+	"slave_name":"thermostat",
+	"unit_addr":1,
+	"slave_key":"device_S",
+}

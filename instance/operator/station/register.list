@@ -1,0 +1,34 @@
+{
+	"type":"PLC_DEVICE",
+	"subtype":"REGISTER"
+}
+{
+	"plc_devname":"thermostat",
+	"type":"COILS",
+	"addr":1,
+	"register_desc":"device_S",
+}
+{
+	"plc_devname":"thermostat",
+	"type":"COILS",
+	"addr":2,
+	"register_desc":"heating_S",
+}
+{
+	"plc_devname":"thermostat",
+	"type":"HOLDING_REGISTER",
+	"addr":40003,
+	"register_desc":"set_T",
+}
+{
+	"plc_devname":"thermostat",
+	"type":"INPUT_REGISTER",
+	"addr":30004,
+	"register_desc":"curr_T",
+}
+{
+	"plc_devname":"thermostat",
+	"type":"HOLDING_REGISTER",
+	"addr":40005,
+	"register_desc":"heating_G",
+}

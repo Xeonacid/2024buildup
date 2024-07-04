@@ -1,0 +1,12 @@
+{
+	"type":"PLC_MONITOR",
+	"subtype":"PLC_RETURN",
+	"mode":"INT"
+}
+{
+	"plc_devname":"thermostat",
+	"action":"WARNING",
+	"action_desc":"收到",
+	"value":0,
+	"operator":"qian",
+}

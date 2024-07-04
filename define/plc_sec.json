@@ -1,0 +1,56 @@
+{
+	"head":
+	{
+		"name":"dtype_plc_secure",
+		"type":"TYPELIST"
+	},
+	"record":
+	{
+		"elem_no":1,
+		"elemlist":
+		[
+			"PLC_SECURE=0x22030",
+		]
+	}
+}
+{
+	"head":
+	{
+		"name":"subtype_plc_device",
+		"type":"SUBTYPELIST"
+	},
+	"record":
+	{
+		"type":"PLC_SECURE",
+		"elem_no":1,
+		"elemlist":
+		[
+			"LOGIC_RELATE"
+		]
+	}
+}
+{
+	"head":
+	{
+		"name":"plc_secure_logic_relate",
+		"type":"RECORDTYPE"
+	},
+	"record":
+	{
+		"type":"PLC_SECURE",
+		"subtype":"LOGIC_RELATE",
+		"struct_desc":
+		{
+			"elem_desc":
+			[
+				{"name":"plc_devname","type":"ESTRING","size":32},
+				{"name":"code_name","type":"ESTRING","size":32},
+				{"name":"code_uuid","type":"UUID"},
+				{"name":"bin_name","type":"ESTRING","size":32},
+				{"name":"bin_uuid","type":"UUID"},
+				{"name":"author","type":"ESTRING","size":32},
+				{"name":"time","type":"INT"}
+			]
+		}
+	}
+}

@@ -1,0 +1,13 @@
+{
+	"type":"PLC_MONITOR",
+	"subtype":"PLC_CMD",
+	"mode":"INT"
+}
+{
+	"plc_devname":"thermostat",
+	"action":"AUDIT",
+	"action_desc":"operator",
+	"value1":0,
+    "value2":5,
+	"plc_monitor":"sun",
+}

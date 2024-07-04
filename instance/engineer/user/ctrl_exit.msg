@@ -1,0 +1,9 @@
+{
+	"type":"MESSAGE",
+	"subtype":"CTRL",
+	"mode":"INT"
+}
+{
+	"ctrl":"EXIT",
+    "name":"local"
+}

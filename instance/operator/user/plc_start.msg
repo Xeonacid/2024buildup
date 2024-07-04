@@ -1,0 +1,12 @@
+{
+	"type":"PLC_OPERATOR",
+	"subtype":"PLC_CMD",
+	"mode":"INT"
+}
+{
+	"plc_devname":"thermostat",
+	"action":"ON",
+	"action_desc":"heating_S",
+	"value":0,
+	"operator":"qian",
+}

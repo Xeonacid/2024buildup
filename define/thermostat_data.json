@@ -1,0 +1,139 @@
+{
+	"head":
+	{
+		"name":"dtype_thermostat_data",
+		"type":"TYPELIST"
+	},
+	"record":
+	{
+		"elem_no":1,
+		"elemlist":
+		[
+			"THERMOSTAT_DATA=0x6200",
+		]
+	}
+}
+{
+	"head":
+	{
+		"name":"subtype_thermostat_data",
+		"type":"SUBTYPELIST"
+	},
+	"record":
+	{
+		"type":"THERMOSTAT_DATA",
+		"elem_no":5,
+		"elemlist":
+		[
+			"MACHINE_SWITCH",
+            "MACHINE_STATE",
+			"TARGET_REG",
+            "CURR_T",
+            "HEATING_REG",
+
+		]
+	}
+}
+{
+	"head":
+	{
+		"name":"machine_switch",
+		"type":"RECORDTYPE"
+	},
+	"record":
+	{
+		"type":"THERMOSTAT_DATA",
+		"subtype":"MACHINE_SWITCH",
+		"struct_desc":
+		{
+			"elem_desc":
+			[
+				{"name":"coil","type":"UCHAR"},
+				{"name":"r_w","type":"UCHAR"},
+			]
+		}
+	}
+}
+{
+	"head":
+	{
+		"name":"machine_state",
+		"type":"RECORDTYPE"
+	},
+	"record":
+	{
+		"type":"THERMOSTAT_DATA",
+		"subtype":"MACHINE_STATE",
+		"struct_desc":
+		{
+			"elem_desc":
+			[
+				{"name":"machine_switch","type":"UCHAR"},
+				{"name":"target_t","type":"USHORT"},
+				{"name":"current_t","type":"USHORT"},
+				{"name":"heating_switch","type":"UCHAR"},
+				{"name":"heatiing_gear","type":"UCHAR"}
+			]
+		}
+	}
+}
+{
+	"head":
+	{
+		"name":"target_register",
+		"type":"RECORDTYPE"
+	},
+	"record":
+	{
+		"type":"THERMOSTAT_DATA",
+		"subtype":"TARGET_REG",
+		"struct_desc":
+		{
+			"elem_desc":
+			[
+				{"name":"target_t","type":"USHORT"},
+				{"name":"r_w","type":"UCHAR"},
+			]
+		}
+	}
+}
+{
+	"head":
+	{
+		"name":"current_temperature",
+		"type":"RECORDTYPE"
+	},
+	"record":
+	{
+		"type":"THERMOSTAT_DATA",
+		"subtype":"CURR_T",
+		"struct_desc":
+		{
+			"elem_desc":
+			[
+				{"name":"current_t","type":"USHORT"}
+			]
+		}
+	}
+}
+{
+	"head":
+	{
+		"name":"heating_register",
+		"type":"RECORDTYPE"
+	},
+	"record":
+	{
+		"type":"THERMOSTAT_DATA",
+		"subtype":"HEATING_REG",
+		"struct_desc":
+		{
+			"elem_desc":
+			[
+				{"name":"coil","type":"UCHAR"},
+				{"name":"gear","type":"UCHAR"},
+				{"name":"r_w","type":"UCHAR"}
+			]
+		}
+	}
+}

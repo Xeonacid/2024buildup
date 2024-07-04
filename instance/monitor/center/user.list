@@ -1,0 +1,34 @@
+{
+	"type":"USER_DEFINE",
+	"subtype":"SERVER_STATE"
+}
+{
+	"user_name":"zhao",
+	"role":"PLC_ENGINEER",
+	"passwd":"123",
+}
+{
+	"user_name":"qian",
+	"role":"PLC_OPERATOR",
+	"passwd":"456",
+}
+{
+	"user_name":"sun",
+	"role":"PLC_MONITOR",
+	"passwd":"123",
+}
+{
+	"user_name":"li",
+	"role":"PLC_ENGINEER",
+	"passwd":"123",
+}
+{
+	"user_name":"zhou",
+	"role":"PLC_OPERATOR",
+	"passwd":"456",
+}
+{
+	"user_name":"wu",
+	"role":"PLC_OPERATOR",
+	"passwd":"456",
+}

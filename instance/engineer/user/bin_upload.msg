@@ -1,0 +1,12 @@
+{
+	"type":"PLC_ENGINEER",
+	"subtype":"LOGIC_UPLOAD",
+	"mode":"INT"
+}
+{
+	"plc_devname":"thermostat",
+	"logic_filename":"libthermostat_logic.so",
+	"type":"FILE_LOGIC",
+	"author":"zhao",
+	"uploader":"zhao"
+}
