@@ -288,6 +288,7 @@ int proc_data_process(void * sub_proc,void * recv_msg)
     DB_RECORD * db_record;
 
    RECORD(PLC_OPERATOR,PLC_RETURN) * plc_data;
+   RECORD(PLC_OPERATOR,PLC_CMD) * plc_cmd;
    RECORD(PLC_DEVICE,REGISTER) * plc_reg;
    RECORD(MODBUS_DATA,WRITE_SINGLE_COIL) * switch_state;
    RECORD(MODBUS_DATA,READ_HOLDING_REGISTERS) * read_set_state;
@@ -316,8 +317,10 @@ int proc_data_process(void * sub_proc,void * recv_msg)
 		   break;
 	   case SUBTYPE(MODBUS_DATA,READ_HOLDING_REGISTERS):
 	           ret = message_get_record(recv_msg,&read_set_state,0);		   	
-		   //addr = switch_state->start_addr;	
-		   //value=switch_state->convert_value;
+		   plc_data->action = ACTION_MONITOR;
+		   //addr = read_set_state->start_addr;
+		   plc_data->value= *((UINT16 *)read_set_state->value);
+
 		   break;
 	   case SUBTYPE(MODBUS_DATA,READ_INPUT_REGISTERS):
 		   break;
@@ -330,34 +333,35 @@ int proc_data_process(void * sub_proc,void * recv_msg)
 	   default:
 		   break;
    } 
-   
+  /* 
    db_record = memdb_find_first(TYPE_PAIR(PLC_DEVICE,REGISTER),"addr",&addr);
    if(db_record==NULL)
    	return -EINVAL;
    plc_reg = db_record->record;
-
-   plc_data->plc_devname = dup_str(plc_reg->plc_devname,0);
-   plc_data->action_desc = dup_str(plc_reg->register_desc,0);
+*/
+ //  plc_data->plc_devname = dup_str(plc_reg->plc_devname,0);
+ //  plc_data->action_desc = dup_str(plc_reg->register_desc,0);
 
   // get uuid from expand
    MSG_EXPAND * msg_expand;
    ret = message_remove_expand(recv_msg,TYPE_PAIR(GENERAL_RETURN,UUID),&msg_expand);
-   if(msg_expand != NULL)
-   {
-        void * hold_msg;
-        uuid_expand=msg_expand->expand;
-        cube_sock = ex_module_removesock(sub_proc,uuid_expand->return_value);
-        if(cube_sock == NULL)
-            return -EINVAL;
-        hold_msg = slot_sock_removemessage(cube_sock,TYPE_PAIR(PLC_OPERATOR,PLC_CMD));
-        if(hold_msg == NULL)
-            return -EINVAL;
-        send_msg = message_create(TYPE_PAIR(PLC_OPERATOR,PLC_RETURN),hold_msg);
-   }
-   else
-   {
-        send_msg = message_create(TYPE_PAIR(PLC_OPERATOR,PLC_RETURN),recv_msg);
-   }
+   if(msg_expand == NULL)
+	   return -EINVAL;
+
+   void * hold_msg;
+   uuid_expand=msg_expand->expand;
+   cube_sock = ex_module_removesock(sub_proc,uuid_expand->return_value);
+   if(cube_sock == NULL)
+        return -EINVAL;
+   hold_msg = slot_sock_removemessage(cube_sock,TYPE_PAIR(PLC_OPERATOR,PLC_CMD));
+   if(hold_msg == NULL)
+        return -EINVAL;
+   message_get_record(hold_msg,&plc_cmd,0);		
+
+   plc_data->plc_devname = dup_str(plc_cmd->plc_devname,0);
+   plc_data->action_desc = dup_str(plc_cmd->action_desc,0);
+
+   send_msg = message_create(TYPE_PAIR(PLC_OPERATOR,PLC_RETURN),hold_msg);
    if(send_msg == NULL)
 	return -EINVAL;
    message_add_record(send_msg,plc_data);

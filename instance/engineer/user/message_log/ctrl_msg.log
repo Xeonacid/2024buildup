@@ -4,8 +4,8 @@
  "HEAD":{"tag":"MESG","version":65537,"sender_uuid":"msg_send","receiver_uuid":"
     msg_send","route":"ctrl_msg","flow":"DELIVER","state":"MATCH","flag":"LOCAL","lj
     ump":1,"rjump":1,"record_type":"MESSAGE","record_subtype":"CTRL","record_num":1,
-    "record_size":0,"expand_num":0,"expand_size":0,"msg_uuid":"e1a7a63e79b3090d46ea8
-    db3f1e23d6112b6d27520a3df813b5e0e0e50fe920e"},
+    "record_size":0,"expand_num":0,"expand_size":0,"msg_uuid":"8365922997a85b7038ce2
+    0818059f152b1525700438905ef49d4c3a6c7a5d914"},
 "RECORD":[
     {"ctrl":"EXIT","name":"local"}
     ],

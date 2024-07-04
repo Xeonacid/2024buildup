@@ -3,6 +3,7 @@
 pkill -9 envset_proc
 
 rm -f instance/monitor/center/logic_code/*
+rm -f instance/monitor/center/lib/PLC_ENGINEER-LOGIC_CODE.lib
 sleep 1
 
 sh run_cube.sh exec_def/_center.def &

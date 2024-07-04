@@ -22,9 +22,9 @@
 
 #define MAX_LINE_LEN 1024
 
-char * code_path = "/root/modbus-demo/src/logic/thermostat_logic/";
-char * bin_path = "/root/modbus-demo/src/logic/thermostat_logic/";
-char * target_path = "/root/modbus-demo/plugin/";
+char * code_path = "/root/2024buildup/src/logic/thermostat_logic/";
+char * bin_path = "/root/2024buildup/src/logic/thermostat_logic/";
+char * target_path = "/root/2024buildup/plugin/";
 
 static unsigned char Buf[DIGEST_SIZE*32];
 
