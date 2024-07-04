@@ -1,0 +1,59 @@
+
+**************Begin new trust node proc****************************
+{
+ "HEAD":{"tag":"MESG","version":65537,"sender_uuid":"7d4a423c5dc082c7f0b9ac90b2f
+    9ee3ab17542a9261004e15b3f7964feb0d0a2","receiver_uuid":"login_user","route":"log
+    in","flow":"QUERY","state":"MATCH","flag":"LOCAL","ljump":1,"rjump":2,"record_ty
+    pe":"GENERAL_RETURN","record_subtype":"STRING","record_num":1,"record_size":14,"
+    expand_num":0,"expand_size":0,"msg_uuid":"c346e68ef95a83d0687f89030b9f5a9f9d80cb
+    934f0659a34ebcde4874585f43"},
+"RECORD":[
+    {"name":"login","return_value":"sun:123"}
+    ],
+"EXPAND" :[]
+}
+
+************************************************************
+{
+ "HEAD":{"tag":"MESG","version":65537,"sender_uuid":"login_user","receiver_uuid"
+    :":center_client","route":"login","flow":"QUERY","state":"MATCH","flag":"NULL","
+    ljump":2,"rjump":2,"record_type":"USER_DEFINE","record_subtype":"LOGIN","record_
+    num":1,"record_size":0,"expand_num":0,"expand_size":0,"msg_uuid":"c346e68ef95a83
+    d0687f89030b9f5a9f9d80cb934f0659a34ebcde4874585f43"},
+"RECORD":[
+    {"user_name":"sun","passwd":"d31NNOrJ3fIPdbqf7tDboTk75P7GWdh6pUdTm38Yd3s","proc_
+        name":"","machine_uuid":"989949064cc144d7cb71e69812300f8270cee7fd856560dec33c7fc
+        dc57a088f"}
+    ],
+"EXPAND" :[]
+}
+
+************************************************************
+{
+ "HEAD":{"tag":"MESG","version":65537,"sender_uuid":"601576fe1b7056869a95eab7078
+    df74412b6be71c08a92655c5bd6c95b3d1b81","receiver_uuid":"login_user","route":"log
+    in","flow":"QUERY","state":"RESPONSE","flag":"LOCAL","ljump":1,"rjump":2,"record
+    _type":"USER_DEFINE","record_subtype":"RETURN","record_num":1,"record_size":20,"
+    expand_num":0,"expand_size":0,"msg_uuid":"c346e68ef95a83d0687f89030b9f5a9f9d80cb
+    934f0659a34ebcde4874585f43"},
+"RECORD":[
+    {"return_code":"SUCCEED","return_info":"login succeed!
+"}
+    ],
+"EXPAND" :[]
+}
+
+************************************************************
+{
+ "HEAD":{"tag":"MESG","version":65537,"sender_uuid":"login_user","receiver_uuid"
+    :"7d4a423c5dc082c7f0b9ac90b2f9ee3ab17542a9261004e15b3f7964feb0d0a2","route":"log
+    in","flow":"QUERY","state":"RESPONSE","flag":"NULL","ljump":2,"rjump":2,"record_
+    type":"USER_DEFINE","record_subtype":"RETURN","record_num":1,"record_size":20,"e
+    xpand_num":0,"expand_size":0,"msg_uuid":"c346e68ef95a83d0687f89030b9f5a9f9d80cb9
+    34f0659a34ebcde4874585f43"},
+"RECORD":[
+    {"return_code":"SUCCEED","return_info":"login succeed!
+"}
+    ],
+"EXPAND" :[]
+}
