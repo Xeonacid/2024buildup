@@ -6,7 +6,7 @@
 {
 	"plc_devname":"thermostat",
 	"action":"ON",
-	"action_desc":"heating_S",
+	"action_desc":"",
 	"value":0,
 	"operator":"qian",
 }

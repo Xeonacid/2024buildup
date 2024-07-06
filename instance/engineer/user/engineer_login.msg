@@ -5,5 +5,5 @@
 }
 {
 	"name":"login",
-	"return_value":"qian:456"
+	"return_value":""
 }

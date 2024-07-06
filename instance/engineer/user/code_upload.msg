@@ -5,8 +5,8 @@
 }
 {
 	"plc_devname":"thermostat",
-	"logic_filename":"thermostat_logic.c",
+	"logic_filename":"",
 	"type":"FILE_CODE",
 	"author":"zhao",
-	"uploader":"zhao"
+	"uploader":""
 }
