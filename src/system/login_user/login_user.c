@@ -15,11 +15,15 @@
 #include "login_user.h"
 // add para lib_include
 
+int mode=0;
 char Buf[DIGEST_SIZE*4];
 
 int login_user_init(void * sub_proc, void * para)
 {
 	int ret;
+
+	struct login_init_para * init_para= para;
+	mode = init_para->mode;
 	// add yorself's module init func here
 	RECORD(USER_DEFINE,CLIENT_STATE) * client_state;
 	// add yorself's module init func here
@@ -148,7 +152,7 @@ int proc_login_result(void * sub_proc,void * recv_msg)
 	{
 		print_cubeaudit("user %s login succeed!",client_state->user_name);
 		client_state->curr_state=LOGIN;
-	}
+	}else
 	{
 		print_cubeerr("user %s login failed!",client_state->user_name);
 		client_state->curr_state=ERROR;
