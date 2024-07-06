@@ -1,0 +1,12 @@
+{
+	"type":"SCORE_COMPUTE",
+	"subtype":"ITEM_STANDARD"
+}
+{
+	"name":"background_test",
+    	"init_score":0,
+    	"lowest_score":0,
+    	"highest_score":500,
+    	"event_num":6,
+    	"desc":"背景应用功能测试!"
+}

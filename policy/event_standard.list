@@ -1,0 +1,12 @@
+{
+	"type":"SCORE_COMPUTE",
+	"subtype":"EVENT_STANDARD"
+}
+{
+	"name":"code_upload",
+	"item_name":"background_test",
+    	"event_type":"START",
+    	"result":"SUCCEED",
+    	"score":100,
+    	"desc":"开始解题测试!"
+}
