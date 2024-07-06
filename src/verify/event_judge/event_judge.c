@@ -45,6 +45,10 @@ int event_judge_start(void * sub_proc, void * para)
 			message_get_type(recv_msg),message_get_subtype(recv_msg));
 			continue;
 		}
+		else if((type==TYPE(USER_DEFINE))&&(subtype==SUBTYPE(USER_DEFINE,RETURN)))
+		{
+			ret=proc_engineer_login(sub_proc,recv_msg);
+		}
 		else if((type==TYPE(PLC_ENGINEER))&&(subtype==SUBTYPE(PLC_ENGINEER,LOGIC_RETURN)))
 		{
 			ret=proc_code_upload_judge(sub_proc,recv_msg);
@@ -53,6 +57,50 @@ int event_judge_start(void * sub_proc, void * para)
 	return 0;
 }
 
+int proc_engineer_login(void * sub_proc,void * recv_msg)
+{
+	int ret;
+	RECORD(USER_DEFINE,RETURN) * user_login;
+	RECORD(USER_DEFINE, SERVER_STATE) * user_info;
+	RECORD(SCORE_COMPUTE,EVENT) * score_event;
+
+	MSG_EXPAND * msg_expand;
+	DB_RECORD * db_record;
+	void * new_msg;
+	int i;
+	int elem_no;
+	void * record_template;
+
+
+	//获取已完成访控处理的数据 
+	ret=message_get_record(recv_msg,&user_login,0);
+	if(ret<0)
+		return ret;
+
+   
+
+	// 创建事件，该事件为背景测试的用户登录事件，如登录成功，则事件成功，
+	// 否则事件失败
+	
+	score_event=Talloc0(sizeof(*score_event));
+	if(score_event == NULL)
+		return -ENOMEM;
+
+	score_event->item_name = dup_str("background_test",0);
+	score_event->name = dup_str("engineer_login",0);
+	
+	if(user_login->return_code == SUCCEED)
+	       	score_event->result=SCORE_RESULT_SUCCEED;	
+	else
+	       	score_event->result=SCORE_RESULT_FAIL;	
+
+	new_msg=message_create(TYPE_PAIR(SCORE_COMPUTE,EVENT),NULL);
+	if(new_msg==NULL)
+		return -EINVAL;
+	message_add_record(new_msg,score_event);
+	ret=ex_module_sendmsg(sub_proc,new_msg);
+	return ret;
+}
 int proc_code_upload_judge(void * sub_proc,void * recv_msg)
 {
 	int ret;

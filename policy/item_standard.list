@@ -7,6 +7,6 @@
     	"init_score":0,
     	"lowest_score":0,
     	"highest_score":500,
-    	"event_num":6,
+    	"event_num":2,
     	"desc":"背景应用功能测试!"
 }

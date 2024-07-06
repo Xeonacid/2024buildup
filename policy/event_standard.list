@@ -3,10 +3,18 @@
 	"subtype":"EVENT_STANDARD"
 }
 {
-	"name":"code_upload",
+	"name":"engineer_login",
 	"item_name":"background_test",
     	"event_type":"START",
     	"result":"SUCCEED",
     	"score":100,
     	"desc":"开始解题测试!"
+}
+{
+	"name":"code_upload",
+	"item_name":"background_test",
+    	"event_type":"ADD",
+    	"result":"SUCCEED",
+    	"score":100,
+    	"desc":"测试上传代码!"
 }

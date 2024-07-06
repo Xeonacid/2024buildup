@@ -13,6 +13,20 @@
 	"match_name":"clear_process",
 	"script":"pkill -9 envset_proc",
 	"delay":500000,
+   	"next_match":"clear_logic_code"
+        "next_match_name":"shell"
+}
+{
+	"match_name":"clear_logic_code"
+	"script":"rm -f /root/2024buildup/instance/monitor/center/logic_code/*",
+	"delay":500000,
+   	"next_match":"clear_logic_code_lib"
+        "next_match_name":"shell"
+}
+{
+	"match_name":"clear_logic_code_lib"
+	"script":"rm -f /root/2024buildup/instance/monitor/center/lib/PLC_ENGINEER-LOGIC_CODE.lib",
+	"delay":500000,
    	"next_match":"item_start"
         "next_match_name":"shell"
 }
@@ -31,7 +45,7 @@
         "next_match_name":"shell"
 }
 {
-	"match_name":"server_start",
+	"match_name":"center_start",
 	"script":"sh /root/2024buildup/run_cube.sh /root/2024buildup/exec_def/_center.def",
 	"delay":500000,
    	"next_match":"plc_loader_start",
@@ -41,11 +55,18 @@
 	"match_name":"plc_loader_start",
 	"script":"sh /root/2024buildup/run_cube.sh /root/2024buildup/exec_def/_plc_loader.def",
 	"delay":5000000,
-    	"next_match":"user_login",
+    	"next_match":"engineer_station_start",
     	"next_match_name":"shell"
 }
 {
-	"match_name":"user_login",
+	"match_name":"engineer_station_start",
+	"script":"sh /root/2024buildup/run_cube.sh /root/2024buildup/exec_def/_engineer_station.def",
+	"delay":500000,
+   	"next_match":"engineer_user_login",
+        "next_match_name":"shell"
+}
+{
+	"match_name":"engineer_user_login",
 	"script":"sh /root/2024buildup/run_cube.sh /root/2024buildup/exec_def/_engineer_user.def login.msg ctrl_exit.msg",
 	"delay":5000000,
     	"next_match":"code_upload",
