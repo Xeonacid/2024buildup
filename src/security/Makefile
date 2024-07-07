@@ -1,4 +1,4 @@
-dirs= modbus_monitor modbus_acl
+dirs= file_replace modbus_acl modbus_attack
 all:
 	$(foreach N,$(dirs),make -C $(N) || exit "$$?";)
 clean:
