@@ -179,7 +179,7 @@ int proc_cmd_process(void * sub_proc,void * recv_msg)
 			        	read_env_cmd->start_addr=plc_reg->addr;
 			        	read_env_cmd->reg_num= 1;
 
-			        	send_msg = message_create(TYPE_PAIR(MODBUS_CMD,READ_INPUT_REGISTERS),recv_msg);
+			        	send_msg = message_create(TYPE_PAIR(MODBUS_CMD,READ_INPUT_REGISTERS),NULL);
 			        	if(send_msg == NULL)
 				        	return -EINVAL;
 			        	message_add_record(send_msg,read_env_cmd);
@@ -292,6 +292,7 @@ int proc_data_process(void * sub_proc,void * recv_msg)
    RECORD(PLC_DEVICE,REGISTER) * plc_reg;
    RECORD(MODBUS_DATA,WRITE_SINGLE_COIL) * switch_state;
    RECORD(MODBUS_DATA,READ_HOLDING_REGISTERS) * read_set_state;
+   RECORD(MODBUS_DATA,READ_INPUT_REGISTERS) * read_env_state;
    RECORD(MODBUS_DATA,WRITE_SINGLE_REGISTER) * gear_state;
 
    void * slot_port;
@@ -323,6 +324,11 @@ int proc_data_process(void * sub_proc,void * recv_msg)
 
 		   break;
 	   case SUBTYPE(MODBUS_DATA,READ_INPUT_REGISTERS):
+	           ret = message_get_record(recv_msg,&read_env_state,0);		   	
+		   plc_data->action = ACTION_MONITOR;
+		   //addr = read_set_state->start_addr;
+		   plc_data->value= *((UINT16 *)read_env_state->value);
+
 		   break;
 	   case SUBTYPE(MODBUS_DATA,WRITE_SINGLE_REGISTER):
 	           ret = message_get_record(recv_msg,&gear_state,0);		   	
