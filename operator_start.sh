@@ -6,7 +6,7 @@ sleep 1
 
 sh run_cube.sh exec_def/_center.def &
 sleep 1
-#sh run_cube.sh exec_def/_plc_device.def &
+sh run_cube.sh exec_def/_plc_device.def &
 sleep 1
 sh run_cube.sh exec_def/_operator_station.def &
 sleep 1

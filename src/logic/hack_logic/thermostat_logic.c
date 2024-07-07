@@ -23,7 +23,7 @@
 #include "ex_module.h"
 #include "sys_func.h"
 
-#include "hack_logic.h"
+#include "thermostat_logic.h"
 #include "modbus_tcp.h"
 #include "modbus_state.h"
 #include "modbus_cmd.h"
@@ -49,7 +49,7 @@ int proc_read_current_t(void * sub_proc,void * recv_msg);
 int proc_send_switch_cmd(void * sub_proc);
 int proc_send_gear_cmd(void * sub_proc);
 
-int hack_logic_init(void * sub_proc,void * para)
+int thermostat_logic_init(void * sub_proc,void * para)
 {
     
     int ret;
@@ -63,7 +63,7 @@ int hack_logic_init(void * sub_proc,void * para)
     return 0;
 }
 
-int hack_logic_start(void * sub_proc,void * para)
+int thermostat_logic_start(void * sub_proc,void * para)
 {
     int ret = 0;
     int rc = 0;

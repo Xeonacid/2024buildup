@@ -11,5 +11,5 @@ sh run_cube.sh exec_def/_plc_loader.def &
 sleep 1
 sh run_cube.sh exec_def/_engineer_station.def &
 sleep 1
-sh run_cube.sh exec_def/_engineer_user.def login.msg bin_upload.msg ctrl_exit.msg
+sh run_cube.sh exec_def/_engineer_user.def engineer_login.msg bin_upload.msg ctrl_exit.msg
 sleep 1

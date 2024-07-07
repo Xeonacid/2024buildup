@@ -5,8 +5,8 @@
 }
 {
 	"plc_devname":"thermostat",
-	"logic_filename":"",
-	"type":"",
+	"logic_filename":"libthermostat_logic.so",
+	"type":"FILE_LOGIC",
 	"author":"zhao",
 	"uploader":"zhao"
 }
