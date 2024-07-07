@@ -33,18 +33,18 @@
 
 #define MAX_LINE_LEN 1024
 
-static int mode=0; //0 means server, 1 means client 
-static char * tcp_addr;
-static int tcp_port;
-static struct tcloud_connector_hub * conn_hub;
-static CHANNEL * modbus_channel;
+int mode=0; //0 means server, 1 means client 
+char * tcp_addr;
+int tcp_port;
+struct tcloud_connector_hub * conn_hub;
+CHANNEL * modbus_channel;
 
-static BYTE Buf[DIGEST_SIZE*64];
-static int index = 0;
-static BYTE * ReadBuf=Buf+DIGEST_SIZE*32;
-static int readbuf_len;
+BYTE Buf[DIGEST_SIZE*64];
+int index = 0;
+BYTE * ReadBuf=Buf+DIGEST_SIZE*32;
+int readbuf_len;
 
-static void * default_conn = NULL;
+void * default_conn = NULL;
 struct tcloud_connector * server_conn = NULL;
 struct tcloud_connector * client_conn = NULL;
 struct tcloud_connector * channel_conn = NULL;
@@ -112,8 +112,15 @@ int modbus_channel_init(void * sub_proc,void * para)
         if((Strcmp(init_para->mode,"client")==0)
             || (Strcmp(init_para->mode,"CLIENT")==0)
             || (Strcmp(init_para->mode,"Client")==0))
+	{
             mode =1;
+	}
+    	else
+	{
+	    mode=0;
+	}
     }
+
     if(mode == 1)
         modbus_channel_client_init(sub_proc,para);
     else
@@ -436,7 +443,7 @@ int modbus_channel_start(void * sub_proc,void * para)
                     		rc = 0;
                     		len = recv_conn->conn_ops->read(recv_conn, Buf,256);
                     		if (len < 0) {
-                        		perror("read error");
+                        		perror("channel read error");
                         		//conn_hub->hub_ops->del_connector(conn_hub, recv_conn);
                     		} else if (len == 0) {
                     			printf("peer close\n");
@@ -457,7 +464,7 @@ int modbus_channel_start(void * sub_proc,void * para)
                     		rc = 0;
                     		len = recv_conn->conn_ops->read(recv_conn, Buf,256);
                     		if (len < 0) {
-                        		perror("read error");
+                        		perror("client read error");
                         		//conn_hub->hub_ops->del_connector(conn_hub, recv_conn);
                     		} else if (len == 0) {
                         		printf("peer close\n");
