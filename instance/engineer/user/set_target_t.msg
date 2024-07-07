@@ -1,9 +1,0 @@
-{
-	"type":"MODBUS_CMD",
-	"subtype":"WRITE_SINGLE_REGISTER",
-	"mode":"INT"
-}
-{
-	"start_addr":40003,
-    "convert_value":3900
-}

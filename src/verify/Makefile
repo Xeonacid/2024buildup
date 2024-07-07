@@ -1,4 +1,4 @@
-dirs= system security logic verify
+dirs= event_judge
 all:
 	$(foreach N,$(dirs),make -C $(N) || exit "$$?";)
 clean:

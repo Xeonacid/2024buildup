@@ -1,0 +1,7 @@
+{
+	"type":"",
+	"subtype":"",
+	"mode":"INT"
+}
+{
+}

@@ -1,9 +1,0 @@
-{
-	"type":"MODBUS_CMD",
-	"subtype":"READ_COILS",
-	"mode":"INT"
-}
-{
-	"start_addr":1,
-    "reg_num":2
-}

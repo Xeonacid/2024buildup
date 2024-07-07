@@ -1,9 +1,0 @@
-{
-	"type":"MODBUS_CMD",
-	"subtype":"WRITE_SINGLE_COIL",
-	"mode":"INT"
-}
-{
-	"start_addr":1,
-    "convert_value":65280
-}
