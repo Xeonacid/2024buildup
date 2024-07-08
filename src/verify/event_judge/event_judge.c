@@ -53,6 +53,10 @@ int event_judge_start(void * sub_proc, void * para)
 		{
 			ret=proc_code_upload_judge(sub_proc,recv_msg);
 		}
+		else if((type==TYPE(PLC_OPERATOR))&&(subtype==SUBTYPE(PLC_OPERATOR,PLC_RETURN)))
+		{
+			ret=proc_operator_cmd_judge(sub_proc,recv_msg);
+		}
 	}
 	return 0;
 }
@@ -148,6 +152,70 @@ int proc_code_upload_judge(void * sub_proc,void * recv_msg)
 	       	score_event->result=SCORE_RESULT_SUCCEED;	
 	else
 	       	score_event->result=SCORE_RESULT_FAIL;	
+
+	new_msg=message_create(TYPE_PAIR(SCORE_COMPUTE,EVENT),NULL);
+	if(new_msg==NULL)
+		return -EINVAL;
+	message_add_record(new_msg,score_event);
+	ret=ex_module_sendmsg(sub_proc,new_msg);
+	return ret;
+}
+int proc_operator_cmd_judge(void * sub_proc,void * recv_msg)
+{
+	int ret;
+	RECORD(PLC_OPERATOR,PLC_RETURN) * plc_return;
+	RECORD(USER_DEFINE, SERVER_STATE) * user_info;
+	RECORD(SCORE_COMPUTE,EVENT) * score_event;
+
+	MSG_EXPAND * msg_expand;
+	DB_RECORD * db_record;
+	void * new_msg;
+	int i;
+	int elem_no;
+	void * record_template;
+
+	//获取PLC返回命令 
+	ret=message_get_record(recv_msg,&plc_return,0);
+	if(ret<0)
+		return ret;
+
+	// 创建事件，该事件为背景测试的命令执行事件，共三个事件：启动，观察温度和设置温度
+	
+	score_event=Talloc0(sizeof(*score_event));
+	if(score_event == NULL)
+		return -ENOMEM;
+
+	score_event->item_name = dup_str("background_test",0);
+
+	if(plc_return->action==ACTION_ON)
+	{
+		score_event->name = dup_str("plc_heating_on",0);
+		// 开启事件
+		if(Strcmp(plc_return->action_desc,"heating_S")==0)
+	       		score_event->result=SCORE_RESULT_SUCCEED;	
+		else
+	       		score_event->result=SCORE_RESULT_FAIL;	
+	}
+	else if(plc_return->action==ACTION_MONITOR)
+	{
+		// 监控事件
+		score_event->name = dup_str("plc_watch",0);
+		// 开启事件
+		if(Strcmp(plc_return->action_desc,"curr_T")==0)
+	       		score_event->result=SCORE_RESULT_SUCCEED;	
+		else
+	       		score_event->result=SCORE_RESULT_FAIL;	
+	}
+	else if(plc_return->action==ACTION_ADJUST)
+	{
+		// 监控事件
+		score_event->name = dup_str("plc_set",0);
+		// 开启事件
+	       	score_event->result=SCORE_RESULT_FAIL;	
+		if(Strcmp(plc_return->action_desc,"set_T")==0)
+			if(plc_return->value == 3900)
+	       			score_event->result=SCORE_RESULT_SUCCEED;	
+	}
 
 	new_msg=message_create(TYPE_PAIR(SCORE_COMPUTE,EVENT),NULL);
 	if(new_msg==NULL)
