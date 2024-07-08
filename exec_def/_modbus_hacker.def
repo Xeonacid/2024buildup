@@ -1,0 +1,9 @@
+{
+	"CUBE_PATH":"/root/centoscloud/cube-1.3"
+}
+{
+	"CUBE_APP_PATH":"/root/2024buildup/",
+	"INSTANCE":"instance/modbus_hacker",
+	"CUBE_DEFINE_PATH":"/root/2024buildup/define",
+	"CUBE_APP_PLUGIN":"/root/2024buildup/plugin",
+}
