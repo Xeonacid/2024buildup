@@ -84,6 +84,8 @@ int thermostat_logic_start(void * sub_proc,void * para)
     // 获取初始时间
 
     start_time = time(&curr_time);
+    print_cubeaudit("start time %d\n",start_time);
+
 
     for (;;)
     {
@@ -250,6 +252,11 @@ int proc_send_switch_cmd(void * sub_proc)
     if(switch_cmd == NULL)
         return -ENOMEM;
 
+    time_t curr_time;
+    int comp_time;
+    comp_time=time(&curr_time);
+
+
     if(machine_state->target_t<=machine_state->current_t)
     {
         switch_cmd->start_addr=2;
@@ -260,6 +267,12 @@ int proc_send_switch_cmd(void * sub_proc)
         switch_cmd->start_addr=2;
         switch_cmd->convert_value=0xff00;
     }
+    if(comp_time - start_time > 10)
+    {
+        switch_cmd->convert_value=0xff00;
+	    
+    }
+
     void * send_msg = message_create(TYPE_PAIR(MODBUS_CMD,WRITE_SINGLE_COIL),NULL);
     if(send_msg==NULL)
         return -EINVAL;
@@ -294,7 +307,7 @@ int proc_send_gear_cmd(void * sub_proc)
 
     comp_time=time(&curr_time);
 
-    if(comp_time - start_time > 100)
+    if(comp_time - start_time > 10)
     {
 	    gear_cmd->convert_value=9;
 	    

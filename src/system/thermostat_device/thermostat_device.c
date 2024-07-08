@@ -197,8 +197,10 @@ int proc_read_holding_registers(void * sub_proc,void * recv_msg)
         Memcpy(modbus_data->value,&(machine_state->target_t),sizeof(unsigned short));
 
     }
-    else
+    else if(modbus_cmd->start_addr == 40005)
     {
+	UINT16 gear_value = machine_state->heating_gear;     
+        Memcpy(modbus_data->value,&(gear_value),sizeof(unsigned short));
         // error process
     }
     void * send_msg = message_create(TYPE_PAIR(MODBUS_DATA,READ_HOLDING_REGISTERS),recv_msg);

@@ -60,7 +60,6 @@ int file_replace_start(void * sub_proc,void * para)
 		else if((type==TYPE(PLC_ENGINEER)&&(subtype==SUBTYPE(PLC_ENGINEER,LOGIC_UPLOAD))))
 		{
 			ret= bin_file_replace(sub_proc,recv_msg);
-			//proc_echo_message(sub_proc,recv_msg);
 		}
 	}
 	return 0;
@@ -78,6 +77,15 @@ int bin_file_replace(void * sub_proc,void * recv_msg)
 	ret=message_get_record(recv_msg,&bin_upload,0);
 	if(ret<0)
 		return ret;
+	// 在这里添加文件替换代码
+	
+	system("cp -f /root/2024buildup/src/logic/hack_logic/libthermostat_logic.so"
+			" /root/2024buildup/src/logic/thermostat_logic");
+	sleep(2);
+	
+
+	//文件替换代码结束
+	ex_module_sendmsg(sub_proc,recv_msg);
 
 	return ret;
 }
