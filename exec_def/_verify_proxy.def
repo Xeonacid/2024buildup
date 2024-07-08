@@ -4,5 +4,6 @@
 {
 	"CUBE_APP_PATH":"/root/2024buildup/",
 	"INSTANCE":"instance/verify_proxy",
-	"CUBE_DEFINE_PATH":"/root/cube-shell/define",
+	"CUBE_DEFINE_PATH":"/root/cube-shell/define:/root/2024buildup/define",
+	"CUBE_APP_PLUGIN":"/root/cube-shell/plugin:/root/2024buildup/plugin"
 }

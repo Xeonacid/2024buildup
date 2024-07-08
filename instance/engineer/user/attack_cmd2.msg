@@ -1,7 +1,12 @@
 {
-	"type":"",
-	"subtype":"",
+	"type":"PLC_ENGINEER",
+	"subtype":"LOGIC_UPLOAD",
 	"mode":"INT"
 }
 {
+	"plc_devname":"thermostat",
+	"logic_filename":"thermostat_logic.c",
+	"type":"FILE_CODE",
+	"author":"zhao",
+	"uploader":""
 }
