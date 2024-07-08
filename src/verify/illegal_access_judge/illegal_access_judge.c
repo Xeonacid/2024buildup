@@ -45,11 +45,11 @@ int illegal_access_judge_start(void * sub_proc, void * para)
 			message_get_type(recv_msg),message_get_subtype(recv_msg));
 			continue;
 		}
-		else if((type==TYPE(PLC_ENGINEER))&&(subtype==SUBTYPE(PLC_ENGINEER,LOGIC_RETURN)))
+		else if((type==TYPE(PLC_ENGINEER))&&(subtype==SUBTYPE(PLC_ENGINEER,LOGIC_UPLOAD)))
 		{
 			ret=proc_illegal_code_upload_judge(sub_proc,recv_msg);
 		}
-		else if((type==TYPE(PLC_OPERATOR))&&(subtype==SUBTYPE(PLC_OPERATOR,PLC_RETURN)))
+		else if((type==TYPE(PLC_OPERATOR))&&(subtype==SUBTYPE(PLC_OPERATOR,PLC_CMD)))
 		{
 			ret=proc_illegal_operator_cmd_judge(sub_proc,recv_msg);
 		}
@@ -60,7 +60,7 @@ int illegal_access_judge_start(void * sub_proc, void * para)
 int proc_illegal_code_upload_judge(void * sub_proc,void * recv_msg)
 {
 	int ret;
-	RECORD(PLC_ENGINEER,LOGIC_RETURN) * code_upload;
+	RECORD(PLC_ENGINEER,LOGIC_UPLOAD) * code_upload;
 	RECORD(USER_DEFINE, SERVER_STATE) * user_info;
 	RECORD(SCORE_COMPUTE,EVENT) * score_event;
 
@@ -96,28 +96,31 @@ int proc_illegal_code_upload_judge(void * sub_proc,void * recv_msg)
 
 	score_event->item_name = dup_str("illegal_access",0);
 	if(Strcmp(code_upload->logic_filename,"thermostat_logic.c") == 0)
-		score_event->name = dup_str("code_upload",0);
-	else if(Strcmp(code_upload->logic_filename,"libthermostat_logic.so") == 0)
-		score_event->name = dup_str("bin_upload",0);
+	{
+		if(user_info->role != PLC_ENGINEER)
+		{
+			if(user_info->role == PLC_MONITOR)
+				score_event->name = dup_str("monitor_upload",0);
+			else if(user_info->role == PLC_OPERATOR)
+				score_event->name = dup_str("operator_upload",0);
 	
-	if(user_info->role == PLC_ENGINEER)
-	       	score_event->result=SCORE_RESULT_SUCCEED;	
-	else
-	       	score_event->result=SCORE_RESULT_FAIL;	
-
-	new_msg=message_create(TYPE_PAIR(SCORE_COMPUTE,EVENT),NULL);
-	if(new_msg==NULL)
-		return -EINVAL;
-	message_add_record(new_msg,score_event);
-	ret=ex_module_sendmsg(sub_proc,new_msg);
+	       		score_event->result=SCORE_RESULT_SUCCEED;	
+			new_msg=message_create(TYPE_PAIR(SCORE_COMPUTE,EVENT),NULL);
+			if(new_msg==NULL)
+				return -EINVAL;
+			message_add_record(new_msg,score_event);
+			ret=ex_module_sendmsg(sub_proc,new_msg);
+		}
+	}
 	return ret;
 }
 int proc_illegal_operator_cmd_judge(void * sub_proc,void * recv_msg)
 {
 	int ret;
-	RECORD(PLC_OPERATOR,PLC_RETURN) * plc_return;
+	RECORD(PLC_OPERATOR,PLC_CMD) * plc_cmd;
 	RECORD(USER_DEFINE, SERVER_STATE) * user_info;
 	RECORD(SCORE_COMPUTE,EVENT) * score_event;
+	RECORD(GENERAL_RETURN,STRING) * site_info;
 
 	MSG_EXPAND * msg_expand;
 	DB_RECORD * db_record;
@@ -127,9 +130,30 @@ int proc_illegal_operator_cmd_judge(void * sub_proc,void * recv_msg)
 	void * record_template;
 
 	//获取PLC返回命令 
-	ret=message_get_record(recv_msg,&plc_return,0);
+	ret=message_get_record(recv_msg,&plc_cmd,0);
 	if(ret<0)
 		return ret;
+
+
+	// 获取扩展项信息
+	ret = message_get_define_expand(recv_msg,&msg_expand,TYPE_PAIR(GENERAL_RETURN,STRING));
+	if(ret<0)
+		return ret;
+	if(msg_expand ==NULL)
+		return -EINVAL;
+	site_info = msg_expand->expand;
+
+	// 获取用户信息
+	db_record=memdb_find_first(TYPE_PAIR(USER_DEFINE,SERVER_STATE),"user_name",
+			plc_cmd->plc_operator);
+
+	if(db_record==NULL)
+	{
+		print_cubeerr("illegal_access_judge: can't find operator!");
+		return -EINVAL;
+	}
+	
+	user_info=db_record->record;
 
 	// 创建事件，该事件为背景测试的命令执行事件，共三个事件：启动，观察温度和设置温度
 	
@@ -139,40 +163,39 @@ int proc_illegal_operator_cmd_judge(void * sub_proc,void * recv_msg)
 
 	score_event->item_name = dup_str("illegal_access",0);
 
-	if(plc_return->action==ACTION_ON)
+
+	if(plc_cmd->action==ACTION_ADJUST) // 温度调节行为是受限操作
 	{
-		score_event->name = dup_str("plc_heating_on",0);
-		// 开启事件
-		if(Strcmp(plc_return->action_desc,"heating_S")==0)
-	       		score_event->result=SCORE_RESULT_SUCCEED;	
-		else
-	       		score_event->result=SCORE_RESULT_FAIL;	
-	}
-	else if(plc_return->action==ACTION_MONITOR)
-	{
-		// 监控事件
-		score_event->name = dup_str("plc_watch",0);
-		// 开启事件
-		if(Strcmp(plc_return->action_desc,"curr_T")==0)
-	       		score_event->result=SCORE_RESULT_SUCCEED;	
-		else
-	       		score_event->result=SCORE_RESULT_FAIL;	
-	}
-	else if(plc_return->action==ACTION_ADJUST)
-	{
-		// 监控事件
-		score_event->name = dup_str("plc_set",0);
-		// 开启事件
-	       	score_event->result=SCORE_RESULT_FAIL;	
-		if(Strcmp(plc_return->action_desc,"set_T")==0)
-			if(plc_return->value == 3900)
-	       			score_event->result=SCORE_RESULT_SUCCEED;	
+		if(Strcmp(site_info->return_value,"operator_station")==0)
+		{
+			//操作员站的操作
+			if(user_info->role == PLC_ENGINEER)
+				score_event->name = dup_str("engineer_adjust_in_OS",0);
+			else if(user_info->role == PLC_MONITOR)
+				score_event->name = dup_str("monitor_adjust_in_OS",0);
+			else 
+				score_event->name = NULL;
+		}
+		else if(Strcmp(site_info->return_value,"center_station")==0)
+		{
+			//管理中心的操作
+			if(user_info->role == PLC_ENGINEER)
+				score_event->name = dup_str("engineer_adjust_in_center",0);
+			else if(user_info->role == PLC_OPERATOR)
+				score_event->name = dup_str("operator_adjust_in_center",0);
+			else 
+				score_event->name = NULL;
+		}
+		
 	}
 
-	new_msg=message_create(TYPE_PAIR(SCORE_COMPUTE,EVENT),NULL);
-	if(new_msg==NULL)
-		return -EINVAL;
-	message_add_record(new_msg,score_event);
-	ret=ex_module_sendmsg(sub_proc,new_msg);
+	if(score_event->name != NULL)
+	{
+		new_msg=message_create(TYPE_PAIR(SCORE_COMPUTE,EVENT),NULL);
+		if(new_msg==NULL)
+			return -EINVAL;
+		message_add_record(new_msg,score_event);
+		ret=ex_module_sendmsg(sub_proc,new_msg);
+	}
 	return ret;
 }

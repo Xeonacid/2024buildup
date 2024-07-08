@@ -57,6 +57,10 @@ int center_probe_start(void * sub_proc, void * para)
 		{
 			ret=proc_code_upload_probe(sub_proc,recv_msg);
 		}
+		else if((type==TYPE(PLC_ENGINEER))&&(subtype==SUBTYPE(PLC_ENGINEER,LOGIC_UPLOAD)))
+		{
+			ret=proc_upload_cmd_probe(sub_proc,recv_msg);
+		}
 	}
 	return 0;
 }
@@ -68,11 +72,13 @@ int proc_probe_item_select(void * sub_proc,void * recv_msg)
 	ret=message_get_record(recv_msg,&item_select,0);
 	if(ret<0)
 		return ret;
+	char proc_name[32];
 
-	if(Strcmp(item_select->name,"item_select")==0)
-	{
-		ex_module_setpointer(sub_proc,item_select);
-	}
+	proc_share_data_getvalue("proc_name",proc_name);
+
+	item_select->return_value = dup_str(proc_name,32);
+
+	ex_module_setpointer(sub_proc,item_select);
 	return ex_module_sendmsg(sub_proc,recv_msg);
 }
 int proc_login_probe(void * sub_proc,void * recv_msg)
@@ -93,10 +99,7 @@ int proc_login_probe(void * sub_proc,void * recv_msg)
 
 	item_select = ex_module_getpointer(sub_proc);
 	if(item_select !=NULL)
-		if(Strcmp(item_select->name,"item_select")==0)
-		{
-			message_add_expand_data(send_msg,TYPE_PAIR(GENERAL_RETURN,STRING),item_select);
-		}
+		message_add_expand_data(send_msg,TYPE_PAIR(GENERAL_RETURN,STRING),item_select);
 
 	return ex_module_sendmsg(sub_proc,send_msg);
 }
@@ -107,6 +110,14 @@ int proc_code_upload_probe(void * sub_proc,void * recv_msg)
 	RECORD(GENERAL_RETURN,STRING) * item_select;
 	RECORD(PLC_ENGINEER,LOGIC_RETURN) * plc_return;
 
+	item_select = ex_module_getpointer(sub_proc);
+
+	if(item_select !=NULL)
+	{
+		if(Strcmp(item_select->name,"illegal_access")==0)
+			return 0;
+	}
+
 	ret=message_get_record(recv_msg,&plc_return,0);
 	if(ret<0)
 		return ret;
@@ -116,13 +127,36 @@ int proc_code_upload_probe(void * sub_proc,void * recv_msg)
 		return -EINVAL;
 	message_add_record(send_msg,plc_return);
 
-	item_select = ex_module_getpointer(sub_proc);
 	if(item_select !=NULL)
-		if(Strcmp(item_select->name,"item_select")==0)
-		{
-			message_add_expand_data(send_msg,TYPE_PAIR(GENERAL_RETURN,STRING),item_select);
-		}
+		message_add_expand_data(send_msg,TYPE_PAIR(GENERAL_RETURN,STRING),item_select);
 
+	return ex_module_sendmsg(sub_proc,send_msg);
+}
+int proc_upload_cmd_probe(void * sub_proc,void * recv_msg)
+{
+	int ret;
+	void * send_msg;
+	RECORD(GENERAL_RETURN,STRING) * item_select;
+	RECORD(PLC_ENGINEER,LOGIC_UPLOAD) * plc_cmd;
 
-	return ex_module_sendmsg(sub_proc,recv_msg);
+	item_select = ex_module_getpointer(sub_proc);
+	print_cubeaudit("center_probe: dup plc_cmd");
+
+	if(Strcmp(item_select->name,"background_test")==0)
+		return 0;
+
+	ret=message_get_record(recv_msg,&plc_cmd,0);
+	if(ret<0)
+		return ret;
+
+	print_cubeaudit("center_probe: create new message");
+	send_msg = message_create(TYPE_PAIR(PLC_ENGINEER,LOGIC_UPLOAD),NULL);
+	if(send_msg == NULL)
+		return -EINVAL;
+	message_add_record(send_msg,plc_cmd);
+
+	if(item_select !=NULL)
+		message_add_expand_data(send_msg,TYPE_PAIR(GENERAL_RETURN,STRING),item_select);
+
+	return ex_module_sendmsg(sub_proc,send_msg);
 }

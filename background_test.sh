@@ -10,7 +10,7 @@ rm -f instance/plc/plc_loader/logic_bin/*
 rm -f plugin/libthermostat_logic.so
 
 # 启动各服务程序
-sh run_cube.sh exec_def/_center.def &
+#sh run_cube.sh exec_def/_center.def &
 sleep 1
 sh run_cube.sh exec_def/_plc_loader.def &
 sleep 1
