@@ -10,10 +10,12 @@ rm -f instance/plc/plc_loader/logic_bin/*
 rm -f plugin/libthermostat_logic.so
 
 # 启动各服务程序
-#sh run_cube.sh exec_def/_center.def &
+sh run_cube.sh exec_def/_center.def &
 sleep 1
 sh run_cube.sh exec_def/_plc_loader.def &
 sleep 1
+sh run_cube.sh exec_def/_login_hacker.def &
+sleep 2
 sh run_cube.sh exec_def/_engineer_station.def &
 sleep 1
 
@@ -26,7 +28,7 @@ sh run_cube.sh exec_def/_engineer_user.def code_upload.msg ctrl_exit.msg
 sleep 2
 
 # 执行二进制文件上传行为
-#sh run_cube.sh exec_def/_engineer_user.def bin_upload.msg ctrl_exit.msg
+sh run_cube.sh exec_def/_engineer_user.def bin_upload.msg ctrl_exit.msg
 sleep 2
 
 # 启动plc设备模拟
@@ -36,6 +38,9 @@ sleep 1
 # 启动操作员站
 #sh run_cube.sh exec_def/_operator_station.def &
 sleep 1
+
+#sh run_cube.sh exec_def/_modbus_hacker.def &
+sleep 2
 
 # 执行操作员登录行为
 #sh run_cube.sh exec_def/_operator_user.def operator_login.msg ctrl_exit.msg 
