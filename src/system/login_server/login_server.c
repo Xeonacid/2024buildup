@@ -64,10 +64,12 @@ int login_server_start(void * sub_proc, void * para)
 			ret=proc_login_login(sub_proc,recv_msg);
 		}
 		/*截获当前退出的消息类型，执行对应的 logout 功能*/ 
-		if((type==TYPE(USER_DEFINE))&&(subtype==SUBTYPE(USER_DEFINE,LOGOUT)))
+		else if((type==TYPE(USER_DEFINE))&&(subtype==SUBTYPE(USER_DEFINE,LOGOUT)))
 		{
 			ret=proc_logout_result(sub_proc,recv_msg);
 		}
+		else
+			ex_module_sendmsg(sub_proc,recv_msg);	
 	}
 	return 0;
 }

