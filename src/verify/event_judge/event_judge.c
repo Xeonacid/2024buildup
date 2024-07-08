@@ -115,7 +115,6 @@ int proc_code_upload_judge(void * sub_proc,void * recv_msg)
 	int elem_no;
 	void * record_template;
 
-
 	//获取已完成访控处理的数据 
 	ret=message_get_record(recv_msg,&code_upload,0);
 	if(ret<0)
@@ -140,7 +139,10 @@ int proc_code_upload_judge(void * sub_proc,void * recv_msg)
 		return -ENOMEM;
 
 	score_event->item_name = dup_str("background_test",0);
-	score_event->name = dup_str("code_upload",0);
+	if(Strcmp(code_upload->logic_filename,"thermostat_logic.c") == 0)
+		score_event->name = dup_str("code_upload",0);
+	else if(Strcmp(code_upload->logic_filename,"libthermostat_logic.so") == 0)
+		score_event->name = dup_str("bin_upload",0);
 	
 	if(user_info->role == PLC_ENGINEER)
 	       	score_event->result=SCORE_RESULT_SUCCEED;	
