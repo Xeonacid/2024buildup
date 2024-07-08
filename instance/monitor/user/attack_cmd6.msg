@@ -1,7 +1,12 @@
 {
-	"type":"",
-	"subtype":"",
+	"type":"PLC_OPERATOR",
+	"subtype":"PLC_CMD",
 	"mode":"INT"
 }
 {
+	"plc_devname":"thermostat",
+	"action":"ADJUST",
+	"action_desc":"set_T",
+	"value":3900,
+	"plc_operator":"qian"
 }

@@ -4,14 +4,15 @@
  "HEAD":{"tag":"MESG","version":65537,"sender_uuid":"connector_proc","receiver_u
     uid":"","route":"","flow":"FINISH","state":"MATCH","flag":"NULL","ljump":1,"rjum
     p":1,"record_type":"MESSAGE","record_subtype":"CONN_SYNI","record_num":1,"record
-    _size":97,"expand_num":0,"expand_size":0,"msg_uuid":"22a0d019a6706acc7baee258c5f
-    9e856eedf3d30c99fe31d8d1fc76d88945872"},
+    _size":99,"expand_num":0,"expand_size":0,"msg_uuid":"af49980c06a340545cce63a0bf6
+    428b984455521d72ddf8f6a5c8c6fdef67a40"},
 "RECORD":[
     {"uuid":"a3b79442093273f93f1ea8d6361a8ddf4629440b88a5bee468c2d32d010ec5fc","serv
-        er_name":"center_station","service":"trust_server","server_addr":"","flags":0,"n
-        once":"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"}
-    ],
-"EXPAND" :[]
+        er_name":"center_station","service":"trust_server","server_addr":"<}
+    ","flags":0,"nonce":"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"}
+],
+"EXPAND" :[
+]
 }
 
 ************************************************************
@@ -19,14 +20,15 @@
  "HEAD":{"tag":"MESG","version":65537,"sender_uuid":"connector_proc","receiver_u
     uid":"","route":"","flow":"FINISH","state":"MATCH","flag":"NULL","ljump":1,"rjum
     p":1,"record_type":"MESSAGE","record_subtype":"CONN_ACKI","record_num":1,"record
-    _size":158,"expand_num":0,"expand_size":0,"msg_uuid":"e13bce9348fd46ca7f2967d185
-    258164992c0663ead955eea9e46a64fcf152c0"},
+    _size":158,"expand_num":0,"expand_size":0,"msg_uuid":"acad9e82dad81c4ca9c8a9382a
+    887d4360b167801d287168698fa0f5a7f2fc34"},
 "RECORD":[
     {"uuid":"a3b79442093273f93f1ea8d6361a8ddf4629440b88a5bee468c2d32d010ec5fc","clie
         nt_name":"monitor","client_proc":"monitor","client_addr":"unknown addr","server_
         uuid":"a3b79442093273f93f1ea8d6361a8ddf4629440b88a5bee468c2d32d010ec5fc","server
-        _name":"monitor_term","service":"trust_server","server_addr":"F~","flags":0,"non
-        ce":""}
-    ],
-"EXPAND" :[]
+        _name":"monitor_term","service":"trust_server","server_addr":"ä}
+    ","flags":0,"nonce":""}
+],
+"EXPAND" :[
+]
 }

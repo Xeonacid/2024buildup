@@ -7,5 +7,5 @@
 	"plc_devname":"thermostat",
 	"action":"MONITOR",
 	"action_desc":"curr_T",
-	"operator":"qian",
+	"plc_operator":"qian",
 }

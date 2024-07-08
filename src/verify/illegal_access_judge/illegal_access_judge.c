@@ -186,6 +186,7 @@ int proc_illegal_operator_cmd_judge(void * sub_proc,void * recv_msg)
 			else 
 				score_event->name = NULL;
 		}
+	       	score_event->result=SCORE_RESULT_SUCCEED;	
 		
 	}
 

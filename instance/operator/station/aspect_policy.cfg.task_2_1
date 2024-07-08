@@ -1,0 +1,20 @@
+{
+	"policy_head":
+	{
+		"name":"operator_cmd",
+       		"type":"DUP",
+		"ljump":1,
+        	"sender":"connector_proc",
+		"newname":"verify_operator_cmd"
+	},
+	"MATCH_RULES":
+	[
+		{"op":"AND","type":"PLC_OPERATOR"},
+	],
+	"ROUTE_RULES":
+	{
+		"main_policy":[
+			{"target_type":"LOCAL","target_name":"operator_probe"}
+		]
+	}
+}

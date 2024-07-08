@@ -61,6 +61,10 @@ int center_probe_start(void * sub_proc, void * para)
 		{
 			ret=proc_upload_cmd_probe(sub_proc,recv_msg);
 		}
+		else if((type==TYPE(PLC_OPERATOR))&&(subtype==SUBTYPE(PLC_OPERATOR,PLC_CMD)))
+		{
+			ret=proc_c_cmd_probe(sub_proc,recv_msg);
+		}
 	}
 	return 0;
 }
@@ -151,6 +155,31 @@ int proc_upload_cmd_probe(void * sub_proc,void * recv_msg)
 
 	print_cubeaudit("center_probe: create new message");
 	send_msg = message_create(TYPE_PAIR(PLC_ENGINEER,LOGIC_UPLOAD),NULL);
+	if(send_msg == NULL)
+		return -EINVAL;
+	message_add_record(send_msg,plc_cmd);
+
+	if(item_select !=NULL)
+		message_add_expand_data(send_msg,TYPE_PAIR(GENERAL_RETURN,STRING),item_select);
+
+	return ex_module_sendmsg(sub_proc,send_msg);
+}
+int proc_c_cmd_probe(void * sub_proc,void * recv_msg)
+{
+	int ret;
+	void * send_msg;
+	RECORD(GENERAL_RETURN,STRING) * item_select;
+	RECORD(PLC_OPERATOR,PLC_CMD) * plc_cmd;
+
+	item_select = ex_module_getpointer(sub_proc);
+	print_cubeaudit("center_probe: dup plc_cmd");
+
+	ret=message_get_record(recv_msg,&plc_cmd,0);
+	if(ret<0)
+		return ret;
+
+	print_cubeaudit("center_probe: create new message");
+	send_msg = message_create(TYPE_PAIR(PLC_OPERATOR,PLC_CMD),NULL);
 	if(send_msg == NULL)
 		return -EINVAL;
 	message_add_record(send_msg,plc_cmd);

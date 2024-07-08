@@ -8,5 +8,5 @@
 	"action":"ON",
 	"action_desc":"heating_S",
 	"value":0,
-	"operator":"qian",
+	"plc_operator":"qian",
 }
