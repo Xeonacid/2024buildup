@@ -22,13 +22,14 @@
 	"record":
 	{
 		"type":"USER_DEFINE",
-		"elem_no":4,
+		"elem_no":5,
 		"elemlist":
 		[
-			"LOGIN",
+			"LOGIN=0x01",
 			"CLIENT_STATE",
 			"SERVER_STATE",
-			"RETURN"
+			"RETURN",
+      "LOGOUT"
 		]
 	}
 }
@@ -43,7 +44,7 @@
 		"elem_no":4,
 		"elemlist":
 		[
-			"PLC_ENGINEER",
+			"PLC_ENGINEER=0x01",
 			"PLC_OPERATOR",
 			"PLC_MONITOR",
 			"PLC_DEVICE=0x10",
@@ -58,11 +59,15 @@
 	},
 	"record":
 	{
-		"elem_no":3,
+		"elem_no":7,
 		"elemlist":
 		[
-			"WAIT",
+			"WAIT=0x01",
+			"REQUEST",	
+			"RESPONSE",	
 			"LOGIN",
+			"CONNECT",
+			"LOGOUT",
 			"ERROR"
 		]
 	}
@@ -75,13 +80,19 @@
 	},
 	"record":
 	{
-		"elem_no":5,
+		"elem_no":11,
 		"elemlist":
 		[
-			"SUCCEED",
+			"SUCCEED=0x01",
+			"CHALLENGE",
 			"INVALID",
 			"NOUSER",
 			"AUTHFAIL",
+      "LOGIN_SUCCEED",
+      "LOGIN_FAILED",
+      "LOGOUT_SUCCEED",
+      "LOGOUT_FAILED",
+			"NOAUTH",
 			"NOACCESS"
 		]
 	}
@@ -124,6 +135,7 @@
 			[
 				{"name":"user_name","type":"ESTRING","size":32},
 				{"name":"curr_state","type":"ENUM","ref_name":"enum_user_state"},
+				{"name":"nonce","type":"BINDATA","size":32},
 				{"name":"user_info","type":"ESTRING","size":512},
 			]
 		}
@@ -157,6 +169,7 @@
 				{"name":"proc_name","type":"STRING","size":32},
 				{"name":"passwd","type":"ESTRING","size":32},
 				{"name":"curr_state","type":"ENUM","ref_name":"enum_login_state"}
+        {"name":"nonce","type":"BINDATA","size":32}
 			]
 		}
 		"flag_no":1,
@@ -185,6 +198,26 @@
 			[
 				{"name":"return_code","type":"ENUM","ref_name":"enum_login_state"},
 				{"name":"return_info","type":"ESTRING","size":128}
+        {"name":"nonce","type":"BINDATA","size":32},
+			]
+		}
+	}
+}
+{
+	"head":
+	{
+		"name":"user_define_logout",
+		"type":"RECORDTYPE"
+	},
+	"record":
+	{
+		"type":"USER_DEFINE",
+		"subtype":"LOGOUT",
+		"struct_desc":
+		{
+			"elem_desc":
+			[
+				{"name":"user_name","type":"ESTRING","size":32}
 			]
 		}
 	}
