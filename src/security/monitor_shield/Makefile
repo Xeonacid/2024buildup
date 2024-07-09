@@ -1,9 +1,9 @@
 FLAGS= -g -shared -o
-INCLUDE= -I$(CUBELIBPATH)/include/ 
+INCLUDE= -I$(CUBESYSPATH)/include/ -I$(CUBE_PATH)/include -I$(CUBEAPPPATH)/include
 CFLAGS= -g -c -fPIC -DUSER_MODE $(INCLUDE)
 CC=gcc
 CCP=g++
-PLUGIN=modbus_acl
+PLUGIN=monitor_shield
 PLUGIN_OBJ=
 TEST_LIB= -L$(CUBELIBPATH)/lib -lmessage -lmemdb -lconnector -lstruct -lcrypto_func -lpthread
 
