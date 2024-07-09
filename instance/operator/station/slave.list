@@ -5,5 +5,5 @@
 {
 	"slave_name":"thermostat",
 	"unit_addr":1,
-	"slave_key":"device_S",
+	"slave_key":"a3b79442093273f93f1ea8d6361a8ddf4629440b88a5bee468c2d32d010ec5fc"
 }

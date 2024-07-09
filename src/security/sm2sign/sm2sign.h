@@ -1,7 +1,7 @@
 #ifndef SM2_SIGN_FUNC_H
 #define SM2_SIGN_FUNC_H
 
-struct init_struct
+struct sm2_init_struct
 {
 	int  mode;   // 0 means signer, 1 means verifier;
 	char * prikeyfile;

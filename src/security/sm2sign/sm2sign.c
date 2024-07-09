@@ -16,6 +16,7 @@
 #include "file_struct.h"
 #include "sm2.h"
 
+#include "plc_emu.h"
 #include "sm2sign.h"
 
 
@@ -27,23 +28,104 @@ char * prikeyfile=NULL;
 char * pubkeyfile=NULL;
 BYTE Buf[DIGEST_SIZE*16];
 
+char * sign_file_path = "/root/2024buildup/src/logic/thermostat_logic/";
+char * verify_file_path = "/root/2024buildup/plugin/";
+
 int sm2sign_init(void * sub_proc,void * para)
 {
 	int ret;
+	int fd;
 	// add youself's plugin init func here
-    	struct init_struct * init_para=para;
+    	struct sm2_init_struct * init_para=para;
+	char Buf[128];
     	if(para==NULL)	 
 		return -EINVAL;
 
 	mode=init_para->mode;
 
-	if(mode==0)
-	{
+	if(init_para->prikeyfile!=NULL)
+		prikeyfile=dup_str(init_para->prikeyfile,0);
 
-        	ret=GM_GenSM2keypair(prikey,&prilen,pubkey_XY);
-        	if(ret!=0)
-                	return -EINVAL;
+	if(init_para->pubkeyfile!=NULL)
+		pubkeyfile=dup_str(init_para->pubkeyfile,0);
+
+	if(mode==0) // 签名者初始化过程
+	{
+		if(prikeyfile == NULL)
+			return -EINVAL;
+		if(access(prikeyfile,R_OK)!=0)
+		{
+			// 可能需要创建密钥
+			if(access(prikeyfile,F_OK)==0)
+			{
+				print_cubeerr("gm2_sign: can't read keyfile");
+				return -EINVAL;
+			}
+	        	ret=GM_GenSM2keypair(prikey,&prilen,pubkey_XY);
+        		if(ret!=0)
+                		return -EINVAL;
+			fd = open(prikeyfile,O_WRONLY|O_CREAT|O_TRUNC,00400);
+			if(fd<0)
+			{
+				print_cubeerr("gm2_sign: can't open prikeyfile");
+				return fd;
+			}
+			write(fd,prikey,prilen);	
+			close(fd);
+
+			fd = open(pubkeyfile,O_WRONLY|O_CREAT|O_TRUNC,00444);
+			if(fd<0)
+			{
+				print_cubeerr("gm2_sign: can't open pubkeyfile");
+				return fd;
+			}
+			write(fd,pubkey_XY,64);
+			close(fd);
+
+		}
+		else
+		{
+			//尝试从文件中读出公私钥对
+			fd = open(prikeyfile,O_RDONLY);
+			if(fd<0)
+			{
+				print_cubeerr("gm2_sign: can't read prikeyfile");
+				return fd;
+			}
+			ret=read(fd,prikey,DIGEST_SIZE*2);
+			if(ret<0)
+			{
+				print_cubeerr("gm2_sign: prikey read abnormal!");
+				return -EINVAL;
+			}
+			prilen=ret;
+			close(fd);
+
+			fd = open(pubkeyfile,O_RDONLY);
+			if(fd<0)
+			{
+				print_cubeerr("gm2_sign: can't open pubkeyfile");
+				return fd;
+			}
+			read(fd,pubkey_XY,64);
+			close(fd);
+		}
+		// 签名者初始化过程结束
 	}
+	else if(mode ==1)  //验签者初始化过程
+	{
+		if(pubkeyfile == NULL)
+			return -EINVAL;
+		fd = open(pubkeyfile,O_RDONLY);
+		if(fd<0)
+		{
+			print_cubeerr("gm2_sign: can't open pubkeyfile");
+			return fd;
+		}
+		read(fd,pubkey_XY,64);
+		close(fd);
+	}
+
 	return 0;
 }
 
@@ -79,214 +161,138 @@ int sm2sign_start(void * sub_proc,void * para)
 			ex_module_sendmsg(sub_proc,recv_msg);
 			continue;
 		}
-		if((type==TYPE(MESSAGE)) && (subtype==SUBTYPE(MESSAGE,BASE_MSG)))
+		if((type==TYPE(PLC_ENGINEER)) && (subtype==SUBTYPE(PLC_ENGINEER,LOGIC_UPLOAD)))
 		{
 			if(mode==0)
-				proc_pubkey_send(sub_proc,recv_msg);
-			else if(mode==1)
-				proc_pubkey_recover(sub_proc,recv_msg);
-		}
-		else if((type==TYPE(FILE_TRANS)) && (subtype==SUBTYPE(FILE_TRANS,FILE_DATA)))
-		{
-			if(mode==1)
 			{
-				proc_sessionkey_gen(sub_proc,recv_msg);
+				proc_sm2_sign(sub_proc,recv_msg);
 			}
-			else if(mode==0)
+			else if(mode==1)
 			{
-				proc_sessionkey_recover(sub_proc,recv_msg);
+				proc_sm2_verify(sub_proc,recv_msg);
 			}
 		}
 	}
 	return 0;
 }
 
-int proc_pubkey_send(void * sub_proc,void * message)
+int proc_sm2_sign(void * sub_proc,void * recv_msg)
 {
         int i;
         int ret=0;
-	RECORD(MESSAGE,BASE_MSG) * base_msg;
 
-	RECORD(GENERAL_RETURN,BINDATA) * pubkeydata;
+	BYTE DataBuf[DIGEST_SIZE*8];
+	BYTE SignBuf[DIGEST_SIZE*4];
+	int signlen;
+	BYTE UserID[DIGEST_SIZE];
+	unsigned long lenUID=DIGEST_SIZE;
+	Memset(UserID,'A',DIGEST_SIZE);
 
-	ret=message_get_record(message,&base_msg,0);
+	BYTE file_digest[DIGEST_SIZE];
+	BYTE cmd_digest[DIGEST_SIZE];
+	RECORD(PLC_ENGINEER,LOGIC_UPLOAD) * bin_upload;
+	RECORD(GENERAL_RETURN,BINDATA) * sign_data;
+
+	ret=message_get_record(recv_msg,&bin_upload,0);
 	if(ret<0)
 		return ret;
-	else if (base_msg==NULL)
+
+	// 计算文件的摘要值并与bin_upload中的uuid对比
+	
+	// 使用calculate_sm3函数
+
+	//序列化命令
+	
+	void * cmd_template = memdb_get_template(TYPE_PAIR(PLC_ENGINEER,LOGIC_UPLOAD));
+	if(cmd_template == NULL)
 		return -EINVAL;
+	ret = struct_2_blob(bin_upload,DataBuf,cmd_template);
+	if(ret<0)
+		return ret;
 
-	if(Strncmp(base_msg->message,"sendkey",DIGEST_SIZE)!=0)
-		return 0;
+	//对命令进行签名
+	signlen=128;
+	GM_SM2Sign(SignBuf,&signlen,DataBuf,ret,
+			UserID,lenUID,prikey,prilen);
 
-	pubkeydata = Talloc0(sizeof(*pubkeydata));
-	if(pubkeydata==NULL)
+	sign_data = Talloc0(sizeof(*sign_data));
+	if(sign_data == NULL)
 		return -ENOMEM;
-	pubkeydata->name=dup_str("pubkeydata",0);
-	pubkeydata->size=64;
-	pubkeydata->bindata=Talloc0(64);
-	Memcpy(pubkeydata->bindata,pubkey_XY,64);
-		
-	message_add_expand_data(message,TYPE_PAIR(GENERAL_RETURN,BINDATA),pubkeydata); 
+	sign_data->name = dup_str("signed data",0);
+	sign_data->size=signlen;
+	sign_data->bindata = Talloc0(sign_data->size);
+	Memcpy(sign_data->bindata,SignBuf,sign_data->size);
+	
+	// 签名结束，签名内容输出到sign_data中
 
-        ret=ex_module_sendmsg(sub_proc,message);
+	message_add_expand_data(recv_msg,TYPE_PAIR(GENERAL_RETURN,BINDATA),sign_data);
+
+	ex_module_sendmsg(sub_proc,recv_msg);
+
         return ret;
 }
 
-int proc_pubkey_recover(void * sub_proc,void * message)
+int proc_sm2_verify(void * sub_proc,void * recv_msg)
 {
-	int ret=1;
-	int i;
-	RECORD(MESSAGE,BASE_MSG) * base_msg;
-	MSG_HEAD* msghead;
-	MSG_EXPAND * msg_expand;
-	RECORD(GENERAL_RETURN,BINDATA) * pubkeydata=NULL;
+        int i;
+        int ret=0;
 
-	ret=message_get_record(message,&base_msg,0);
+	BYTE DataBuf[DIGEST_SIZE*8];
+	BYTE VerifyBuf[DIGEST_SIZE*2];
+	int signlen;
+	BYTE UserID[DIGEST_SIZE];
+	unsigned long lenUID=DIGEST_SIZE;
+	Memset(UserID,'A',DIGEST_SIZE);
+
+	BYTE file_digest[DIGEST_SIZE];
+	BYTE cmd_digest[DIGEST_SIZE];
+	RECORD(PLC_ENGINEER,LOGIC_UPLOAD) * bin_upload;
+	RECORD(GENERAL_RETURN,BINDATA) * sign_data;
+	RECORD(GENERAL_RETURN,INT) * verify_result;
+	MSG_EXPAND * msg_expand;
+
+	ret=message_get_record(recv_msg,&bin_upload,0);
 	if(ret<0)
 		return ret;
-	else if (base_msg==NULL)
+	int result;
+
+	ret=message_remove_expand(recv_msg,TYPE_PAIR(GENERAL_RETURN,BINDATA),&msg_expand);
+	if(msg_expand == NULL)
 		return -EINVAL;
 
-	if(Strncmp(base_msg->message,"sendkey",DIGEST_SIZE)!=0)
-		return 0;
+	sign_data = msg_expand->expand;
 
-	pubkeydata = Talloc0(sizeof(*pubkeydata));
-	if(pubkeydata==NULL)
+	//序列化命令
+	
+	void * cmd_template = memdb_get_template(TYPE_PAIR(PLC_ENGINEER,LOGIC_UPLOAD));
+	if(cmd_template == NULL)
+		return -EINVAL;
+	ret = struct_2_blob(bin_upload,DataBuf,cmd_template);
+	if(ret<0)
+		return ret;
+
+	//对命令进行验证
+	signlen=128;
+	result = GM_SM2VerifySig(sign_data->bindata,(UINT64)sign_data->size,
+			DataBuf,ret,UserID,(UINT64)lenUID,pubkey_XY,(UINT64)64);
+
+	verify_result = Talloc0(sizeof(*verify_result));
+	if(verify_result == NULL)
 		return -ENOMEM;
-	msghead= message_get_head(message);
-	if(msghead==NULL)
-		return -EINVAL;
+	verify_result->name = dup_str("verify result",0);
+	verify_result->return_value = result;
 	
-	for(i=0;i<msghead->expand_num;i++)
-	{
-		ret=message_get_expand(message,&msg_expand,i);
-		if(msg_expand==NULL)
-			return -EINVAL;
-		if((msg_expand->type==TYPE(GENERAL_RETURN)) &&
-			(msg_expand->subtype==SUBTYPE(GENERAL_RETURN,BINDATA)))
-		{
-			pubkeydata=msg_expand->expand;
-			if(pubkeydata==NULL)
-				continue;
-			if(Strcmp(pubkeydata->name,"pubkeydata"))
-			{
-				pubkeydata=NULL;
-				continue;
-			}		
-			else
-			{
-				ret= message_remove_indexed_expand(message,i,&msg_expand);
-				pubkeydata=msg_expand->expand;
-				Memcpy(pubkey_XY,pubkeydata->bindata,pubkeydata->size);
-				break;
-			}
-		}
-	}		
-	return ret;
-}
-
-int proc_sessionkey_gen(void * sub_proc,void * message)
-{
-        int i;
-        int ret;
-
-	RECORD(GENERAL_RETURN,BINDATA) * keyblob;
-	RECORD(GENERAL_RETURN,UUID) * sessionkey;
-
-	keyblob = Talloc0(sizeof(*keyblob));
-	if(keyblob==NULL)
-		return -ENOMEM;
-
-	sessionkey = Talloc0(sizeof(*sessionkey));
-	if(keyblob==NULL)
-		return -ENOMEM;
-
-	ret=RAND_bytes(sessionkey->return_value,DIGEST_SIZE);
-
-	int Enclen=DIGEST_SIZE*16;
-	ret=GM_SM2Encrypt(Buf,&Enclen,sessionkey->return_value,DIGEST_SIZE,pubkey_XY,64);
-	if(ret!=0)
-	{
-		print_cubeerr("Sm2 Encrypt sessionkey failed!");
-		return -EINVAL;
-	}
 	
-	keyblob->name=dup_str("sessionkeyblob",0);
-	keyblob->size=Enclen;
-	keyblob->bindata=Talloc0(Enclen);
-	Memcpy(keyblob->bindata,Buf,Enclen);
-		
-	message_add_expand_data(message,TYPE_PAIR(GENERAL_RETURN,BINDATA),keyblob); 
-
-	sessionkey->name=dup_str("sessionkey",0);
-
-	message_add_expand_data(message,TYPE_PAIR(GENERAL_RETURN,UUID),sessionkey); 
-
-        ex_module_sendmsg(sub_proc,message);
-        return ret;
-}
-
-int proc_sessionkey_recover(void * sub_proc,void * message)
-{
-        int i;
-        int ret;
-
-	MSG_HEAD* msghead;
-	MSG_EXPAND * msg_expand;
-	RECORD(GENERAL_RETURN,BINDATA) * keyblob=NULL;
-	RECORD(GENERAL_RETURN,UUID) * sessionkey=NULL;
-
-	msghead= message_get_head(message);
-	if(msghead==NULL)
-		return -EINVAL;
+	// 计算文件的摘要值并与bin_upload中的uuid对比
 	
-	for(i=0;i<msghead->expand_num;i++)
-	{
-		ret=message_get_expand(message,&msg_expand,i);
-		if(msg_expand==NULL)
-			return -EINVAL;
-		if((msg_expand->type==TYPE(GENERAL_RETURN)) &&
-			(msg_expand->subtype==SUBTYPE(GENERAL_RETURN,BINDATA)))
-		{
-			keyblob=msg_expand->expand;
-			if(keyblob==NULL)
-				continue;
-			if(Strcmp(keyblob->name,"sessionkeyblob"))
-			{
-				keyblob=NULL;
-				continue;
-			}		
-			else
-			{
-				// recover the sessionkey
-				sessionkey=Talloc0(sizeof(*sessionkey));
-				if(sessionkey==NULL)
-					return -ENOMEM;
-				ret= message_remove_indexed_expand(message,i,&msg_expand);
-				keyblob=msg_expand->expand;
-				
-				int Enclen=DIGEST_SIZE*16;
-				ret=GM_SM2Decrypt(Buf,&Enclen,keyblob->bindata,keyblob->size,prikey,prilen);
-				if(ret!=0)
-				{
-					print_cubeerr("decrypt session key failed!\n");
-					return -EINVAL;
-				}
-				if(Enclen!=DIGEST_SIZE)
-				{
-					print_cubeerr("session key size error!\n");
-					return -EINVAL;
-				}
+	// 使用calculate_sm3函数 
+	// 如验证结果不一致，则verify_result->result = 1
+	
+	//验证结束，验证内容输出到verify_result中
 
-				Memcpy(sessionkey->return_value,Buf,Enclen);
-				sessionkey->name=dup_str("sessionkey",0);
-				message_add_expand_data(message,TYPE_PAIR(GENERAL_RETURN,UUID),sessionkey); 
-	
-				break;
-			}
-		}
-	}
-	
-        ex_module_sendmsg(sub_proc,message);
+	message_add_expand_data(recv_msg,TYPE_PAIR(GENERAL_RETURN,BINDATA),verify_result);
+
+	ex_module_sendmsg(sub_proc,recv_msg);
+
         return ret;
 }

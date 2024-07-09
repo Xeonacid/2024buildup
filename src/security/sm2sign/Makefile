@@ -6,7 +6,7 @@ CCP=g++
 PLUGIN=sm2sign
 PLUGIN_OBJ= 
 TEST_LIB= -L$(CUBELIBPATH)/lib -lexmodule -lmessage -lmemdb -lconnector -lstruct -lcrypto_func -lpthread 
-LOCALLIB=-L$(CUBEAPPPATH)/locallib/bin -lsm2So
+LOCALLIB=-L$(CUBEAPPPATH)/locallib -lsm2So
 
 main: lib$(PLUGIN).so 
 lib$(PLUGIN).so:  $(PLUGIN).o $(PLUGIN_OBJ) 

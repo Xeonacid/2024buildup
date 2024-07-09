@@ -93,7 +93,7 @@
 				{"name":"port","type":"USHORT"},
 				{"name":"unit_addr","type":"UCHAR"},
 				{"name":"state_machine","type":"SENUM","ref_name":"enum_modbus_state_machine"},
-				{"name":"slave_key","type":"BINDATA","size":32},
+				{"name":"slave_key","type":"UUID"}
 			]
 		},
         "flag_no":1,
@@ -123,7 +123,7 @@
 				{"name":"server_name","type":"STRING","size":32},
 				{"name":"unit_addr","type":"UCHAR"},
 				{"name":"state_machine","type":"SENUM","ref_name":"enum_modbus_state_machine"},
-				{"name":"server_key","type":"BINDATA","size":32},
+				{"name":"server_key","type":"UUID"}
 			]
 		}
 	}
@@ -148,7 +148,7 @@
 				{"name":"port","type":"USHORT"},
 				{"name":"state_machine","type":"SENUM","ref_name":"enum_modbus_state_machine"},
 				{"name":"no","type":"USHORT"},
-				{"name":"client_key","type":"BINDATA","size":32},
+				{"name":"client_key","type":"UUID"}
 			]
 		}
 	}
@@ -172,7 +172,7 @@
 				{"name":"unit_addr","type":"UCHAR"},
 				{"name":"state_machine","type":"SENUM","ref_name":"enum_modbus_state_machine"},
 				{"name":"no","type":"USHORT"},
-				{"name":"client_key","type":"BINDATA","size":32},
+				{"name":"client_key","type":"UUID"},
 			]
 		}
         "flag_no":1,
