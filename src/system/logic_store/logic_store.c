@@ -84,6 +84,8 @@ int logic_store_start(void * sub_proc,void * para)
 		{
 			ret=proc_logic_store(sub_proc,recv_msg);
 		}
+		else
+			ex_module_sendmsg(sub_proc,recv_msg);
 	}
     return 0;
 }

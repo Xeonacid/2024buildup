@@ -15,6 +15,7 @@
 #include "cube_record.h"
 
 #include "user_define.h"
+#include "plc_emu.h"
 
 extern struct timeval time_val={0,50*1000};
 
@@ -51,48 +52,41 @@ int role_access_start(void * sub_proc,void * para)
 			ex_module_sendmsg(sub_proc,recv_msg);
 			continue;
 		}
-		if((type==TYPE(USER_DEFINE))&&(subtype==SUBTYPE(USER_DEFINE,LOGIN)))
+		if((type==TYPE(PLC_ENGINEER))&&(subtype==SUBTYPE(PLC_ENGINEER,LOGIC_UPLOAD)))
 		{
-			ret= proc_role_access(sub_proc,recv_msg);
+			ret= proc_engineer_access(sub_proc,recv_msg);
+		}
+		else if((type==TYPE(PLC_OPERATOR))&&(subtype==SUBTYPE(PLC_OPERATOR,PLC_CMD)))
+		{
+			ret= proc_operator_access(sub_proc,recv_msg);
 		}
 	}
 	return 0;
 }
 
-int proc_role_access(void * sub_proc,void * recv_msg)
+int proc_engineer_access(void * sub_proc,void * recv_msg)
 {
 	int i;
 	int ret;
 
-	RECORD(USER_DEFINE,LOGIN) * user_login;
-	RECORD(USER_DEFINE,RETURN) * user_return;
+	RECORD(PLC_ENGINEER,LOGIC_UPLOAD) * code_upload;
 	RECORD(USER_DEFINE,SERVER_STATE) * user_state;
+   	RECORD(PLC_ENGINEER,LOGIC_RETURN) * logic_return;
 	DB_RECORD * db_record;
 	int illegal_user =0;
 
-	ret=message_get_record(recv_msg,&user_login,0);
+	ret=message_get_record(recv_msg,&code_upload,0);
 	if(ret<0)
 		return ret;
 	// 在这里添加角色验证逻辑
 	
-	db_record=memdb_find_first(TYPE_PAIR(USER_DEFINE,SERVER_STATE),"user_name",user_login->user_name);
+	db_record=memdb_find_first(TYPE_PAIR(USER_DEFINE,SERVER_STATE),"user_name",code_upload->author);
 	if(db_record !=NULL)
 	{
 		user_state=db_record->record;
 
-		if(user_state->role == PLC_ENGINEER)
+		if(user_state->role != PLC_ENGINEER)
 		{
-			if(Strcmp(user_login->proc_name,"engineer_station")!=0)
-				illegal_user=1;
-		}
-		else if(user_state->role == PLC_OPERATOR)
-		{
-			if(Strcmp(user_login->proc_name,"operator_station")!=0)
-				illegal_user=1;
-		}
-		else if(user_state->role == PLC_MONITOR)
-		{
-			if(Strcmp(user_login->proc_name,"monitor_term")!=0)
 				illegal_user=1;
 		}
 	}
@@ -102,21 +96,79 @@ int proc_role_access(void * sub_proc,void * recv_msg)
 
 	if(illegal_user)
 	{
-		user_return = Talloc0(sizeof(*user_return));
-	       if(user_return == NULL)
-	       		return -ENOMEM;
-		user_return->return_code = INVALID;
-		user_return->return_info=dup_str("not right user!\n",0);
-		void * send_msg = message_create(TYPE_PAIR(USER_DEFINE,RETURN),recv_msg);
-		message_add_record(send_msg,user_return);	
+        	logic_return = Talloc0(sizeof(*logic_return));
+        	if(logic_return == NULL)
+            		return -ENOMEM;
+        	logic_return->plc_devname = dup_str(code_upload->plc_devname,DIGEST_SIZE);
+        	logic_return->logic_filename = dup_str(code_upload->logic_filename,DIGEST_SIZE);
+        	Memcpy(logic_return->uuid,code_upload->uuid,DIGEST_SIZE);
+        	logic_return->author = dup_str(code_upload->author,DIGEST_SIZE);
+        	logic_return->time=code_upload->time;
+
+		logic_return->result=-1;
+		void * send_msg = message_create(TYPE_PAIR(PLC_ENGINEER,LOGIC_RETURN),recv_msg);
+		message_add_record(send_msg,logic_return);	
 		ex_module_sendmsg(sub_proc,send_msg);
 	}
 
 	else
 		ex_module_sendmsg(sub_proc,recv_msg);
 
+
+	return ret;
+}
+
+int proc_operator_access(void * sub_proc,void * recv_msg)
+{
+	int i;
+	int ret;
+
+	RECORD(PLC_OPERATOR,PLC_CMD) * plc_cmd;
+	RECORD(USER_DEFINE,SERVER_STATE) * user_state;
+   	RECORD(PLC_OPERATOR,PLC_RETURN) * plc_return;
+	DB_RECORD * db_record;
+	int illegal_user =0;
+
+	ret=message_get_record(recv_msg,&plc_cmd,0);
+	if(ret<0)
+		return ret;
+	// 在这里添加角色验证逻辑
 	
-	//角色验证代码结束
+	db_record=memdb_find_first(TYPE_PAIR(USER_DEFINE,SERVER_STATE),"user_name",plc_cmd->plc_operator);
+	if(db_record !=NULL)
+	{
+		user_state=db_record->record;
+
+		if(user_state->role != PLC_MONITOR)
+		{
+			if(plc_cmd->action == ACTION_ADJUST)
+				illegal_user=1;
+		}
+	}
+
+	// 添加角色验证逻辑结束
+
+
+	if(illegal_user)
+	{
+        	plc_return = Talloc0(sizeof(*plc_return));
+        	if(plc_return == NULL)
+            		return -ENOMEM;
+        	plc_return->plc_devname = dup_str(plc_cmd->plc_devname,DIGEST_SIZE);
+        	plc_return->action = plc_cmd->action;
+        	plc_return->action_desc = dup_str(plc_cmd->action_desc,DIGEST_SIZE);
+        	plc_return->value = 0;
+        	plc_return->time=plc_cmd->time;
+
+		plc_return->result=-1;
+		void * send_msg = message_create(TYPE_PAIR(PLC_OPERATOR,PLC_RETURN),recv_msg);
+		message_add_record(send_msg,plc_return);	
+		ex_module_sendmsg(sub_proc,send_msg);
+	}
+
+	else
+		ex_module_sendmsg(sub_proc,recv_msg);
+
 
 	return ret;
 }
