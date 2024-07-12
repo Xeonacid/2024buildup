@@ -20,8 +20,8 @@
 
 extern struct timeval time_val={0,50*1000};
 
-char * operator_route = "operator_cmd";
-char * monitor_route = "monitor_ctrl";
+char * operator_route = "operator_aspect";
+char * monitor_route = "monitor_aspect";
 int mode =0;   // 0 means normal, 1 means prohibit plc
 
 int monitor_shield_init(void * sub_proc,void * para)
@@ -82,27 +82,6 @@ int proc_monitor_shield(void * sub_proc,void * recv_msg)
 
 	// 在这里添加命令验证逻辑
 	
-	MSG_HEAD * msg_head;
-	
-	msg_head= message_get_head(recv_msg);
-
-	if(Strcmp(monitor_route,msg_head->route)==0)
-	{
-
-		if(plc_cmd->action == ACTION_ADJUST)
-		{
-			illegal_cmd=0;
-			mode=1;
-		}
-	}
-	else if(Strcmp(operator_route,msg_head->route)==0)
-	{
-		if(mode==1)
-			illegal_cmd=1;
-		else if (mode ==0)
-			illegal_cmd=0;
-
-	}
 
 	// 命令验证逻辑结束
 

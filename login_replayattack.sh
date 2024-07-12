@@ -11,11 +11,11 @@ sh run_cube.sh exec_def/_login_hacker.def &
 sleep 1
 sh run_cube.sh exec_def/_engineer_station.def &
 sleep 1
-sh run_cube.sh exec_def/_engineer_user.def login.msg   ctrl_exit.msg
-sleep 1
-sh run_cube.sh exec_def/_engineer_user.def logout.msg  ctrl_exit.msg
+#sh run_cube.sh exec_def/_engineer_user.def login.msg   ctrl_exit.msg
 #sleep 1
-#sh run_cube.sh exec_def/_engineer_user.def login1.msg  logout1.msg  ctrl_exit.msg
+#sh run_cube.sh exec_def/_engineer_user.def logout.msg  ctrl_exit.msg
+#sleep 1
+sh run_cube.sh exec_def/_engineer_user.def login1.msg  logout1.msg  ctrl_exit.msg
 sleep 1
 sh run_cube.sh exec_def/_engineer_user.def engineer_login_nopass.msg  ctrl_exit.msg
 sleep 1

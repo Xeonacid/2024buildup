@@ -5,8 +5,8 @@
 }
 {
 	"plc_devname":"thermostat",
-	"action":"",
-	"action_desc":"",
+	"action":"ADJUST",
+	"action_desc":"set_T",
 	"value":4200,
-	"operator":"qian"
+	"plc_operator":"sun"
 }

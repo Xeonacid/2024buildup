@@ -1,0 +1,21 @@
+
+**************Begin new trust node proc****************************
+{
+ "HEAD":{"tag":"MESG","version":65537,"sender_uuid":"logic_upload","receiver_uui
+    d":"sm2sign","route":"sm2sign","flow":"QUERY","state":"MATCH","flag":"LOCAL","lj
+    ump":1,"rjump":1,"record_type":"PLC_ENGINEER","record_subtype":"LOGIC_UPLOAD","r
+    ecord_num":1,"record_size":0,"expand_num":1,"expand_size":0,"msg_uuid":"fede91ed
+    589d7e3990296dd43b5568c483cc4c22e91723356a8414a4ea9e7eb1"},
+"RECORD":[
+    {"plc_devname":"thermostat","logic_filename":"libthermostat_logic.so","type":"FI
+        LE_LOGIC","uuid":"7fe15f8f075db96e5df6855a2fdc21cb48ada19b21d667477fe47d77607268
+        6f","author":"zhao","uploader":"zhao","time":1720672457}
+    ],
+"EXPAND" :[
+    {"data_size":0,"type":"PLC_ENGINEER","subtype":"LOGIC_BIN","expand":
+        {"plc_devname":"thermostat","logic_filename":"libthermostat_logic.so","code_uuid
+            ":"","bin_uuid":"7fe15f8f075db96e5df6855a2fdc21cb48ada19b21d667477fe47d776072686
+            f","author":"zhao","time":1720672457}
+        }
+    ]
+}

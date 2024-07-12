@@ -21,7 +21,7 @@
 extern struct timeval time_val={0,50*1000};
 
 char * operator_sender = "modbus_slave";
-char * plc_sender = "device";
+char * plc_sender = "logic";
 int mode =0;   // 0 means normal, 1 means prohibit plc
 
 int operator_shield_init(void * sub_proc,void * para)
@@ -76,25 +76,6 @@ int proc_operator_shield(void * sub_proc,void * recv_msg)
 
 	// 在这里添加命令验证逻辑
 	
-	char * sender =message_get_sender(recv_msg);
-
-	if(Strcmp(sender,operator_sender)==0)
-	{
-		subtype=message_get_subtype(recv_msg);
-		if(subtype ==  SUBTYPE(MODBUS_CMD,WRITE_SINGLE_REGISTER))
-		{
-			illegal_cmd=0;
-			mode=1;
-		}
-	}
-	else if(Strcmp(sender,plc_sender)==0)
-	{
-		if(mode==1)
-			illegal_cmd=1;
-		else if (mode ==0)
-			illegal_cmd=0;
-
-	}
 
 	// 命令验证逻辑结束
 

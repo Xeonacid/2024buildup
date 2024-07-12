@@ -1,0 +1,134 @@
+time: 0.000454 :read 3 elem from file /root/centoscloud/cube-1.3/proc/main/base_define/namelist.json!
+time: 0.000644 :read 4 elem from file /root/centoscloud/cube-1.3/proc/main/base_define/dispatchnamelist.json!
+time: 0.000745 :read 1 elem from file /root/centoscloud/cube-1.3/proc/main/base_define/typelist.json!
+time: 0.001116 :read 7 elem from file /root/centoscloud/cube-1.3/proc/main/base_define/subtypelist.json!
+time: 0.001199 :read 1 elem from file /root/centoscloud/cube-1.3/proc/main/base_define/baseflag.json!
+time: 0.001520 :read 3 elem from file /root/centoscloud/cube-1.3/proc/main/base_define/memdb.json!
+time: 0.002255 :read 7 elem from file /root/centoscloud/cube-1.3/proc/main/base_define/msghead.json!
+time: 0.002561 :read 2 elem from file /root/centoscloud/cube-1.3/proc/main/base_define/msgrecord.json!
+time: 0.003435 :read 11 elem from file /root/centoscloud/cube-1.3/proc/main/base_define/base_msg.json!
+time: 0.004151 :read 9 elem from file /root/centoscloud/cube-1.3/proc/main/base_define/return.json!
+time: 0.004503 :read 3 elem from file /root/centoscloud/cube-1.3/proc/main/base_define/dispatchrecord.json!
+time: 0.004685 :read 2 elem from file /root/centoscloud/cube-1.3/proc/main/base_define/exmoduledefine.json!
+time: 0.004851 :read 1 elem from file /root/centoscloud/cube-1.3/proc/main/base_define/sys_conn.json!
+time: 0.005334 :read 6 elem from file /root/centoscloud/cube-1.3/proc/main/base_define/cube_audit.json!
+time: 0.006214 :read 10 elem from file user_define.json!
+time: 0.007695 :read 16 elem from file plc_emu.json!
+time: 0.007729 :proc_share_data_setvalue: set proc_name value
+time: 0.042340 :this machine's local uuid is e1b35687ed25f36c612db60086c20be1d516084c5d867371471348a017fe1dc9
+
+time: 0.042364 :proc_share_data_setvalue: set uuid value
+time: 0.042380 :proc_share_data_getvalue: get proc_name value
+time: 0.042398 :this instance's local proc uuid is 5c5521388726f9ef3359a237f1b183cb9b025e1e5a8d42e063e1878543d5f36e
+
+time: 0.047992 :read 2 connector!
+
+time: 0.048015 :conn server manage_term begin to listen!
+
+time: 0.048276 :read 3 policy from router_policy file!
+time: 0.048322 :mkdir message_log for ervery router's message store!
+
+time: 0.048453 :system plugin router_proc is prepared!
+time: 0.054554 :system plugin connector_proc is prepared!
+time: 0.054654 :ex_module connector_proc started successfully!
+time: 0.054720 :ex_module router_proc started successfully!
+time: 0.054741 :proc_share_data_getvalue: get uuid value
+time: 0.054767 :proc_share_data_getvalue: get proc_name value
+time: 0.054774 :ex_module msg_send started successfully!
+time: 0.054829 :client center_client connect succeed!
+
+time: 0.054838 :ex_module msg_print started successfully!
+time: 0.054915 :ex_module login_user started successfully!
+time: 0.055017 :ex_module monitor_manage started successfully!
+time: 0.055041 :instance load 6 module!
+
+time: 0.055078 :begin msgfile_send module!
+
+time: 0.055110 :proc_share_data_getvalue: get uuid value
+time: 0.055122 :proc_share_data_getvalue: get proc_name value
+time: 0.065577 :proc conn client receive 279 data!
+
+time: 0.065715 :send 350 data to conn center_client!
+
+time: 0.065738 :client center_client send 350 ack data to server !
+
+time: 0.065832 :router get proc connector_proc's message 
+time: 1.062814 :create a new channel 68002654!
+
+time: 1.062974 :send 277 data to conn (null)!
+
+time: 1.067256 :channel set name monitor!
+
+time: 1.072005 :router get proc connector_proc's message 
+time: 1.569964 :channel receive (139281 1) message from conn monitor!
+
+time: 1.570007 :client forward (139281 1) message to main proc!
+
+time: 1.571922 :router get proc connector_proc's message 
+time: 1.571953 :remote msg match path monitor_ctrl's policy
+time: 1.572222 :send message to conn process!
+time: 1.578307 :send 213 data to conn center_client!
+
+time: 1.578331 :send (139281  1)message 213 to conn center_client!
+
+time: 2.734404 :proc conn client receive 213 data!
+
+time: 2.739350 :router get proc connector_proc's message 
+time: 2.739383 :response remote msg match path monitor_ctrl's policy
+time: 2.739396 :router_proc: add message to send queue
+time: 2.739654 :send message to conn process!
+time: 2.742054 :send 213 data to conn monitor!
+
+time: 2.742080 :send (139281  2)message 213 to conn monitor!
+
+time: 2.074558 :channel receive (139281 1) message from conn monitor!
+
+time: 2.074595 :client forward (139281 1) message to main proc!
+
+time: 2.077022 :router get proc connector_proc's message 
+time: 2.077052 :remote msg match path monitor_ctrl's policy
+time: 2.077282 :send message to conn process!
+time: 2.081718 :send 214 data to conn center_client!
+
+time: 2.081743 :send (139281  1)message 214 to conn center_client!
+
+time: 2.244018 :proc conn client receive 217 data!
+
+time: 2.248691 :router get proc connector_proc's message 
+time: 2.248724 :response remote msg match path monitor_ctrl's policy
+time: 2.248738 :router_proc: add message to send queue
+time: 2.248988 :send message to conn process!
+time: 2.249702 :send 217 data to conn monitor!
+
+time: 2.249729 :send (139281  2)message 217 to conn monitor!
+
+time: 9.743655 :create a new channel 680035a4!
+
+time: 9.743800 :send 277 data to conn (null)!
+
+time: 9.745054 :receive_local_client_ack: delete connector monitor
+
+time: 9.745156 :channel set name monitor!
+
+time: 9.749415 :router get proc connector_proc's message 
+time: 9.246385 :channel receive (139281 1) message from conn monitor!
+
+time: 9.246423 :client forward (139281 1) message to main proc!
+
+time: 9.248028 :router get proc connector_proc's message 
+time: 9.248055 :remote msg match path monitor_ctrl's policy
+time: 9.248283 :send message to conn process!
+time: 9.254257 :send 214 data to conn center_client!
+
+time: 9.254285 :send (139281  1)message 214 to conn center_client!
+
+time: 9.412204 :proc conn client receive 217 data!
+
+time: 9.414412 :router get proc connector_proc's message 
+time: 9.414438 :response remote msg match path monitor_ctrl's policy
+time: 9.414449 :router_proc: add message to send queue
+time: 9.414705 :send message to conn process!
+time: 9.417991 :send 217 data to conn monitor!
+
+time: 9.418015 :send (139281  2)message 217 to conn monitor!
+

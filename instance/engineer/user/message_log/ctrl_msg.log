@@ -1,0 +1,13 @@
+
+**************Begin new trust node proc****************************
+{
+ "HEAD":{"tag":"MESG","version":65537,"sender_uuid":"msg_send","receiver_uuid":"
+    msg_send","route":"ctrl_msg","flow":"DELIVER","state":"MATCH","flag":"LOCAL","lj
+    ump":1,"rjump":1,"record_type":"MESSAGE","record_subtype":"CTRL","record_num":1,
+    "record_size":0,"expand_num":0,"expand_size":0,"msg_uuid":"5a5c44ba66f813aac67f1
+    cc931386b53fe689b88973cd1e2bfd7d793983b41ff"},
+"RECORD":[
+    {"ctrl":"EXIT","name":"local"}
+    ],
+"EXPAND" :[]
+}

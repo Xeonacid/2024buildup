@@ -1,0 +1,25 @@
+
+**************Begin new trust node proc****************************
+{
+ "HEAD":{"tag":"MESG","version":65537,"sender_uuid":"file_dealer","receiver_uuid
+    ":"sm2sign","route":"sm2verify","flow":"QUERY","state":"MATCH","flag":"LOCAL","l
+    jump":1,"rjump":1,"record_type":"PLC_ENGINEER","record_subtype":"LOGIC_UPLOAD","
+    record_num":1,"record_size":84,"expand_num":2,"expand_size":211,"msg_uuid":"155f
+    74e31f7d3d74595ce23695152ce3d7deac89b88399b2ebc2dabc366d51ac"},
+"RECORD":[
+    {"plc_devname":"thermostat","logic_filename":"libthermostat_logic.so","type":"FI
+        LE_LOGIC","uuid":"7fe15f8f075db96e5df6855a2fdc21cb48ada19b21d667477fe47d77607268
+        6f","author":"zhao","uploader":"zhao","time":1720672457}
+    ],
+"EXPAND" :[
+    {"data_size":0,"type":"PLC_ENGINEER","subtype":"LOGIC_BIN","expand":
+        {"plc_devname":"thermostat","logic_filename":"libthermostat_logic.so","code_uuid
+            ":"","bin_uuid":"7fe15f8f075db96e5df6855a2fdc21cb48ada19b21d667477fe47d776072686
+            f","author":"zhao","time":1720672457}
+        },
+    {"data_size":0,"type":"GENERAL_RETURN","subtype":"BINDATA","expand":
+        {"name":"signed data","size":64,"bindata":"QvvS2WMCj8wbrNaBQ22RXIXFkUgvFTs9JUBp4
+            wuJkH9woX+oo2reJQQrJvrFXc7af0CW7oGbtAmrf4eH9ew08g"}
+        }
+    ]
+}

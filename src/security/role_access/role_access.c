@@ -80,16 +80,6 @@ int proc_engineer_access(void * sub_proc,void * recv_msg)
 		return ret;
 	// 在这里添加角色验证逻辑
 	
-	db_record=memdb_find_first(TYPE_PAIR(USER_DEFINE,SERVER_STATE),"user_name",code_upload->author);
-	if(db_record !=NULL)
-	{
-		user_state=db_record->record;
-
-		if(user_state->role != PLC_ENGINEER)
-		{
-				illegal_user=1;
-		}
-	}
 
 	// 添加角色验证逻辑结束
 
@@ -134,17 +124,6 @@ int proc_operator_access(void * sub_proc,void * recv_msg)
 		return ret;
 	// 在这里添加角色验证逻辑
 	
-	db_record=memdb_find_first(TYPE_PAIR(USER_DEFINE,SERVER_STATE),"user_name",plc_cmd->plc_operator);
-	if(db_record !=NULL)
-	{
-		user_state=db_record->record;
-
-		if(user_state->role != PLC_MONITOR)
-		{
-			if(plc_cmd->action == ACTION_ADJUST)
-				illegal_user=1;
-		}
-	}
 
 	// 添加角色验证逻辑结束
 

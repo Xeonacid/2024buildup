@@ -1,0 +1,43 @@
+
+**************Begin new trust node proc****************************
+{
+ "HEAD":{"tag":"MESG","version":65537,"sender_uuid":"msg_send","receiver_uuid":"
+    :monitor_client","route":"monitor_ctrl","flow":"QUERY","state":"MATCH","flag":"N
+    ULL","ljump":1,"rjump":1,"record_type":"PLC_OPERATOR","record_subtype":"PLC_CMD"
+    ,"record_num":1,"record_size":0,"expand_num":0,"expand_size":0,"msg_uuid":"c5734
+    b56924898f6f53ce291e168487b516c6a3054762098fd294572affff3cc"},
+"RECORD":[
+    {"plc_devname":"thermostat","action":"MONITOR","action_desc":"heating_G","value"
+        :0,"plc_operator":"","time":0}
+    ],
+"EXPAND" :[]
+}
+
+************************************************************
+{
+ "HEAD":{"tag":"MESG","version":65537,"sender_uuid":"5c5521388726f9ef3359a237f1b
+    183cb9b025e1e5a8d42e063e1878543d5f36e","receiver_uuid":"msg_print","route":"moni
+    tor_ctrl","flow":"QUERY","state":"RESPONSE","flag":"LOCAL","ljump":1,"rjump":1,"
+    record_type":"PLC_OPERATOR","record_subtype":"PLC_RETURN","record_num":1,"record
+    _size":37,"expand_num":0,"expand_size":0,"msg_uuid":"c5734b56924898f6f53ce291e16
+    8487b516c6a3054762098fd294572affff3cc"},
+"RECORD":[
+    {"plc_devname":"thermostat","action":"MONITOR","action_desc":"heating_G","value"
+        :2,"result":0,"time":0}
+    ],
+"EXPAND" :[]
+}
+
+************************************************************
+{
+ "HEAD":{"tag":"MESG","version":65537,"sender_uuid":"msg_print","receiver_uuid":
+    "","route":"monitor_ctrl","flow":"FINISH","state":"RESPONSE","flag":"LOCAL","lju
+    mp":2,"rjump":1,"record_type":"PLC_OPERATOR","record_subtype":"PLC_RETURN","reco
+    rd_num":1,"record_size":37,"expand_num":0,"expand_size":0,"msg_uuid":"c5734b5692
+    4898f6f53ce291e168487b516c6a3054762098fd294572affff3cc"},
+"RECORD":[
+    {"plc_devname":"thermostat","action":"MONITOR","action_desc":"heating_G","value"
+        :2,"result":0,"time":0}
+    ],
+"EXPAND" :[]
+}

@@ -1,0 +1,477 @@
+time: 0.000484 :read 3 elem from file /root/centoscloud/cube-1.3/proc/main/base_define/namelist.json!
+time: 0.000677 :read 4 elem from file /root/centoscloud/cube-1.3/proc/main/base_define/dispatchnamelist.json!
+time: 0.000789 :read 1 elem from file /root/centoscloud/cube-1.3/proc/main/base_define/typelist.json!
+time: 0.001182 :read 7 elem from file /root/centoscloud/cube-1.3/proc/main/base_define/subtypelist.json!
+time: 0.001256 :read 1 elem from file /root/centoscloud/cube-1.3/proc/main/base_define/baseflag.json!
+time: 0.001571 :read 3 elem from file /root/centoscloud/cube-1.3/proc/main/base_define/memdb.json!
+time: 0.002305 :read 7 elem from file /root/centoscloud/cube-1.3/proc/main/base_define/msghead.json!
+time: 0.002644 :read 2 elem from file /root/centoscloud/cube-1.3/proc/main/base_define/msgrecord.json!
+time: 0.003513 :read 11 elem from file /root/centoscloud/cube-1.3/proc/main/base_define/base_msg.json!
+time: 0.004229 :read 9 elem from file /root/centoscloud/cube-1.3/proc/main/base_define/return.json!
+time: 0.004753 :read 3 elem from file /root/centoscloud/cube-1.3/proc/main/base_define/dispatchrecord.json!
+time: 0.004952 :read 2 elem from file /root/centoscloud/cube-1.3/proc/main/base_define/exmoduledefine.json!
+time: 0.005112 :read 1 elem from file /root/centoscloud/cube-1.3/proc/main/base_define/sys_conn.json!
+time: 0.005585 :read 6 elem from file /root/centoscloud/cube-1.3/proc/main/base_define/cube_audit.json!
+time: 0.006400 :read 7 elem from file file_trans.json!
+time: 0.007181 :read 10 elem from file user_define.json!
+time: 0.008638 :read 16 elem from file plc_emu.json!
+time: 0.008671 :proc_share_data_setvalue: set proc_name value
+time: 0.038958 :this machine's local uuid is e1b35687ed25f36c612db60086c20be1d516084c5d867371471348a017fe1dc9
+
+time: 0.038986 :proc_share_data_setvalue: set uuid value
+time: 0.039003 :proc_share_data_getvalue: get proc_name value
+time: 0.039023 :this instance's local proc uuid is 14e50389c921c31714a004c731255acffa8bbcc4d22be25d699bded3ede54ca0
+
+time: 0.045124 :read 2 connector!
+
+time: 0.045149 :conn server logic_server begin to listen!
+
+time: 0.045379 :read 1 policy from router_policy file!
+time: 0.045436 :read 1 policy from aspect policy file!
+time: 0.045454 :mkdir message_log for ervery router's message store!
+
+time: 0.045679 :system plugin router_proc is prepared!
+time: 0.052774 :system plugin connector_proc is prepared!
+time: 0.052904 :ex_module connector_proc started successfully!
+time: 0.052930 :proc_share_data_getvalue: get uuid value
+time: 0.052953 :ex_module router_proc started successfully!
+time: 0.052961 :proc_share_data_getvalue: get proc_name value
+time: 0.053001 :ex_module msg_send started successfully!
+time: 0.053064 :ex_module msg_print started successfully!
+time: 0.053072 :proc_share_data_getvalue: get uuid value
+time: 0.053096 :proc_share_data_getvalue: get proc_name value
+time: 0.053119 :ex_module file_dealer started successfully!
+time: 0.053191 :ex_module logic_store started successfully!
+time: 0.053251 :ex_module plc_upload started successfully!
+time: 0.053352 :ex_module sm2sign started successfully!
+time: 0.053378 :instance load 8 module!
+
+time: 0.053415 :begin file_dealer start proctime: 0.053415 :begin file_dealer start process! 
+
+time: 2.071451 :create a new channel f8000b74!
+
+time: 2.071565 :send 273 data to conn (null)!
+
+time: 2.088480 :channel set name engineer_station!
+
+time: 2.092225 :router get proc connector_proc's message 
+time: 4.115683 :channel receive (769 2) message from conn engineer_station!
+
+time: 4.115725 :client forward (769 2) message to main proc!
+
+time: 4.119306 :router get proc connector_proc's message 
+time: 4.119338 :remote msg match path bin_upload's policy
+time: 4.119789 :begin file receive!
+
+time: 4.173907 :channel receive (769 2) message from conn engineer_station!
+
+time: 4.173964 :client forward (769 2) message to main proc!
+
+time: 4.178437 :router get proc connector_proc's message 
+time: 4.178479 :remote msg match path bin_upload's policy
+time: 4.183598 :begin file receive!
+
+time: 4.219268 :channel receive (769 2) message from conn engineer_station!
+
+time: 4.219337 :client forward (769 2) message to main proc!
+
+time: 4.221320 :router get proc connector_proc's message 
+time: 4.221358 :remote msg match path bin_upload's policy
+time: 4.222774 :begin file receive!
+
+time: 4.273387 :channel receive (769 2) message from conn engineer_station!
+
+time: 4.273437 :client forward (769 2) message to main proc!
+
+time: 4.276397 :router get proc connector_proc's message 
+time: 4.276432 :remote msg match path bin_upload's policy
+time: 4.282051 :begin file receive!
+
+time: 4.322797 :channel receive (769 2) message from conn engineer_station!
+
+time: 4.322831 :client forward (769 2) message to main proc!
+
+time: 4.324433 :router get proc connector_proc's message 
+time: 4.324459 :remote msg match path bin_upload's policy
+time: 4.325605 :begin file receive!
+
+time: 4.366765 :channel receive (769 2) message from conn engineer_station!
+
+time: 4.366796 :client forward (769 2) message to main proc!
+
+time: 4.368245 :router get proc connector_proc's message 
+time: 4.368266 :remote msg match path bin_upload's policy
+time: 4.373632 :begin file receive!
+
+time: 4.420927 :channel receive (769 2) message from conn engineer_station!
+
+time: 4.420959 :client forward (769 2) message to main proc!
+
+time: 4.421444 :router get proc connector_proc's message 
+time: 4.421473 :remote msg match path bin_upload's policy
+time: 4.426768 :begin file receive!
+
+time: 4.481929 :channel receive (769 2) message from conn engineer_station!
+
+time: 4.481958 :client forward (769 2) message to main proc!
+
+time: 4.487253 :router get proc connector_proc's message 
+time: 4.487284 :remote msg match path bin_upload's policy
+time: 4.492413 :begin file receive!
+
+time: 4.527691 :channel receive (769 2) message from conn engineer_station!
+
+time: 4.527722 :client forward (769 2) message to main proc!
+
+time: 4.530847 :router get proc connector_proc's message 
+time: 4.530874 :remote msg match path bin_upload's policy
+time: 4.535039 :begin file receive!
+
+time: 4.574906 :channel receive (769 2) message from conn engineer_station!
+
+time: 4.574934 :client forward (769 2) message to main proc!
+
+time: 4.579210 :router get proc connector_proc's message 
+time: 4.579239 :remote msg match path bin_upload's policy
+time: 4.583334 :begin file receive!
+
+time: 4.624127 :channel receive (769 2) message from conn engineer_station!
+
+time: 4.624166 :client forward (769 2) message to main proc!
+
+time: 4.626760 :router get proc connector_proc's message 
+time: 4.626791 :remote msg match path bin_upload's policy
+time: 4.632378 :begin file receive!
+
+time: 4.678185 :channel receive (769 2) message from conn engineer_station!
+
+time: 4.678250 :client forward (769 2) message to main proc!
+
+time: 4.681792 :router get proc connector_proc's message 
+time: 4.681827 :remote msg match path bin_upload's policy
+time: 4.686982 :begin file receive!
+
+time: 4.723566 :channel receive (769 2) message from conn engineer_station!
+
+time: 4.723599 :client forward (769 2) message to main proc!
+
+time: 4.725185 :router get proc connector_proc's message 
+time: 4.725216 :remote msg match path bin_upload's policy
+time: 4.728952 :begin file receive!
+
+time: 4.777170 :channel receive (769 2) message from conn engineer_station!
+
+time: 4.777204 :client forward (769 2) message to main proc!
+
+time: 4.778518 :router get proc connector_proc's message 
+time: 4.778542 :remote msg match path bin_upload's policy
+time: 4.783042 :begin file receive!
+
+time: 4.827681 :channel receive (769 2) message from conn engineer_station!
+
+time: 4.827712 :client forward (769 2) message to main proc!
+
+time: 4.828098 :router get proc connector_proc's message 
+time: 4.828125 :remote msg match path bin_upload's policy
+time: 4.832197 :begin file receive!
+
+time: 4.876462 :channel receive (769 2) message from conn engineer_station!
+
+time: 4.876494 :client forward (769 2) message to main proc!
+
+time: 4.881777 :router get proc connector_proc's message 
+time: 4.881806 :remote msg match path bin_upload's policy
+time: 4.885414 :begin file receive!
+
+time: 4.927623 :channel receive (769 2) message from conn engineer_station!
+
+time: 4.927663 :client forward (769 2) message to main proc!
+
+time: 4.930546 :router get proc connector_proc's message 
+time: 4.930577 :remote msg match path bin_upload's policy
+time: 4.933804 :begin file receive!
+
+time: 5.975656 :channel receive (769 2) message from conn engineer_station!
+
+time: 5.975692 :client forward (769 2) message to main proc!
+
+time: 5.978710 :router get proc connector_proc's message 
+time: 5.978748 :remote msg match path bin_upload's policy
+time: 5.981309 :begin file receive!
+
+time: 5.028443 :channel receive (769 2) message from conn engineer_station!
+
+time: 5.028476 :client forward (769 2) message to main proc!
+
+time: 5.028497 :router get proc connector_proc's message 
+time: 5.028512 :remote msg match path bin_upload's policy
+time: 5.028891 :begin file receive!
+
+time: 5.079992 :channel receive (769 2) message from conn engineer_station!
+
+time: 5.080023 :client forward (769 2) message to main proc!
+
+time: 5.082204 :router get proc connector_proc's message 
+time: 5.082235 :remote msg match path bin_upload's policy
+time: 5.087530 :begin file receive!
+
+time: 5.134913 :channel receive (769 2) message from conn engineer_station!
+
+time: 5.134948 :client forward (769 2) message to main proc!
+
+time: 5.136423 :router get proc connector_proc's message 
+time: 5.136447 :remote msg match path bin_upload's policy
+time: 5.141872 :begin file receive!
+
+time: 5.180675 :channel receive (769 2) message from conn engineer_station!
+
+time: 5.180706 :client forward (769 2) message to main proc!
+
+time: 5.180726 :router get proc connector_proc's message 
+time: 5.180739 :remote msg match path bin_upload's policy
+time: 5.186608 :begin file receive!
+
+time: 5.233316 :channel receive (769 2) message from conn engineer_station!
+
+time: 5.233352 :client forward (769 2) message to main proc!
+
+time: 5.234875 :router get proc connector_proc's message 
+time: 5.234899 :remote msg match path bin_upload's policy
+time: 5.240343 :begin file receive!
+
+time: 5.283865 :channel receive (769 2) message from conn engineer_station!
+
+time: 5.283890 :client forward (769 2) message to main proc!
+
+time: 5.289115 :router get proc connector_proc's message 
+time: 5.289151 :remote msg match path bin_upload's policy
+time: 5.294150 :begin file receive!
+
+time: 5.336505 :channel receive (769 2) message from conn engineer_station!
+
+time: 5.336537 :client forward (769 2) message to main proc!
+
+time: 5.340096 :router get proc connector_proc's message 
+time: 5.340122 :remote msg match path bin_upload's policy
+time: 5.343140 :begin file receive!
+
+time: 5.384213 :channel receive (769 2) message from conn engineer_station!
+
+time: 5.384244 :client forward (769 2) message to main proc!
+
+time: 5.389100 :router get proc connector_proc's message 
+time: 5.389129 :remote msg match path bin_upload's policy
+time: 5.392134 :begin file receive!
+
+time: 5.431529 :channel receive (769 2) message from conn engineer_station!
+
+time: 5.431567 :client forward (769 2) message to main proc!
+
+time: 5.433741 :router get proc connector_proc's message 
+time: 5.433777 :remote msg match path bin_upload's policy
+time: 5.435191 :begin file receive!
+
+time: 5.484400 :channel receive (769 2) message from conn engineer_station!
+
+time: 5.484431 :client forward (769 2) message to main proc!
+
+time: 5.488487 :router get proc connector_proc's message 
+time: 5.488515 :remote msg match path bin_upload's policy
+time: 5.489500 :begin file receive!
+
+time: 5.531957 :channel receive (769 2) message from conn engineer_station!
+
+time: 5.531991 :client forward (769 2) message to main proc!
+
+time: 5.537451 :router get proc connector_proc's message 
+time: 5.537482 :remote msg match path bin_upload's policy
+time: 5.538996 :begin file receive!
+
+time: 5.590747 :channel receive (769 2) message from conn engineer_station!
+
+time: 5.590777 :client forward (769 2) message to main proc!
+
+time: 5.590804 :router get proc connector_proc's message 
+time: 5.590817 :remote msg match path bin_upload's policy
+time: 5.592261 :begin file receive!
+
+time: 5.639176 :channel receive (769 2) message from conn engineer_station!
+
+time: 5.639216 :client forward (769 2) message to main proc!
+
+time: 5.639937 :router get proc connector_proc's message 
+time: 5.639965 :remote msg match path bin_upload's policy
+time: 5.645343 :begin file receive!
+
+time: 5.688740 :channel receive (769 2) message from conn engineer_station!
+
+time: 5.688769 :client forward (769 2) message to main proc!
+
+time: 5.693877 :router get proc connector_proc's message 
+time: 5.693903 :remote msg match path bin_upload's policy
+time: 5.699055 :begin file receive!
+
+time: 5.734885 :channel receive (769 2) message from conn engineer_station!
+
+time: 5.734917 :client forward (769 2) message to main proc!
+
+time: 5.738429 :router get proc connector_proc's message 
+time: 5.738458 :remote msg match path bin_upload's policy
+time: 5.741696 :begin file receive!
+
+time: 5.802722 :channel receive (769 2) message from conn engineer_station!
+
+time: 5.802758 :client forward (769 2) message to main proc!
+
+time: 5.805666 :router get proc connector_proc's message 
+time: 5.805697 :remote msg match path bin_upload's policy
+time: 5.808334 :begin file receive!
+
+time: 5.841843 :channel receive (769 2) message from conn engineer_station!
+
+time: 5.841879 :client forward (769 2) message to main proc!
+
+time: 5.843419 :router get proc connector_proc's message 
+time: 5.843445 :remote msg match path bin_upload's policy
+time: 5.847577 :begin file receive!
+
+time: 5.897690 :channel receive (769 2) message from conn engineer_station!
+
+time: 5.897725 :client forward (769 2) message to main proc!
+
+time: 5.901888 :router get proc connector_proc's message 
+time: 5.901919 :remote msg match path bin_upload's policy
+time: 5.906110 :begin file receive!
+
+time: 6.942694 :channel receive (769 2) message from conn engineer_station!
+
+time: 6.942724 :client forward (769 2) message to main proc!
+
+time: 6.944816 :router get proc connector_proc's message 
+time: 6.944845 :remote msg match path bin_upload's policy
+time: 6.949102 :begin file receive!
+
+time: 6.002516 :channel receive (769 2) message from conn engineer_station!
+
+time: 6.002549 :client forward (769 2) message to main proc!
+
+time: 6.003635 :router get proc connector_proc's message 
+time: 6.003661 :remote msg match path bin_upload's policy
+time: 6.007864 :begin file receive!
+
+time: 6.045958 :channel receive (769 2) message from conn engineer_station!
+
+time: 6.045990 :client forward (769 2) message to main proc!
+
+time: 6.046830 :router get proc connector_proc's message 
+time: 6.046856 :remote msg match path bin_upload's policy
+time: 6.050610 :begin file receive!
+
+time: 6.096999 :channel receive (769 2) message from conn engineer_station!
+
+time: 6.097032 :client forward (769 2) message to main proc!
+
+time: 6.101462 :router get proc connector_proc's message 
+time: 6.101494 :remote msg match path bin_upload's policy
+time: 6.107274 :begin file receive!
+
+time: 6.147328 :channel receive (769 2) message from conn engineer_station!
+
+time: 6.147357 :client forward (769 2) message to main proc!
+
+time: 6.150879 :router get proc connector_proc's message 
+time: 6.150912 :remote msg match path bin_upload's policy
+time: 6.156417 :begin file receive!
+
+time: 6.197223 :channel receive (769 2) message from conn engineer_station!
+
+time: 6.197253 :client forward (769 2) message to main proc!
+
+time: 6.199370 :router get proc connector_proc's message 
+time: 6.199394 :remote msg match path bin_upload's policy
+time: 6.204565 :begin file receive!
+
+time: 6.256951 :channel receive (769 2) message from conn engineer_station!
+
+time: 6.256982 :client forward (769 2) message to main proc!
+
+time: 6.257765 :router get proc connector_proc's message 
+time: 6.257791 :remote msg match path bin_upload's policy
+time: 6.263325 :begin file receive!
+
+time: 6.302187 :channel receive (769 2) message from conn engineer_station!
+
+time: 6.302216 :client forward (769 2) message to main proc!
+
+time: 6.306473 :router get proc connector_proc's message 
+time: 6.306500 :remote msg match path bin_upload's policy
+time: 6.311585 :begin file receive!
+
+time: 6.366447 :channel receive (769 2) message from conn engineer_station!
+
+time: 6.366490 :client forward (769 2) message to main proc!
+
+time: 6.371899 :router get proc connector_proc's message 
+time: 6.371930 :remote msg match path bin_upload's policy
+time: 6.377024 :begin file receive!
+
+time: 6.405314 :channel receive (769 2) message from conn engineer_station!
+
+time: 6.405343 :client forward (769 2) message to main proc!
+
+time: 6.409239 :router get proc connector_proc's message 
+time: 6.409267 :remote msg match path bin_upload's policy
+time: 6.414561 :begin file receive!
+
+time: 6.454697 :channel receive (769 2) message from conn engineer_station!
+
+time: 6.454726 :client forward (769 2) message to main proc!
+
+time: 6.458334 :router get proc connector_proc's message 
+time: 6.458358 :remote msg match path bin_upload's policy
+time: 6.463872 :begin file receive!
+
+time: 6.502670 :channel receive (769 2) message from conn engineer_station!
+
+time: 6.502699 :client forward (769 2) message to main proc!
+
+time: 6.506503 :router get proc connector_proc's message 
+time: 6.506532 :remote msg match path bin_upload's policy
+time: 6.511644 :begin file receive!
+
+time: 6.557655 :channel receive (769 2) message from conn engineer_station!
+
+time: 6.557685 :client forward (769 2) message to main proc!
+
+time: 6.561225 :router get proc connector_proc's message 
+time: 6.561251 :remote msg match path bin_upload's policy
+time: 6.565081 :begin file receive!
+
+time: 6.606490 :channel receive (769 2) message from conn engineer_station!
+
+time: 6.606523 :client forward (769 2) message to main proc!
+
+time: 6.609247 :router get proc connector_proc's message 
+time: 6.609309 :remote msg match path bin_upload's policy
+time: 6.612589 :begin file receive!
+
+time: 6.612664 :get file logic_bin/7fe15f8f075db96e5df6855a2fdc21cb48ada19b21d667477fe47d776072686f succeed!
+
+time: 6.615011 :router get proc file_dealer's message 
+time: 6.709010 :channel receive (139280 3) message from conn engineer_station!
+
+time: 6.709039 :client forward (139280 3) message to main proc!
+
+time: 6.712017 :router get proc connector_proc's message 
+time: 6.712040 :remote msg match path bin_upload's policy
+time: 6.717770 :router get proc file_dealer's message 
+time: 6.718184 :aspect message to path sm2verify's policy
+time: 6.745245 :router get proc sm2sign's message 
+time: 6.751351 :router get proc logic_store's message 
+time: 6.757129 :router get proc logic_store's message 
+time: 6.757343 :router get proc plc_upload's message 
+time: 6.757649 :send message to conn process!
+time: 6.761030 :send 289 data to conn engineer_station!
+
+time: 6.761056 :send (139280  4)message 289 to conn engineer_station!
+

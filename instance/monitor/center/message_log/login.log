@@ -1,0 +1,32 @@
+
+**************Begin new trust node proc****************************
+{
+ "HEAD":{"tag":"MESG","version":65537,"sender_uuid":"0b37c4a5b237b1d718c5c020490
+    f13e7bf9c7470eb1571a240fc9763db829479","receiver_uuid":"login_server","route":"l
+    ogin","flow":"QUERY","state":"MATCH","flag":"LOCAL","ljump":1,"rjump":4,"record_
+    type":"USER_DEFINE","record_subtype":"LOGIN","record_num":1,"record_size":102,"e
+    xpand_num":0,"expand_size":0,"msg_uuid":"7b318c2a426d9fe4bd288acf2cc944cfda01325
+    febc269520ddd71a1676fd339"},
+"RECORD":[
+    {"user_name":"james","passwd":"d31NNOrJ3fIPdbqf7tDboTk75P7GWdh6pUdTm38Yd3s","pro
+        c_name":"engineer_station","machine_uuid":"8655f0da17fd1d8bb18ecee04c02849acc0cb
+        b844c07edab8aec775d04358401"}
+    ],
+"EXPAND" :[]
+}
+
+************************************************************
+{
+ "HEAD":{"tag":"MESG","version":65537,"sender_uuid":"login_server","receiver_uui
+    d":"0b37c4a5b237b1d718c5c020490f13e7bf9c7470eb1571a240fc9763db829479","route":"l
+    ogin","flow":"QUERY","state":"RESPONSE","flag":"NULL","ljump":2,"rjump":4,"recor
+    d_type":"USER_DEFINE","record_subtype":"RETURN","record_num":1,"record_size":0,"
+    expand_num":0,"expand_size":0,"msg_uuid":"7b318c2a426d9fe4bd288acf2cc944cfda0132
+    5febc269520ddd71a1676fd339"},
+"RECORD":[
+    {"return_code":"NOUSER","return_info":"no such user!
+","nonce":"AAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAA"}
+    ],
+"EXPAND" :[]
+}

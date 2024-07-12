@@ -1,0 +1,582 @@
+
+**************Begin new trust node proc****************************
+{
+ "HEAD":{"tag":"MESG","version":65537,"sender_uuid":"modbus_channel","receiver_u
+    uid":"modbus_master","route":"command_response","flow":"DELIVER","state":"MATCH"
+    ,"flag":"LOCAL","ljump":1,"rjump":1,"record_type":"MODBUS_TCP","record_subtype":
+    "DATAGRAM","record_num":1,"record_size":0,"expand_num":1,"expand_size":0,"msg_uu
+    id":"1d6c72ee66df164f157e451110e8c9e24b98d93488a79fc7559aec76e57163fd"},
+"RECORD":[
+    {"datasize":4,"unit_id":1,"function":"WRITE_SINGLE_COIL","data":"GOpkfA"}
+    ],
+"EXPAND" :[
+    {"data_size":0,"type":"MODBUS_TCP","subtype":"MBAP","expand":
+        {"trans_id":1,"protocol_id":0,"length_hi":0,"length_lo":6}
+        }
+    ]
+}
+
+************************************************************
+{
+ "HEAD":{"tag":"MESG","version":65537,"sender_uuid":"modbus_channel","receiver_u
+    uid":"modbus_master","route":"command_response","flow":"DELIVER","state":"MATCH"
+    ,"flag":"LOCAL","ljump":1,"rjump":1,"record_type":"MODBUS_TCP","record_subtype":
+    "DATAGRAM","record_num":1,"record_size":0,"expand_num":1,"expand_size":0,"msg_uu
+    id":"1d6c72ee66df164f157e451110e8c9e24b98d93488a79fc7559aec76e57163fd"},
+"RECORD":[
+    {"datasize":4,"unit_id":1,"function":"WRITE_SINGLE_COIL","data":"AgAA/w"}
+    ],
+"EXPAND" :[
+    {"data_size":0,"type":"MODBUS_TCP","subtype":"MBAP","expand":
+        {"trans_id":1,"protocol_id":0,"length_hi":0,"length_lo":6}
+        }
+    ]
+}
+
+************************************************************
+{
+ "HEAD":{"tag":"MESG","version":65537,"sender_uuid":"modbus_master","receiver_uu
+    id":"cmd_process","route":"command_response","flow":"DELIVER","state":"MATCH","f
+    lag":"LOCAL","ljump":1,"rjump":1,"record_type":"MODBUS_DATA","record_subtype":"W
+    RITE_SINGLE_COIL","record_num":1,"record_size":0,"expand_num":1,"expand_size":0,
+    "msg_uuid":"1d6c72ee66df164f157e451110e8c9e24b98d93488a79fc7559aec76e57163fd"},
+"RECORD":[
+    {"start_addr":2,"convert_value":65280}
+    ],
+"EXPAND" :[
+    {"data_size":0,"type":"GENERAL_RETURN","subtype":"UUID","expand":
+        {"name":"thermostat","return_value":"3129af31c98112867555ff216e31fadc3ee499459e6
+            a4284c0ef1dda1b568da2"}
+        }
+    ]
+}
+
+************************************************************
+{
+ "HEAD":{"tag":"MESG","version":65537,"sender_uuid":"modbus_channel","receiver_u
+    uid":"modbus_master","route":"command_response","flow":"DELIVER","state":"MATCH"
+    ,"flag":"LOCAL","ljump":1,"rjump":1,"record_type":"MODBUS_TCP","record_subtype":
+    "DATAGRAM","record_num":1,"record_size":0,"expand_num":1,"expand_size":0,"msg_uu
+    id":"60db6f2f57873ce1c8a309d2c8274cd61112721954453bf0012828481c5a16ad"},
+"RECORD":[
+    {"datasize":3,"unit_id":1,"function":"READ_INPUT_REGISTERS","data":"LhwX"}
+    ],
+"EXPAND" :[
+    {"data_size":0,"type":"MODBUS_TCP","subtype":"MBAP","expand":
+        {"trans_id":2,"protocol_id":0,"length_hi":0,"length_lo":5}
+        }
+    ]
+}
+
+************************************************************
+{
+ "HEAD":{"tag":"MESG","version":65537,"sender_uuid":"modbus_channel","receiver_u
+    uid":"modbus_master","route":"command_response","flow":"DELIVER","state":"MATCH"
+    ,"flag":"LOCAL","ljump":1,"rjump":1,"record_type":"MODBUS_TCP","record_subtype":
+    "DATAGRAM","record_num":1,"record_size":0,"expand_num":1,"expand_size":0,"msg_uu
+    id":"60db6f2f57873ce1c8a309d2c8274cd61112721954453bf0012828481c5a16ad"},
+"RECORD":[
+    {"datasize":3,"unit_id":1,"function":"READ_INPUT_REGISTERS","data":"AqMQ"}
+    ],
+"EXPAND" :[
+    {"data_size":0,"type":"MODBUS_TCP","subtype":"MBAP","expand":
+        {"trans_id":2,"protocol_id":0,"length_hi":0,"length_lo":5}
+        }
+    ]
+}
+
+************************************************************
+{
+ "HEAD":{"tag":"MESG","version":65537,"sender_uuid":"modbus_master","receiver_uu
+    id":"cmd_process","route":"command_response","flow":"DELIVER","state":"MATCH","f
+    lag":"LOCAL","ljump":1,"rjump":1,"record_type":"MODBUS_DATA","record_subtype":"R
+    EAD_INPUT_REGISTERS","record_num":1,"record_size":0,"expand_num":1,"expand_size"
+    :0,"msg_uuid":"60db6f2f57873ce1c8a309d2c8274cd61112721954453bf0012828481c5a16ad"
+    },
+"RECORD":[
+    {"area_bytes":2,"value":"oxA"}
+    ],
+"EXPAND" :[
+    {"data_size":0,"type":"GENERAL_RETURN","subtype":"UUID","expand":
+        {"name":"thermostat","return_value":"2446b888b95d3475020ca9ec94abc850b3d03265455
+            9f632ec2122de5a55b7eb"}
+        }
+    ]
+}
+
+************************************************************
+{
+ "HEAD":{"tag":"MESG","version":65537,"sender_uuid":"modbus_channel","receiver_u
+    uid":"modbus_master","route":"command_response","flow":"DELIVER","state":"MATCH"
+    ,"flag":"LOCAL","ljump":1,"rjump":1,"record_type":"MODBUS_TCP","record_subtype":
+    "DATAGRAM","record_num":1,"record_size":0,"expand_num":1,"expand_size":0,"msg_uu
+    id":"3221f6c6383f1c6fe81943d604df118c4280ed95da222778586ef3920e692994"},
+"RECORD":[
+    {"datasize":4,"unit_id":1,"function":"WRITE_SINGLE_REGISTER","data":"d5q0wg"}
+    ],
+"EXPAND" :[
+    {"data_size":0,"type":"MODBUS_TCP","subtype":"MBAP","expand":
+        {"trans_id":3,"protocol_id":0,"length_hi":0,"length_lo":6}
+        }
+    ]
+}
+
+************************************************************
+{
+ "HEAD":{"tag":"MESG","version":65537,"sender_uuid":"modbus_channel","receiver_u
+    uid":"modbus_master","route":"command_response","flow":"DELIVER","state":"MATCH"
+    ,"flag":"LOCAL","ljump":1,"rjump":1,"record_type":"MODBUS_TCP","record_subtype":
+    "DATAGRAM","record_num":1,"record_size":0,"expand_num":1,"expand_size":0,"msg_uu
+    id":"3221f6c6383f1c6fe81943d604df118c4280ed95da222778586ef3920e692994"},
+"RECORD":[
+    {"datasize":4,"unit_id":1,"function":"WRITE_SINGLE_REGISTER","data":"Q5w8Dw"}
+    ],
+"EXPAND" :[
+    {"data_size":0,"type":"MODBUS_TCP","subtype":"MBAP","expand":
+        {"trans_id":3,"protocol_id":0,"length_hi":0,"length_lo":6}
+        }
+    ]
+}
+
+************************************************************
+{
+ "HEAD":{"tag":"MESG","version":65537,"sender_uuid":"modbus_master","receiver_uu
+    id":"cmd_process","route":"command_response","flow":"DELIVER","state":"MATCH","f
+    lag":"LOCAL","ljump":1,"rjump":1,"record_type":"MODBUS_DATA","record_subtype":"W
+    RITE_SINGLE_REGISTER","record_num":1,"record_size":0,"expand_num":1,"expand_size
+    ":0,"msg_uuid":"3221f6c6383f1c6fe81943d604df118c4280ed95da222778586ef3920e692994
+    "},
+"RECORD":[
+    {"start_addr":40003,"convert_value":3900}
+    ],
+"EXPAND" :[
+    {"data_size":0,"type":"GENERAL_RETURN","subtype":"UUID","expand":
+        {"name":"thermostat","return_value":"7b55eb6f23bd05a6dd663026e0d9fb58d9334c3934e
+            e70f88bb402fb1f0139cc"}
+        }
+    ]
+}
+
+************************************************************
+{
+ "HEAD":{"tag":"MESG","version":65537,"sender_uuid":"modbus_channel","receiver_u
+    uid":"modbus_master","route":"command_response","flow":"DELIVER","state":"MATCH"
+    ,"flag":"LOCAL","ljump":1,"rjump":1,"record_type":"MODBUS_TCP","record_subtype":
+    "DATAGRAM","record_num":1,"record_size":0,"expand_num":1,"expand_size":0,"msg_uu
+    id":"5a8a663e40029b8c362fbeb3e52fc6824f3ef6d86aac9cd0369b72d7a1e6fd50"},
+"RECORD":[
+    {"datasize":3,"unit_id":1,"function":"READ_INPUT_REGISTERS","data":"FdSx"}
+    ],
+"EXPAND" :[
+    {"data_size":0,"type":"MODBUS_TCP","subtype":"MBAP","expand":
+        {"trans_id":4,"protocol_id":0,"length_hi":0,"length_lo":5}
+        }
+    ]
+}
+
+************************************************************
+{
+ "HEAD":{"tag":"MESG","version":65537,"sender_uuid":"modbus_channel","receiver_u
+    uid":"modbus_master","route":"command_response","flow":"DELIVER","state":"MATCH"
+    ,"flag":"LOCAL","ljump":1,"rjump":1,"record_type":"MODBUS_TCP","record_subtype":
+    "DATAGRAM","record_num":1,"record_size":0,"expand_num":1,"expand_size":0,"msg_uu
+    id":"5a8a663e40029b8c362fbeb3e52fc6824f3ef6d86aac9cd0369b72d7a1e6fd50"},
+"RECORD":[
+    {"datasize":3,"unit_id":1,"function":"READ_INPUT_REGISTERS","data":"AnYa"}
+    ],
+"EXPAND" :[
+    {"data_size":0,"type":"MODBUS_TCP","subtype":"MBAP","expand":
+        {"trans_id":4,"protocol_id":0,"length_hi":0,"length_lo":5}
+        }
+    ]
+}
+
+************************************************************
+{
+ "HEAD":{"tag":"MESG","version":65537,"sender_uuid":"modbus_master","receiver_uu
+    id":"cmd_process","route":"command_response","flow":"DELIVER","state":"MATCH","f
+    lag":"LOCAL","ljump":1,"rjump":1,"record_type":"MODBUS_DATA","record_subtype":"R
+    EAD_INPUT_REGISTERS","record_num":1,"record_size":0,"expand_num":1,"expand_size"
+    :0,"msg_uuid":"5a8a663e40029b8c362fbeb3e52fc6824f3ef6d86aac9cd0369b72d7a1e6fd50"
+    },
+"RECORD":[
+    {"area_bytes":2,"value":"dho"}
+    ],
+"EXPAND" :[
+    {"data_size":0,"type":"GENERAL_RETURN","subtype":"UUID","expand":
+        {"name":"thermostat","return_value":"7eda17e32467898426487e5187adab4c022d4c88824
+            a3c95c95f3940d7df4d7c"}
+        }
+    ]
+}
+
+************************************************************
+{
+ "HEAD":{"tag":"MESG","version":65537,"sender_uuid":"modbus_channel","receiver_u
+    uid":"modbus_master","route":"command_response","flow":"DELIVER","state":"MATCH"
+    ,"flag":"LOCAL","ljump":1,"rjump":1,"record_type":"MODBUS_TCP","record_subtype":
+    "DATAGRAM","record_num":1,"record_size":0,"expand_num":1,"expand_size":0,"msg_uu
+    id":"0cbdea2339899e50c32d30b00a2f178ae0ba417da2e94e51f47fd020c46d35ff"},
+"RECORD":[
+    {"datasize":3,"unit_id":1,"function":"READ_HOLDING_REGISTERS","data":"HrKN"}
+    ],
+"EXPAND" :[
+    {"data_size":0,"type":"MODBUS_TCP","subtype":"MBAP","expand":
+        {"trans_id":5,"protocol_id":0,"length_hi":0,"length_lo":5}
+        }
+    ]
+}
+
+************************************************************
+{
+ "HEAD":{"tag":"MESG","version":65537,"sender_uuid":"modbus_channel","receiver_u
+    uid":"modbus_master","route":"command_response","flow":"DELIVER","state":"MATCH"
+    ,"flag":"LOCAL","ljump":1,"rjump":1,"record_type":"MODBUS_TCP","record_subtype":
+    "DATAGRAM","record_num":1,"record_size":0,"expand_num":1,"expand_size":0,"msg_uu
+    id":"0cbdea2339899e50c32d30b00a2f178ae0ba417da2e94e51f47fd020c46d35ff"},
+"RECORD":[
+    {"datasize":3,"unit_id":1,"function":"READ_HOLDING_REGISTERS","data":"AgkA"}
+    ],
+"EXPAND" :[
+    {"data_size":0,"type":"MODBUS_TCP","subtype":"MBAP","expand":
+        {"trans_id":5,"protocol_id":0,"length_hi":0,"length_lo":5}
+        }
+    ]
+}
+
+************************************************************
+{
+ "HEAD":{"tag":"MESG","version":65537,"sender_uuid":"modbus_master","receiver_uu
+    id":"cmd_process","route":"command_response","flow":"DELIVER","state":"MATCH","f
+    lag":"LOCAL","ljump":1,"rjump":1,"record_type":"MODBUS_DATA","record_subtype":"R
+    EAD_HOLDING_REGISTERS","record_num":1,"record_size":0,"expand_num":1,"expand_siz
+    e":0,"msg_uuid":"0cbdea2339899e50c32d30b00a2f178ae0ba417da2e94e51f47fd020c46d35f
+    f"},
+"RECORD":[
+    {"area_bytes":2,"value":"CQA"}
+    ],
+"EXPAND" :[
+    {"data_size":0,"type":"GENERAL_RETURN","subtype":"UUID","expand":
+        {"name":"thermostat","return_value":"6115b1368cf1cdd646eb0a669ec48f9db472648069f
+            6ef21c48083d71afac362"}
+        }
+    ]
+}
+
+************************************************************
+{
+ "HEAD":{"tag":"MESG","version":65537,"sender_uuid":"modbus_channel","receiver_u
+    uid":"modbus_master","route":"command_response","flow":"DELIVER","state":"MATCH"
+    ,"flag":"LOCAL","ljump":1,"rjump":1,"record_type":"MODBUS_TCP","record_subtype":
+    "DATAGRAM","record_num":1,"record_size":0,"expand_num":1,"expand_size":0,"msg_uu
+    id":"2cbca7b88060a4e01213253b6121b0649b1edbdf3eb6abe4affbc8ad741c8321"},
+"RECORD":[
+    {"datasize":3,"unit_id":1,"function":"READ_INPUT_REGISTERS","data":"dGmX"}
+    ],
+"EXPAND" :[
+    {"data_size":0,"type":"MODBUS_TCP","subtype":"MBAP","expand":
+        {"trans_id":6,"protocol_id":0,"length_hi":0,"length_lo":5}
+        }
+    ]
+}
+
+************************************************************
+{
+ "HEAD":{"tag":"MESG","version":65537,"sender_uuid":"modbus_channel","receiver_u
+    uid":"modbus_master","route":"command_response","flow":"DELIVER","state":"MATCH"
+    ,"flag":"LOCAL","ljump":1,"rjump":1,"record_type":"MODBUS_TCP","record_subtype":
+    "DATAGRAM","record_num":1,"record_size":0,"expand_num":1,"expand_size":0,"msg_uu
+    id":"2cbca7b88060a4e01213253b6121b0649b1edbdf3eb6abe4affbc8ad741c8321"},
+"RECORD":[
+    {"datasize":3,"unit_id":1,"function":"READ_INPUT_REGISTERS","data":"Avkd"}
+    ],
+"EXPAND" :[
+    {"data_size":0,"type":"MODBUS_TCP","subtype":"MBAP","expand":
+        {"trans_id":6,"protocol_id":0,"length_hi":0,"length_lo":5}
+        }
+    ]
+}
+
+************************************************************
+{
+ "HEAD":{"tag":"MESG","version":65537,"sender_uuid":"modbus_master","receiver_uu
+    id":"cmd_process","route":"command_response","flow":"DELIVER","state":"MATCH","f
+    lag":"LOCAL","ljump":1,"rjump":1,"record_type":"MODBUS_DATA","record_subtype":"R
+    EAD_INPUT_REGISTERS","record_num":1,"record_size":0,"expand_num":1,"expand_size"
+    :0,"msg_uuid":"2cbca7b88060a4e01213253b6121b0649b1edbdf3eb6abe4affbc8ad741c8321"
+    },
+"RECORD":[
+    {"area_bytes":2,"value":"+R0"}
+    ],
+"EXPAND" :[
+    {"data_size":0,"type":"GENERAL_RETURN","subtype":"UUID","expand":
+        {"name":"thermostat","return_value":"380ec4ec8d9d3f4e9849f6597ad276c1220b3f86f8b
+            e040ec5b2d615117d4657"}
+        }
+    ]
+}
+
+************************************************************
+{
+ "HEAD":{"tag":"MESG","version":65537,"sender_uuid":"modbus_channel","receiver_u
+    uid":"modbus_master","route":"command_response","flow":"DELIVER","state":"MATCH"
+    ,"flag":"LOCAL","ljump":1,"rjump":1,"record_type":"MODBUS_TCP","record_subtype":
+    "DATAGRAM","record_num":1,"record_size":0,"expand_num":1,"expand_size":0,"msg_uu
+    id":"3ff8cb716507c0c3a75c3cac6fe3305f4edf0cde1e03f92e32702d5ff6077d54"},
+"RECORD":[
+    {"datasize":3,"unit_id":1,"function":"READ_HOLDING_REGISTERS","data":"udNH"}
+    ],
+"EXPAND" :[
+    {"data_size":0,"type":"MODBUS_TCP","subtype":"MBAP","expand":
+        {"trans_id":7,"protocol_id":0,"length_hi":0,"length_lo":5}
+        }
+    ]
+}
+
+************************************************************
+{
+ "HEAD":{"tag":"MESG","version":65537,"sender_uuid":"modbus_channel","receiver_u
+    uid":"modbus_master","route":"command_response","flow":"DELIVER","state":"MATCH"
+    ,"flag":"LOCAL","ljump":1,"rjump":1,"record_type":"MODBUS_TCP","record_subtype":
+    "DATAGRAM","record_num":1,"record_size":0,"expand_num":1,"expand_size":0,"msg_uu
+    id":"3ff8cb716507c0c3a75c3cac6fe3305f4edf0cde1e03f92e32702d5ff6077d54"},
+"RECORD":[
+    {"datasize":3,"unit_id":1,"function":"READ_HOLDING_REGISTERS","data":"AgkA"}
+    ],
+"EXPAND" :[
+    {"data_size":0,"type":"MODBUS_TCP","subtype":"MBAP","expand":
+        {"trans_id":7,"protocol_id":0,"length_hi":0,"length_lo":5}
+        }
+    ]
+}
+
+************************************************************
+{
+ "HEAD":{"tag":"MESG","version":65537,"sender_uuid":"modbus_master","receiver_uu
+    id":"cmd_process","route":"command_response","flow":"DELIVER","state":"MATCH","f
+    lag":"LOCAL","ljump":1,"rjump":1,"record_type":"MODBUS_DATA","record_subtype":"R
+    EAD_HOLDING_REGISTERS","record_num":1,"record_size":0,"expand_num":1,"expand_siz
+    e":0,"msg_uuid":"3ff8cb716507c0c3a75c3cac6fe3305f4edf0cde1e03f92e32702d5ff6077d5
+    4"},
+"RECORD":[
+    {"area_bytes":2,"value":"CQA"}
+    ],
+"EXPAND" :[
+    {"data_size":0,"type":"GENERAL_RETURN","subtype":"UUID","expand":
+        {"name":"thermostat","return_value":"6213d35101089e58352e649c63229290aea628446d4
+            d7d0b224a09f40eeeb027"}
+        }
+    ]
+}
+
+************************************************************
+{
+ "HEAD":{"tag":"MESG","version":65537,"sender_uuid":"modbus_channel","receiver_u
+    uid":"modbus_master","route":"command_response","flow":"DELIVER","state":"MATCH"
+    ,"flag":"LOCAL","ljump":1,"rjump":1,"record_type":"MODBUS_TCP","record_subtype":
+    "DATAGRAM","record_num":1,"record_size":0,"expand_num":1,"expand_size":0,"msg_uu
+    id":"14b83d87ee35f63840fc132c4ae17367aa32e8a6b382f07ff8ee4eba7e23d961"},
+"RECORD":[
+    {"datasize":3,"unit_id":1,"function":"READ_INPUT_REGISTERS","data":"gWjZ"}
+    ],
+"EXPAND" :[
+    {"data_size":0,"type":"MODBUS_TCP","subtype":"MBAP","expand":
+        {"trans_id":8,"protocol_id":0,"length_hi":0,"length_lo":5}
+        }
+    ]
+}
+
+************************************************************
+{
+ "HEAD":{"tag":"MESG","version":65537,"sender_uuid":"modbus_channel","receiver_u
+    uid":"modbus_master","route":"command_response","flow":"DELIVER","state":"MATCH"
+    ,"flag":"LOCAL","ljump":1,"rjump":1,"record_type":"MODBUS_TCP","record_subtype":
+    "DATAGRAM","record_num":1,"record_size":0,"expand_num":1,"expand_size":0,"msg_uu
+    id":"14b83d87ee35f63840fc132c4ae17367aa32e8a6b382f07ff8ee4eba7e23d961"},
+"RECORD":[
+    {"datasize":3,"unit_id":1,"function":"READ_INPUT_REGISTERS","data":"Amcf"}
+    ],
+"EXPAND" :[
+    {"data_size":0,"type":"MODBUS_TCP","subtype":"MBAP","expand":
+        {"trans_id":8,"protocol_id":0,"length_hi":0,"length_lo":5}
+        }
+    ]
+}
+
+************************************************************
+{
+ "HEAD":{"tag":"MESG","version":65537,"sender_uuid":"modbus_master","receiver_uu
+    id":"cmd_process","route":"command_response","flow":"DELIVER","state":"MATCH","f
+    lag":"LOCAL","ljump":1,"rjump":1,"record_type":"MODBUS_DATA","record_subtype":"R
+    EAD_INPUT_REGISTERS","record_num":1,"record_size":0,"expand_num":1,"expand_size"
+    :0,"msg_uuid":"14b83d87ee35f63840fc132c4ae17367aa32e8a6b382f07ff8ee4eba7e23d961"
+    },
+"RECORD":[
+    {"area_bytes":2,"value":"Zx8"}
+    ],
+"EXPAND" :[
+    {"data_size":0,"type":"GENERAL_RETURN","subtype":"UUID","expand":
+        {"name":"thermostat","return_value":"1d9c62780852fd41502be349dfd9cc48e911896e5e7
+            bc7bf25e724a22ffcb5ab"}
+        }
+    ]
+}
+
+************************************************************
+{
+ "HEAD":{"tag":"MESG","version":65537,"sender_uuid":"modbus_channel","receiver_u
+    uid":"modbus_master","route":"command_response","flow":"DELIVER","state":"MATCH"
+    ,"flag":"LOCAL","ljump":1,"rjump":1,"record_type":"MODBUS_TCP","record_subtype":
+    "DATAGRAM","record_num":1,"record_size":0,"expand_num":1,"expand_size":0,"msg_uu
+    id":"771a966d4a194fc8779cf7d85b08d24d80f738048b5326e0d6d365f852cfe1a3"},
+"RECORD":[
+    {"datasize":3,"unit_id":1,"function":"READ_HOLDING_REGISTERS","data":"PIXe"}
+    ],
+"EXPAND" :[
+    {"data_size":0,"type":"MODBUS_TCP","subtype":"MBAP","expand":
+        {"trans_id":9,"protocol_id":0,"length_hi":0,"length_lo":5}
+        }
+    ]
+}
+
+************************************************************
+{
+ "HEAD":{"tag":"MESG","version":65537,"sender_uuid":"modbus_channel","receiver_u
+    uid":"modbus_master","route":"command_response","flow":"DELIVER","state":"MATCH"
+    ,"flag":"LOCAL","ljump":1,"rjump":1,"record_type":"MODBUS_TCP","record_subtype":
+    "DATAGRAM","record_num":1,"record_size":0,"expand_num":1,"expand_size":0,"msg_uu
+    id":"771a966d4a194fc8779cf7d85b08d24d80f738048b5326e0d6d365f852cfe1a3"},
+"RECORD":[
+    {"datasize":3,"unit_id":1,"function":"READ_HOLDING_REGISTERS","data":"AgkA"}
+    ],
+"EXPAND" :[
+    {"data_size":0,"type":"MODBUS_TCP","subtype":"MBAP","expand":
+        {"trans_id":9,"protocol_id":0,"length_hi":0,"length_lo":5}
+        }
+    ]
+}
+
+************************************************************
+{
+ "HEAD":{"tag":"MESG","version":65537,"sender_uuid":"modbus_master","receiver_uu
+    id":"cmd_process","route":"command_response","flow":"DELIVER","state":"MATCH","f
+    lag":"LOCAL","ljump":1,"rjump":1,"record_type":"MODBUS_DATA","record_subtype":"R
+    EAD_HOLDING_REGISTERS","record_num":1,"record_size":0,"expand_num":1,"expand_siz
+    e":0,"msg_uuid":"771a966d4a194fc8779cf7d85b08d24d80f738048b5326e0d6d365f852cfe1a
+    3"},
+"RECORD":[
+    {"area_bytes":2,"value":"CQA"}
+    ],
+"EXPAND" :[
+    {"data_size":0,"type":"GENERAL_RETURN","subtype":"UUID","expand":
+        {"name":"thermostat","return_value":"7eb71e18c8e21a8513c6afb5493509b56efc758cff3
+            f5fb6c4a319d9b057285e"}
+        }
+    ]
+}
+
+************************************************************
+{
+ "HEAD":{"tag":"MESG","version":65537,"sender_uuid":"modbus_channel","receiver_u
+    uid":"modbus_master","route":"command_response","flow":"DELIVER","state":"MATCH"
+    ,"flag":"LOCAL","ljump":1,"rjump":1,"record_type":"MODBUS_TCP","record_subtype":
+    "DATAGRAM","record_num":1,"record_size":0,"expand_num":1,"expand_size":0,"msg_uu
+    id":"9df7d04643fe5b802835ac229885c4b4d8f7f65d8489aff6a3ea492ff42977f7"},
+"RECORD":[
+    {"datasize":3,"unit_id":1,"function":"READ_INPUT_REGISTERS","data":"64cn"}
+    ],
+"EXPAND" :[
+    {"data_size":0,"type":"MODBUS_TCP","subtype":"MBAP","expand":
+        {"trans_id":10,"protocol_id":0,"length_hi":0,"length_lo":5}
+        }
+    ]
+}
+
+************************************************************
+{
+ "HEAD":{"tag":"MESG","version":65537,"sender_uuid":"modbus_channel","receiver_u
+    uid":"modbus_master","route":"command_response","flow":"DELIVER","state":"MATCH"
+    ,"flag":"LOCAL","ljump":1,"rjump":1,"record_type":"MODBUS_TCP","record_subtype":
+    "DATAGRAM","record_num":1,"record_size":0,"expand_num":1,"expand_size":0,"msg_uu
+    id":"9df7d04643fe5b802835ac229885c4b4d8f7f65d8489aff6a3ea492ff42977f7"},
+"RECORD":[
+    {"datasize":3,"unit_id":1,"function":"READ_INPUT_REGISTERS","data":"AhUg"}
+    ],
+"EXPAND" :[
+    {"data_size":0,"type":"MODBUS_TCP","subtype":"MBAP","expand":
+        {"trans_id":10,"protocol_id":0,"length_hi":0,"length_lo":5}
+        }
+    ]
+}
+
+************************************************************
+{
+ "HEAD":{"tag":"MESG","version":65537,"sender_uuid":"modbus_master","receiver_uu
+    id":"cmd_process","route":"command_response","flow":"DELIVER","state":"MATCH","f
+    lag":"LOCAL","ljump":1,"rjump":1,"record_type":"MODBUS_DATA","record_subtype":"R
+    EAD_INPUT_REGISTERS","record_num":1,"record_size":0,"expand_num":1,"expand_size"
+    :0,"msg_uuid":"9df7d04643fe5b802835ac229885c4b4d8f7f65d8489aff6a3ea492ff42977f7"
+    },
+"RECORD":[
+    {"area_bytes":2,"value":"FSA"}
+    ],
+"EXPAND" :[
+    {"data_size":0,"type":"GENERAL_RETURN","subtype":"UUID","expand":
+        {"name":"thermostat","return_value":"886bddb928811f8f11ced18b4cb29eaaf2c7327add3
+            22beec46662ed6f7af19d"}
+        }
+    ]
+}
+
+************************************************************
+{
+ "HEAD":{"tag":"MESG","version":65537,"sender_uuid":"modbus_channel","receiver_u
+    uid":"modbus_master","route":"command_response","flow":"DELIVER","state":"MATCH"
+    ,"flag":"LOCAL","ljump":1,"rjump":1,"record_type":"MODBUS_TCP","record_subtype":
+    "DATAGRAM","record_num":1,"record_size":0,"expand_num":1,"expand_size":0,"msg_uu
+    id":"bda47d1100430fb594dab2c6d50142d874b878e69e77dd12c5a1d43cff8a55eb"},
+"RECORD":[
+    {"datasize":3,"unit_id":1,"function":"READ_HOLDING_REGISTERS","data":"o4AA"}
+    ],
+"EXPAND" :[
+    {"data_size":0,"type":"MODBUS_TCP","subtype":"MBAP","expand":
+        {"trans_id":11,"protocol_id":0,"length_hi":0,"length_lo":5}
+        }
+    ]
+}
+
+************************************************************
+{
+ "HEAD":{"tag":"MESG","version":65537,"sender_uuid":"modbus_channel","receiver_u
+    uid":"modbus_master","route":"command_response","flow":"DELIVER","state":"MATCH"
+    ,"flag":"LOCAL","ljump":1,"rjump":1,"record_type":"MODBUS_TCP","record_subtype":
+    "DATAGRAM","record_num":1,"record_size":0,"expand_num":1,"expand_size":0,"msg_uu
+    id":"bda47d1100430fb594dab2c6d50142d874b878e69e77dd12c5a1d43cff8a55eb"},
+"RECORD":[
+    {"datasize":3,"unit_id":1,"function":"READ_HOLDING_REGISTERS","data":"AgkA"}
+    ],
+"EXPAND" :[
+    {"data_size":0,"type":"MODBUS_TCP","subtype":"MBAP","expand":
+        {"trans_id":11,"protocol_id":0,"length_hi":0,"length_lo":5}
+        }
+    ]
+}
+
+************************************************************
+{
+ "HEAD":{"tag":"MESG","version":65537,"sender_uuid":"modbus_master","receiver_uu
+    id":"cmd_process","route":"command_response","flow":"DELIVER","state":"MATCH","f
+    lag":"LOCAL","ljump":1,"rjump":1,"record_type":"MODBUS_DATA","record_subtype":"R
+    EAD_HOLDING_REGISTERS","record_num":1,"record_size":0,"expand_num":1,"expand_siz
+    e":0,"msg_uuid":"bda47d1100430fb594dab2c6d50142d874b878e69e77dd12c5a1d43cff8a55e
+    b"},
+"RECORD":[
+    {"area_bytes":2,"value":"CQA"}
+    ],
+"EXPAND" :[
+    {"data_size":0,"type":"GENERAL_RETURN","subtype":"UUID","expand":
+        {"name":"thermostat","return_value":"37a23f712387ae68e168b3fd57403e6e96618252316
+            7e06acfb1d8a3fcbc2fa8"}
+        }
+    ]
+}

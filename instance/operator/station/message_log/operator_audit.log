@@ -1,0 +1,154 @@
+
+**************Begin new trust node proc****************************
+{
+ "HEAD":{"tag":"MESG","version":65537,"sender_uuid":"cmd_process","receiver_uuid
+    ":"audit_store","route":"operator_audit","flow":"DELIVER","state":"MATCH","flag"
+    :"LOCAL","ljump":1,"rjump":1,"record_type":"PLC_OPERATOR","record_subtype":"PLC_
+    CMD","record_num":1,"record_size":0,"expand_num":0,"expand_size":0,"msg_uuid":"8
+    f0fdd0b03bcbb2e737d78f6fdbacf29b26602142bd4780af46d7cbc90cc6dba"},
+"RECORD":[
+    {"plc_devname":"thermostat","action":"ON","action_desc":"heating_S","value":0,"p
+        lc_operator":"qian","time":1720674083}
+    ],
+"EXPAND" :[]
+}
+
+************************************************************
+{
+ "HEAD":{"tag":"MESG","version":65537,"sender_uuid":"cmd_process","receiver_uuid
+    ":"audit_store","route":"operator_audit","flow":"DELIVER","state":"MATCH","flag"
+    :"LOCAL","ljump":1,"rjump":1,"record_type":"PLC_OPERATOR","record_subtype":"PLC_
+    CMD","record_num":1,"record_size":0,"expand_num":0,"expand_size":0,"msg_uuid":"7
+    4ceaf6338045e927d87387a4bbdd0cfcad33044bf45bc00d478da80e437f5c6"},
+"RECORD":[
+    {"plc_devname":"thermostat","action":"MONITOR","action_desc":"curr_T","value":0,
+        "plc_operator":"qian","time":1720674083}
+    ],
+"EXPAND" :[]
+}
+
+************************************************************
+{
+ "HEAD":{"tag":"MESG","version":65537,"sender_uuid":"cmd_process","receiver_uuid
+    ":"audit_store","route":"operator_audit","flow":"DELIVER","state":"MATCH","flag"
+    :"LOCAL","ljump":1,"rjump":1,"record_type":"PLC_OPERATOR","record_subtype":"PLC_
+    CMD","record_num":1,"record_size":0,"expand_num":0,"expand_size":0,"msg_uuid":"4
+    acaa7e6c0fe348e5c3180242bf6f4409611a30ef0b94b802d11fceff7a13d95"},
+"RECORD":[
+    {"plc_devname":"thermostat","action":"ADJUST","action_desc":"set_T","value":3900
+        ,"plc_operator":"qian","time":1720674084}
+    ],
+"EXPAND" :[]
+}
+
+************************************************************
+{
+ "HEAD":{"tag":"MESG","version":65537,"sender_uuid":"cmd_process","receiver_uuid
+    ":"audit_store","route":"operator_audit","flow":"DELIVER","state":"MATCH","flag"
+    :"LOCAL","ljump":1,"rjump":1,"record_type":"PLC_OPERATOR","record_subtype":"PLC_
+    CMD","record_num":1,"record_size":0,"expand_num":0,"expand_size":0,"msg_uuid":"1
+    43b0a1ef54b84d0c317da1e543f85b6bf697e4f79c593ad3f6586af8ee3ab97"},
+"RECORD":[
+    {"plc_devname":"thermostat","action":"MONITOR","action_desc":"curr_T","value":0,
+        "plc_operator":"qian","time":1720674091}
+    ],
+"EXPAND" :[]
+}
+
+************************************************************
+{
+ "HEAD":{"tag":"MESG","version":65537,"sender_uuid":"cmd_process","receiver_uuid
+    ":"audit_store","route":"operator_audit","flow":"DELIVER","state":"MATCH","flag"
+    :"LOCAL","ljump":1,"rjump":1,"record_type":"PLC_OPERATOR","record_subtype":"PLC_
+    CMD","record_num":1,"record_size":0,"expand_num":0,"expand_size":0,"msg_uuid":"2
+    8c1e6f9ca6b943f40d897d6a3135dff39242220c02af51e9aac331d956a7d59"},
+"RECORD":[
+    {"plc_devname":"thermostat","action":"MONITOR","action_desc":"heating_G","value"
+        :0,"plc_operator":"","time":1720674092}
+    ],
+"EXPAND" :[]
+}
+
+************************************************************
+{
+ "HEAD":{"tag":"MESG","version":65537,"sender_uuid":"cmd_process","receiver_uuid
+    ":"audit_store","route":"operator_audit","flow":"DELIVER","state":"MATCH","flag"
+    :"LOCAL","ljump":1,"rjump":1,"record_type":"PLC_OPERATOR","record_subtype":"PLC_
+    CMD","record_num":1,"record_size":0,"expand_num":0,"expand_size":0,"msg_uuid":"9
+    115c98485e57584737ff9c69c006242b859f219ba9940fde139b14bdf34e394"},
+"RECORD":[
+    {"plc_devname":"thermostat","action":"MONITOR","action_desc":"curr_T","value":0,
+        "plc_operator":"qian","time":1720674099}
+    ],
+"EXPAND" :[]
+}
+
+************************************************************
+{
+ "HEAD":{"tag":"MESG","version":65537,"sender_uuid":"cmd_process","receiver_uuid
+    ":"audit_store","route":"operator_audit","flow":"DELIVER","state":"MATCH","flag"
+    :"LOCAL","ljump":1,"rjump":1,"record_type":"PLC_OPERATOR","record_subtype":"PLC_
+    CMD","record_num":1,"record_size":0,"expand_num":0,"expand_size":0,"msg_uuid":"5
+    704f395b01bb12116ed80e2f86cdacf30900fe1db6e9e550f3bf1211993072d"},
+"RECORD":[
+    {"plc_devname":"thermostat","action":"MONITOR","action_desc":"heating_G","value"
+        :0,"plc_operator":"","time":1720674100}
+    ],
+"EXPAND" :[]
+}
+
+************************************************************
+{
+ "HEAD":{"tag":"MESG","version":65537,"sender_uuid":"cmd_process","receiver_uuid
+    ":"audit_store","route":"operator_audit","flow":"DELIVER","state":"MATCH","flag"
+    :"LOCAL","ljump":1,"rjump":1,"record_type":"PLC_OPERATOR","record_subtype":"PLC_
+    CMD","record_num":1,"record_size":0,"expand_num":0,"expand_size":0,"msg_uuid":"b
+    d1ae21d26975f9c8b9732ed3c0ea21fefb781b8f609540c08c7eff6b98c37b8"},
+"RECORD":[
+    {"plc_devname":"thermostat","action":"MONITOR","action_desc":"curr_T","value":0,
+        "plc_operator":"qian","time":1720674107}
+    ],
+"EXPAND" :[]
+}
+
+************************************************************
+{
+ "HEAD":{"tag":"MESG","version":65537,"sender_uuid":"cmd_process","receiver_uuid
+    ":"audit_store","route":"operator_audit","flow":"DELIVER","state":"MATCH","flag"
+    :"LOCAL","ljump":1,"rjump":1,"record_type":"PLC_OPERATOR","record_subtype":"PLC_
+    CMD","record_num":1,"record_size":0,"expand_num":0,"expand_size":0,"msg_uuid":"9
+    2fa582544bc9af08da2bd408bc7ca2813a6f09a5fc4c5f251f4220b621a290c"},
+"RECORD":[
+    {"plc_devname":"thermostat","action":"MONITOR","action_desc":"heating_G","value"
+        :0,"plc_operator":"","time":1720674108}
+    ],
+"EXPAND" :[]
+}
+
+************************************************************
+{
+ "HEAD":{"tag":"MESG","version":65537,"sender_uuid":"cmd_process","receiver_uuid
+    ":"audit_store","route":"operator_audit","flow":"DELIVER","state":"MATCH","flag"
+    :"LOCAL","ljump":1,"rjump":1,"record_type":"PLC_OPERATOR","record_subtype":"PLC_
+    CMD","record_num":1,"record_size":0,"expand_num":0,"expand_size":0,"msg_uuid":"9
+    1abb05a161397423fa52cdd662a229f3ce9c4560a97e78d784eafe7b8a83ed7"},
+"RECORD":[
+    {"plc_devname":"thermostat","action":"MONITOR","action_desc":"curr_T","value":0,
+        "plc_operator":"qian","time":1720674115}
+    ],
+"EXPAND" :[]
+}
+
+************************************************************
+{
+ "HEAD":{"tag":"MESG","version":65537,"sender_uuid":"cmd_process","receiver_uuid
+    ":"audit_store","route":"operator_audit","flow":"DELIVER","state":"MATCH","flag"
+    :"LOCAL","ljump":1,"rjump":1,"record_type":"PLC_OPERATOR","record_subtype":"PLC_
+    CMD","record_num":1,"record_size":0,"expand_num":0,"expand_size":0,"msg_uuid":"7
+    1434c42ca9ecbeb231f3060272ccbe9bb57c215f23ac26da6745db9f2e61970"},
+"RECORD":[
+    {"plc_devname":"thermostat","action":"MONITOR","action_desc":"heating_G","value"
+        :0,"plc_operator":"","time":1720674116}
+    ],
+"EXPAND" :[]
+}

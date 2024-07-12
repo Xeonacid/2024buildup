@@ -1,0 +1,1340 @@
+
+**************Begin new trust node proc****************************
+{
+ "HEAD":{"tag":"MESG","version":65537,"sender_uuid":"953b0e08e059fb81d81a1dc67dd
+    55f11079246014f5dd9be3b87bd40889ce079","receiver_uuid":"logic_upload","route":"b
+    in_upload","flow":"QUERY","state":"MATCH","flag":"LOCAL","ljump":1,"rjump":2,"re
+    cord_type":"PLC_ENGINEER","record_subtype":"LOGIC_UPLOAD","record_num":1,"record
+    _size":84,"expand_num":0,"expand_size":0,"msg_uuid":"c1ebee5c25f7311b38239bb754a
+    59289fdeb439e555d1f3a61f5e2a2ca2c1566"},
+"RECORD":[
+    {"plc_devname":"thermostat","logic_filename":"libthermostat_logic.so","type":"FI
+        LE_LOGIC","uuid":"","author":"zhao","uploader":"zhao","time":0}
+    ],
+"EXPAND" :[]
+}
+
+************************************************************
+{
+ "HEAD":{"tag":"MESG","version":65537,"sender_uuid":"logic_upload","receiver_uui
+    d":"file_dealer","route":"bin_upload","flow":"QUERY","state":"MATCH","flag":"LOC
+    AL","ljump":2,"rjump":2,"record_type":"PLC_ENGINEER","record_subtype":"LOGIC_UPL
+    OAD","record_num":1,"record_size":0,"expand_num":1,"expand_size":0,"msg_uuid":"c
+    1ebee5c25f7311b38239bb754a59289fdeb439e555d1f3a61f5e2a2ca2c1566"},
+"RECORD":[
+    {"plc_devname":"thermostat","logic_filename":"libthermostat_logic.so","type":"FI
+        LE_LOGIC","uuid":"7fe15f8f075db96e5df6855a2fdc21cb48ada19b21d667477fe47d77607268
+        6f","author":"zhao","uploader":"zhao","time":1720672457}
+    ],
+"EXPAND" :[
+    {"data_size":0,"type":"PLC_ENGINEER","subtype":"LOGIC_BIN","expand":
+        {"plc_devname":"thermostat","logic_filename":"libthermostat_logic.so","code_uuid
+            ":"","bin_uuid":"7fe15f8f075db96e5df6855a2fdc21cb48ada19b21d667477fe47d776072686
+            f","author":"zhao","time":1720672457}
+        }
+    ]
+}
+
+************************************************************
+{
+ "HEAD":{"tag":"MESG","version":65537,"sender_uuid":"logic_upload","receiver_uui
+    d":"file_dealer","route":"bin_upload","flow":"QUERY","state":"MATCH","flag":"LOC
+    AL","ljump":2,"rjump":2,"record_type":"FILE_TRANS","record_subtype":"REQUEST","r
+    ecord_num":1,"record_size":0,"expand_num":0,"expand_size":0,"msg_uuid":"c1ebee5c
+    25f7311b38239bb754a59289fdeb439e555d1f3a61f5e2a2ca2c1566"},
+"RECORD":[
+    {"uuid":"7fe15f8f075db96e5df6855a2fdc21cb48ada19b21d667477fe47d776072686f","file
+        name":"logic_bin/7fe15f8f075db96e5df6855a2fdc21cb48ada19b21d667477fe47d776072686
+        f","requestor":"logic_upload"}
+    ],
+"EXPAND" :[]
+}
+
+************************************************************
+{
+ "HEAD":{"tag":"MESG","version":65537,"sender_uuid":"file_dealer","receiver_uuid
+    ":":plc_client","route":"bin_upload","flow":"QUERY","state":"MATCH","flag":"NULL
+    ","ljump":3,"rjump":2,"record_type":"FILE_TRANS","record_subtype":"FILE_DATA","r
+    ecord_num":1,"record_size":0,"expand_num":0,"expand_size":0,"msg_uuid":"c1ebee5c
+    25f7311b38239bb754a59289fdeb439e555d1f3a61f5e2a2ca2c1566"},
+"RECORD":[
+    {"uuid":"7fe15f8f075db96e5df6855a2fdc21cb48ada19b21d667477fe47d776072686f","file
+        name":"logic_bin/7fe15f8f075db96e5df6855a2fdc21cb48ada19b21d667477fe47d776072686
+        f","total_size":25528,"record_no":0,"offset":0,"data_size":512,"file_data":"f0VM
+        RgIBAQAAAAAAAAAAAAMAPgABAAAAAAAAAAAAAABAAAAAAAAAALhaAAAAAAAAAAAAAEAAOAALAEAAJAAj
+        AAEAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAaA0AAAAAAABoDQAAAAAAAAAQAAAAAAAAAQAA
+        AAUAAAAAEAAAAAAAAAAQAAAAAAAAABAAAAAAAAC9DAAAAAAAAL0MAAAAAAAAABAAAAAAAAABAAAABAAA
+        AAAgAAAAAAAAACAAAAAAAAAAIAAAAAAAADgCAAAAAAAAOAIAAAAAAAAAEAAAAAAAAAEAAAAGAAAAsC0A
+        AAAAAACwPQAAAAAAALA9AAAAAAAASAMAAAAAAAC4CwAAAAAAAAAQAAAAAAAAAgAAAAYAAADALQAAAAAA
+        AMA9AAAAAAAAwD0AAAAAAAAQAgAAAAAAABACAAAAAAAACAAAAAAAAAAEAAAABAAAAKgCAAAAAAAAqAIA
+        AAAAAACoAgAAAAAAACAAAAAAAAAAIAAAAAAAAAAIAAAAAAAAAAQAAAAEAAAAyAIAAAAAAADIAgAAAAAA
+        AMgCAAAAAAAAJAAAAAAAAAAkAAAAAAAAAAQAAAAAAAAAU+V0ZAQAAACoAgAAAAAAAKgCAAAAAAAAqAIA
+        AAAAAAAgAAAAAAAAACAAAAAAAAAACAAAAAAAAAA"}
+    ],
+"EXPAND" :[]
+}
+
+************************************************************
+{
+ "HEAD":{"tag":"MESG","version":65537,"sender_uuid":"logic_upload","receiver_uui
+    d":"file_dealer","route":"bin_upload","flow":"QUERY","state":"MATCH","flag":"LOC
+    AL","ljump":2,"rjump":2,"record_type":"PLC_ENGINEER","record_subtype":"LOGIC_UPL
+    OAD","record_num":1,"record_size":0,"expand_num":2,"expand_size":0,"msg_uuid":"c
+    1ebee5c25f7311b38239bb754a59289fdeb439e555d1f3a61f5e2a2ca2c1566"},
+"RECORD":[
+    {"plc_devname":"thermostat","logic_filename":"libthermostat_logic.so","type":"FI
+        LE_LOGIC","uuid":"7fe15f8f075db96e5df6855a2fdc21cb48ada19b21d667477fe47d77607268
+        6f","author":"zhao","uploader":"zhao","time":1720672457}
+    ],
+"EXPAND" :[
+    {"data_size":0,"type":"PLC_ENGINEER","subtype":"LOGIC_BIN","expand":
+        {"plc_devname":"thermostat","logic_filename":"libthermostat_logic.so","code_uuid
+            ":"","bin_uuid":"7fe15f8f075db96e5df6855a2fdc21cb48ada19b21d667477fe47d776072686
+            f","author":"zhao","time":1720672457}
+        },
+    {"data_size":0,"type":"GENERAL_RETURN","subtype":"BINDATA","expand":
+        {"name":"signed data","size":64,"bindata":"QvvS2WMCj8wbrNaBQ22RXIXFkUgvFTs9JUBp4
+            wuJkH9woX+oo2reJQQrJvrFXc7af0CW7oGbtAmrf4eH9ew08g"}
+        }
+    ]
+}
+
+************************************************************
+{
+ "HEAD":{"tag":"MESG","version":65537,"sender_uuid":"file_dealer","receiver_uuid
+    ":":plc_client","route":"bin_upload","flow":"QUERY","state":"MATCH","flag":"NULL
+    ","ljump":3,"rjump":2,"record_type":"FILE_TRANS","record_subtype":"FILE_DATA","r
+    ecord_num":1,"record_size":0,"expand_num":0,"expand_size":0,"msg_uuid":"c1ebee5c
+    25f7311b38239bb754a59289fdeb439e555d1f3a61f5e2a2ca2c1566"},
+"RECORD":[
+    {"uuid":"7fe15f8f075db96e5df6855a2fdc21cb48ada19b21d667477fe47d776072686f","file
+        name":"logic_bin/7fe15f8f075db96e5df6855a2fdc21cb48ada19b21d667477fe47d776072686
+        f","total_size":25528,"record_no":1,"offset":512,"data_size":512,"file_data":"UO
+        V0ZAQAAABkIAAAAAAAAGQgAAAAAAAAZCAAAAAAAABkAAAAAAAAAGQAAAAAAAAABAAAAAAAAABR5XRkBg
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAFLldGQEAAAAsC
+        0AAAAAAACwPQAAAAAAALA9AAAAAAAAUAIAAAAAAABQAgAAAAAAAAEAAAAAAAAABAAAABAAAAAFAAAAR0
+        5VAAIAAMAEAAAAAwAAAAAAAAAEAAAAFAAAAAMAAABHTlUAsh0AbHPHy3WPHrADtGlRn37BmNUAAAAAAw
+        AAABoAAAACAAAABwAAAEIBAAAYAgpRACQJAMEAoAgaAAAAGwAAAB8AAAAHcvxjMn92xai55svMU7WiMT
+        zIWNDbal3gPdrhAARhAkpzfgtMRT1QvDHDbvUJiAsAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA4g
+        EAABIAAAAAAAAAAAAAAAAAAAAAAAAAEAAAACAAAAAAAAAAAAAAAAAAAAAAAAAA9QEAABIAAAAAAAAAAA
+        AAAAAAAAAAAAAAGgIAABIAAAAAAAAAAAAAAAAAAAAAAAAAlAAAABAAAAAAAAAAAAAAAAAAAAAAAAAALw
+        IAABIAAAAAAAAAAAAAAAAAAAAAAAAA0wEAABIAAAA"}
+    ],
+"EXPAND" :[]
+}
+
+************************************************************
+{
+ "HEAD":{"tag":"MESG","version":65537,"sender_uuid":"file_dealer","receiver_uuid
+    ":":plc_client","route":"bin_upload","flow":"QUERY","state":"MATCH","flag":"NULL
+    ","ljump":3,"rjump":2,"record_type":"FILE_TRANS","record_subtype":"FILE_DATA","r
+    ecord_num":1,"record_size":0,"expand_num":0,"expand_size":0,"msg_uuid":"c1ebee5c
+    25f7311b38239bb754a59289fdeb439e555d1f3a61f5e2a2ca2c1566"},
+"RECORD":[
+    {"uuid":"7fe15f8f075db96e5df6855a2fdc21cb48ada19b21d667477fe47d776072686f","file
+        name":"logic_bin/7fe15f8f075db96e5df6855a2fdc21cb48ada19b21d667477fe47d776072686
+        f","total_size":25528,"record_no":2,"offset":1024,"data_size":512,"file_data":"A
+        AAAAAAAAAAAAAAAAAAAAL4BAAASAAAAAAAAAAAAAAAAAAAAAAAAAMUBAAASAAAAAAAAAAAAAAAAAAAAA
+        AAAAL0BAAASAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAJwAAAASAAAAA
+        AAAAAAAAAAAAAAAAAAAAFYBAAASAAAAAAAAAAAAAAAAAAAAAAAAAN0AAAAQAAAAAAAAAAAAAAAAAAAAA
+        AAAAMgAAAASAAAAAAAAAAAAAAAAAAAAAAAAAAcCAAASAAAAAAAAAAAAAAAAAAAAAAAAAGcBAAASAAAAA
+        AAAAAAAAAAAAAAAAAAAAM0AAAAQAAAAAAAAAAAAAAAAAAAAAAAAAHsBAAASAAAAAAAAAAAAAAAAAAAAA
+        AAAALgBAAASAAAAAAAAAAAAAAAAAAAAAAAAAEQBAAASAAAAAAAAAAAAAAAAAAAAAAAAAMsBAAAQAAAAA
+        AAAAAAAAAAAAAAAAAAAACwAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAEYAAAAiAAAAAAAAAAAAAAAAAAAAA
+        AAAAOYAAAASAAAAAAAAAAAAAAAAAAAAAAAAABwBAAASAA4AExoAAAAAAAA2AQAAAAAAADEBAAASAA4AS
+        RsAAAAAAABnAQAAAAAAAKQBAAASAA4AdhkAAAAAAAA"}
+    ],
+"EXPAND" :[]
+}
+
+************************************************************
+{
+ "HEAD":{"tag":"MESG","version":65537,"sender_uuid":"file_dealer","receiver_uuid
+    ":":plc_client","route":"bin_upload","flow":"QUERY","state":"MATCH","flag":"NULL
+    ","ljump":3,"rjump":2,"record_type":"FILE_TRANS","record_subtype":"FILE_DATA","r
+    ecord_num":1,"record_size":0,"expand_num":0,"expand_size":0,"msg_uuid":"c1ebee5c
+    25f7311b38239bb754a59289fdeb439e555d1f3a61f5e2a2ca2c1566"},
+"RECORD":[
+    {"uuid":"7fe15f8f075db96e5df6855a2fdc21cb48ada19b21d667477fe47d776072686f","file
+        name":"logic_bin/7fe15f8f075db96e5df6855a2fdc21cb48ada19b21d667477fe47d776072686
+        f","total_size":25528,"record_no":3,"offset":1536,"data_size":512,"file_data":"n
+        QAAAAAAAACRAQAAEgAOALoYAAAAAAAAvAAAAAAAAABVAAAAEQAZACBBAAAAAAAACAAAAAAAAAB+AAAAE
+        gAOADkUAAAAAAAAUQAAAAAAAADtAAAAEgAOAI4XAAAAAAAAlgAAAAAAAABzAAAAEQAYAPBAAAAAAAAAC
+        AAAAAAAAACxAAAAEgAOAIoUAAAAAAAABAMAAAAAAABlAAAAEQAZACxBAAAAAAAABAAAAAAAAAAEAQAAE
+        gAOACQYAAAAAAAAlgAAAAAAAABhAAAAEQAZAChBAAAAAAAABAAAAAAAAAAAX19nbW9uX3N0YXJ0X18AX
+        0lUTV9kZXJlZ2lzdGVyVE1DbG9uZVRhYmxlAF9JVE1fcmVnaXN0ZXJUTUNsb25lVGFibGUAX19jeGFfZ
+        mluYWxpemUAY2xpZW50X2Nvbm4ATlVNAGVudmlyb25tZW50X1QAdmFsdWVfZmlsZQB0aGVybW9zdGF0X
+        2xvZ2ljX2luaXQARGFsbG9jMABleF9tb2R1bGVfc2V0cG9pbnRlcgB0aGVybW9zdGF0X2xvZ2ljX3N0Y
+        XJ0AHRpbWUAcHJpbnRfY3ViZWF1ZGl0AHRpbWVfdmFsAHVzbGVlcABwcm9jX3JlYWRfdGFyZ2V0X3RfY
+        21kAHByb2NfcmVhZF9jdXJyZW50X3RfY21kAHByb2M"}
+    ],
+"EXPAND" :[]
+}
+
+************************************************************
+{
+ "HEAD":{"tag":"MESG","version":65537,"sender_uuid":"file_dealer","receiver_uuid
+    ":":plc_client","route":"bin_upload","flow":"QUERY","state":"MATCH","flag":"NULL
+    ","ljump":3,"rjump":2,"record_type":"FILE_TRANS","record_subtype":"FILE_DATA","r
+    ecord_num":1,"record_size":0,"expand_num":0,"expand_size":0,"msg_uuid":"c1ebee5c
+    25f7311b38239bb754a59289fdeb439e555d1f3a61f5e2a2ca2c1566"},
+"RECORD":[
+    {"uuid":"7fe15f8f075db96e5df6855a2fdc21cb48ada19b21d667477fe47d776072686f","file
+        name":"logic_bin/7fe15f8f075db96e5df6855a2fdc21cb48ada19b21d667477fe47d776072686
+        f","total_size":25528,"record_no":4,"offset":2048,"data_size":512,"file_data":"X
+        3NlbmRfc3dpdGNoX2NtZABwcm9jX3NlbmRfZ2Vhcl9jbWQAZXhfbW9kdWxlX3JlY3Ztc2cAbWVzc2FnZ
+        V9nZXRfdHlwZQBtZXNzYWdlX2dldF9zdWJ0eXBlAG1lbWRiX2ZpbmRfcmVjb3JkdHlwZQBwcm9jX3JlY
+        WRfdGFyZ2V0X3QAcHJvY19yZWFkX2N1cnJlbnRfdABvcGVuAGRwcmludGYAY2xvc2UAVGFsbG9jMABtZ
+        XNzYWdlX2NyZWF0ZQBtZXNzYWdlX2FkZF9yZWNvcmQAZXhfbW9kdWxlX3NlbmRtc2cAbWVzc2FnZV9nZ
+        XRfcmVjb3JkAGV4X21vZHVsZV9nZXRwb2ludGVyAF9fc3RhY2tfY2hrX2ZhaWwAbGliZXhtb2R1bGUuc
+        28AbGlibWVzc2FnZS5zbwBsaWJtZW1kYi5zbwBsaWJzdHJ1Y3Quc28AbGliY3J5cHRvX2Z1bmMuc28Ab
+        GliYy5zby42AEdMSUJDXzIuMi41AEdMSUJDXzIuNAAAAAEAAQABAAEAAQACAAEAAwADAAMAAQABAAEAA
+        QADAAEAAQABAAEAAwABAAEAAQADAAMAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAAAAAAEAAgCIAgAAE
+        AAAAAAAAAB1GmkJAAADAJICAAAQAAAAFGlpDQAAAgA"}
+    ],
+"EXPAND" :[]
+}
+
+************************************************************
+{
+ "HEAD":{"tag":"MESG","version":65537,"sender_uuid":"file_dealer","receiver_uuid
+    ":":plc_client","route":"bin_upload","flow":"QUERY","state":"MATCH","flag":"NULL
+    ","ljump":3,"rjump":2,"record_type":"FILE_TRANS","record_subtype":"FILE_DATA","r
+    ecord_num":1,"record_size":0,"expand_num":0,"expand_size":0,"msg_uuid":"c1ebee5c
+    25f7311b38239bb754a59289fdeb439e555d1f3a61f5e2a2ca2c1566"},
+"RECORD":[
+    {"uuid":"7fe15f8f075db96e5df6855a2fdc21cb48ada19b21d667477fe47d776072686f","file
+        name":"logic_bin/7fe15f8f075db96e5df6855a2fdc21cb48ada19b21d667477fe47d776072686
+        f","total_size":25528,"record_no":5,"offset":2560,"data_size":512,"file_data":"n
+        gIAAAAAAACwPQAAAAAAAAgAAAAAAAAAMBQAAAAAAAC4PQAAAAAAAAgAAAAAAAAA8BMAAAAAAADoQAAAA
+        AAAAAgAAAAAAAAA6EAAAAAAAADwQAAAAAAAAAgAAAAAAAAAACAAAAAAAADQPwAAAAAAAAYAAAACAAAAA
+        AAAAAAAAADYPwAAAAAAAAYAAAALAAAAAAAAAAAAAADgPwAAAAAAAAYAAAAOAAAAAAAAAAAAAADoPwAAA
+        AAAAAYAAAAhAAAAAAAAAAAAAADwPwAAAAAAAAYAAAAXAAAAAAAAAAAAAAD4PwAAAAAAAAYAAAAYAAAAA
+        AAAAAAAAAAYQAAAAAAAAAcAAAAbAAAAAAAAAAAAAAAgQAAAAAAAAAcAAAABAAAAAAAAAAAAAAAoQAAAA
+        AAAAAcAAAADAAAAAAAAAAAAAAAwQAAAAAAAAAcAAAAEAAAAAAAAAAAAAAA4QAAAAAAAAAcAAAAFAAAAA
+        AAAAAAAAABAQAAAAAAAAAcAAAAGAAAAAAAAAAAAAABIQAAAAAAAAAcAAAAcAAAAAAAAAAAAAABQQAAAA
+        AAAAAcAAAAHAAAAAAAAAAAAAABYQAAAAAAAAAcAAAAIAAAAAAAAAAAAAABgQAAAAAAAAAcAAAAJAAAAA
+        AAAAAAAAABoQAAAAAAAAAcAAAAKAAAAAAAAAAAAAAA"}
+    ],
+"EXPAND" :[]
+}
+
+************************************************************
+{
+ "HEAD":{"tag":"MESG","version":65537,"sender_uuid":"file_dealer","receiver_uuid
+    ":":plc_client","route":"bin_upload","flow":"QUERY","state":"MATCH","flag":"NULL
+    ","ljump":3,"rjump":2,"record_type":"FILE_TRANS","record_subtype":"FILE_DATA","r
+    ecord_num":1,"record_size":0,"expand_num":0,"expand_size":0,"msg_uuid":"c1ebee5c
+    25f7311b38239bb754a59289fdeb439e555d1f3a61f5e2a2ca2c1566"},
+"RECORD":[
+    {"uuid":"7fe15f8f075db96e5df6855a2fdc21cb48ada19b21d667477fe47d776072686f","file
+        name":"logic_bin/7fe15f8f075db96e5df6855a2fdc21cb48ada19b21d667477fe47d776072686
+        f","total_size":25528,"record_no":6,"offset":3072,"data_size":512,"file_data":"c
+        EAAAAAAAAAHAAAADAAAAAAAAAAAAAAAeEAAAAAAAAAHAAAADQAAAAAAAAAAAAAAgEAAAAAAAAAHAAAAD
+        wAAAAAAAAAAAAAAiEAAAAAAAAAHAAAAHQAAAAAAAAAAAAAAkEAAAAAAAAAHAAAAIAAAAAAAAAAAAAAAm
+        EAAAAAAAAAHAAAAEAAAAAAAAAAAAAAAoEAAAAAAAAAHAAAAEQAAAAAAAAAAAAAAqEAAAAAAAAAHAAAAE
+        gAAAAAAAAAAAAAAsEAAAAAAAAAHAAAAGgAAAAAAAAAAAAAAuEAAAAAAAAAHAAAAEwAAAAAAAAAAAAAAw
+        EAAAAAAAAAHAAAAFAAAAAAAAAAAAAAAyEAAAAAAAAAHAAAAFQAAAAAAAAAAAAAA0EAAAAAAAAAHAAAAF
+        gAAAAAAAAAAAAAA2EAAAAAAAAAHAAAAJAAAAAAAAAAAAAAA4EAAAAAAAAAHAAAAGQAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"}
+    ],
+"EXPAND" :[]
+}
+
+************************************************************
+{
+ "HEAD":{"tag":"MESG","version":65537,"sender_uuid":"file_dealer","receiver_uuid
+    ":":plc_client","route":"bin_upload","flow":"QUERY","state":"MATCH","flag":"NULL
+    ","ljump":3,"rjump":2,"record_type":"FILE_TRANS","record_subtype":"FILE_DATA","r
+    ecord_num":1,"record_size":0,"expand_num":0,"expand_size":0,"msg_uuid":"c1ebee5c
+    25f7311b38239bb754a59289fdeb439e555d1f3a61f5e2a2ca2c1566"},
+"RECORD":[
+    {"uuid":"7fe15f8f075db96e5df6855a2fdc21cb48ada19b21d667477fe47d776072686f","file
+        name":"logic_bin/7fe15f8f075db96e5df6855a2fdc21cb48ada19b21d667477fe47d776072686
+        f","total_size":25528,"record_no":7,"offset":3584,"data_size":512,"file_data":"A
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"}
+    ],
+"EXPAND" :[]
+}
+
+************************************************************
+{
+ "HEAD":{"tag":"MESG","version":65537,"sender_uuid":"file_dealer","receiver_uuid
+    ":":plc_client","route":"bin_upload","flow":"QUERY","state":"MATCH","flag":"NULL
+    ","ljump":3,"rjump":2,"record_type":"FILE_TRANS","record_subtype":"FILE_DATA","r
+    ecord_num":1,"record_size":0,"expand_num":0,"expand_size":0,"msg_uuid":"c1ebee5c
+    25f7311b38239bb754a59289fdeb439e555d1f3a61f5e2a2ca2c1566"},
+"RECORD":[
+    {"uuid":"7fe15f8f075db96e5df6855a2fdc21cb48ada19b21d667477fe47d776072686f","file
+        name":"logic_bin/7fe15f8f075db96e5df6855a2fdc21cb48ada19b21d667477fe47d776072686
+        f","total_size":25528,"record_no":8,"offset":4096,"data_size":512,"file_data":"8
+        w8e+kiD7AhIiwXJLwAASIXAdAL/0EiDxAjDAAAAAAD/NeIvAADy/yXjLwAADx8A8w8e+mgAAAAA8unh/
+        ///kPMPHvpoAQAAAPLp0f///5DzDx76aAIAAADy6cH///+Q8w8e+mgDAAAA8umx////kPMPHvpoBAAAA
+        PLpof///5DzDx76aAUAAADy6ZH///+Q8w8e+mgGAAAA8umB////kPMPHvpoBwAAAPLpcf///5DzDx76a
+        AgAAADy6WH///+Q8w8e+mgJAAAA8ulR////kPMPHvpoCgAAAPLpQf///5DzDx76aAsAAADy6TH///+Q8
+        w8e+mgMAAAA8ukh////kPMPHvpoDQAAAPLpEf///5DzDx76aA4AAADy6QH///+Q8w8e+mgPAAAA8unx/
+        v//kPMPHvpoEAAAAPLp4f7//5DzDx76aBEAAADy6dH+//+Q8w8e+mgSAAAA8unB/v//kPMPHvpoEwAAA
+        PLpsf7//5DzDx76aBQAAADy6aH+//+Q8w8e+mgVAAAA8umR/v//kPMPHvpoFgAAAPLpgf7//5DzDx76a
+        BcAAADy6XH+//+Q8w8e+mgYAAAA8ulh/v//kPMPHvpoGQAAAPLpUf7//5DzDx768v8lHS4AAA8fRAAA8
+        w8e+vL/JS0uAAAPH0QAAPMPHvry/yUlLgAADx9EAAA"}
+    ],
+"EXPAND" :[]
+}
+
+************************************************************
+{
+ "HEAD":{"tag":"MESG","version":65537,"sender_uuid":"file_dealer","receiver_uuid
+    ":":plc_client","route":"bin_upload","flow":"QUERY","state":"MATCH","flag":"NULL
+    ","ljump":3,"rjump":2,"record_type":"FILE_TRANS","record_subtype":"FILE_DATA","r
+    ecord_num":1,"record_size":0,"expand_num":0,"expand_size":0,"msg_uuid":"c1ebee5c
+    25f7311b38239bb754a59289fdeb439e555d1f3a61f5e2a2ca2c1566"},
+"RECORD":[
+    {"uuid":"7fe15f8f075db96e5df6855a2fdc21cb48ada19b21d667477fe47d776072686f","file
+        name":"logic_bin/7fe15f8f075db96e5df6855a2fdc21cb48ada19b21d667477fe47d776072686
+        f","total_size":25528,"record_no":9,"offset":4608,"data_size":512,"file_data":"8
+        w8e+vL/JR0uAAAPH0QAAPMPHvry/yUVLgAADx9EAADzDx768v8lDS4AAA8fRAAA8w8e+vL/JQUuAAAPH
+        0QAAPMPHvry/yX9LQAADx9EAADzDx768v8l9S0AAA8fRAAA8w8e+vL/Je0tAAAPH0QAAPMPHvry/yXlL
+        QAADx9EAADzDx768v8l3S0AAA8fRAAA8w8e+vL/JdUtAAAPH0QAAPMPHvry/yXNLQAADx9EAADzDx768
+        v8lxS0AAA8fRAAA8w8e+vL/Jb0tAAAPH0QAAPMPHvry/yW1LQAADx9EAADzDx768v8lrS0AAA8fRAAA8
+        w8e+vL/JaUtAAAPH0QAAPMPHvry/yWdLQAADx9EAADzDx768v8llS0AAA8fRAAA8w8e+vL/JY0tAAAPH
+        0QAAPMPHvry/yWFLQAADx9EAADzDx768v8lfS0AAA8fRAAA8w8e+vL/JXUtAAAPH0QAAPMPHvry/yVtL
+        QAADx9EAADzDx768v8lZS0AAA8fRAAASI09cS0AAEiNBWotAABIOfh0FUiLBTYsAABIhcB0Cf/gDx+AA
+        AAAAMMPH4AAAAAASI09QS0AAEiNNTotAABIKf5IifBIwe4/SMH4A0gBxkjR/nQUSIsFFSwAAEiFwHQI/
+        +BmDx9EAADDDx+AAAAAAPMPHvqAPQUtAAAAdStVSIM"}
+    ],
+"EXPAND" :[]
+}
+
+************************************************************
+{
+ "HEAD":{"tag":"MESG","version":65537,"sender_uuid":"file_dealer","receiver_uuid
+    ":":plc_client","route":"bin_upload","flow":"QUERY","state":"MATCH","flag":"NULL
+    ","ljump":3,"rjump":2,"record_type":"FILE_TRANS","record_subtype":"FILE_DATA","r
+    ecord_num":1,"record_size":0,"expand_num":0,"expand_size":0,"msg_uuid":"c1ebee5c
+    25f7311b38239bb754a59289fdeb439e555d1f3a61f5e2a2ca2c1566"},
+"RECORD":[
+    {"uuid":"7fe15f8f075db96e5df6855a2fdc21cb48ada19b21d667477fe47d776072686f","file
+        name":"logic_bin/7fe15f8f075db96e5df6855a2fdc21cb48ada19b21d667477fe47d776072686
+        f","total_size":25528,"record_no":10,"offset":5120,"data_size":512,"file_data":"
+        PfIrAAAASInldAxIiz3WLAAA6Ln9///oZP///8YF3SwAAAFdww8fAMMPH4AAAAAA8w8e+ul3////8w8e
+        +lVIieVIg+wgSIl96EiJdeBIi0XoSInGvwcAAADowv3//0iJRfhIg334AHUHuPT////rGEiLVfhIi0Xo
+        SInWSInH6A3+//+4AAAAAMnD8w8e+lVIieVTSIPsWEiJfahIiXWgZEiLBCUoAAAASIlF6DHAx0XEAAAA
+        AMdFyAAAAADHRbgAAAAAx0W8AAAAAMdFwAAAAABIjUXgSInHuAAAAADozv3//4kFeDQAAIsFcjQAAInG
+        SI0FGAsAAEiJx7gAAAAA6Pz9//9IiwXVKgAASItACInH6Fr+//+DRbgBi0W4SGPQSGnS001iEEjB6iDB
+        +gaJwcH5HynKacroAwAAKciJwoP6AXUPSItFqEiJx+iA/f//iUXEi0W4SGPQSGnSH4XrUUjB6iDB+gWJ
+        wcH5HynKa8pkKciJwoP6AnUWx0W8AgAAAEiLRahIicfo0/3//4lFxIN9vAN1D0iLRahIicfobv3//4lF
+        xIN9vAR1D0iLRahIicfoKfz//4lFxEiNVdhIi0WoSInWSInH6HP9//+JRcSDfcQAD4ioAQAASItF2EiF
+        wA+EoQEAAEiLRdhIicforfz//4lFzEiLRdhIicfo7vw"}
+    ],
+"EXPAND" :[]
+}
+
+************************************************************
+{
+ "HEAD":{"tag":"MESG","version":65537,"sender_uuid":"file_dealer","receiver_uuid
+    ":":plc_client","route":"bin_upload","flow":"QUERY","state":"MATCH","flag":"NULL
+    ","ljump":3,"rjump":2,"record_type":"FILE_TRANS","record_subtype":"FILE_DATA","r
+    ecord_num":1,"record_size":0,"expand_num":0,"expand_size":0,"msg_uuid":"c1ebee5c
+    25f7311b38239bb754a59289fdeb439e555d1f3a61f5e2a2ca2c1566"},
+"RECORD":[
+    {"uuid":"7fe15f8f075db96e5df6855a2fdc21cb48ada19b21d667477fe47d776072686f","file
+        name":"logic_bin/7fe15f8f075db96e5df6855a2fdc21cb48ada19b21d667477fe47d776072686
+        f","total_size":25528,"record_no":11,"offset":5632,"data_size":512,"file_data":"
+        //+JRdCLVdCLRcyJ1onH6Az9//+FwHU3SItF2EiJx+jM/P//icNIi0XYSInH6G78//+J2onGSI0F4wkA
+        AEiJx7gAAAAA6Bb8///pOgEAAIF9zGARAgB1RIN90AN1PkiLVdhIi0WoSInWSInH6E/8//+JRcSDfcQA
+        D44LAQAAi0XEicZIjQXBCQAASInHuAAAAADoyfv//+ntAAAAgX3MYBECAA+FngAAAIN90AQPhZQAAABI
+        i1XYSItFqEiJ1kiJx+h6+///iUXESIsFGCkAAEiLAL4BAAAASInHuAAAAADoS/z//4lF1IN91AB+RotV
+        xItF1EiNDWIJAABIic6Jx7gAAAAA6Hb7//+DRcAGg33ASH4gi0XUSI0VRAkAAEiJ1onHuAAAAADoU/v/
+        /8dFwAAAAACLRdSJx+gy+///x0W8AwAAAOtCgX3MYBECAHUPg33QBXUJx0W8BAAAAOsqgX3MYBECAA+F
+        mP3//4N90AYPhY79///HRbwAAAAA6YL9//+Q6Xz9//+Q6Xb9///zDx76VUiJ5UiD7DBIiX3YvwQAAADo
+        qPv//0iJRfBIg33wAHUHuPT////raEiLRfBmxwBDnEiLRfBmx0ACAQC6AAAAAL4DAAAAv1ARAgDob/r/
+        /0iJRfhIg334AHUHuOr////rL0iLVfBIi0X4SInWSIk"}
+    ],
+"EXPAND" :[]
+}
+
+************************************************************
+{
+ "HEAD":{"tag":"MESG","version":65537,"sender_uuid":"file_dealer","receiver_uuid
+    ":":plc_client","route":"bin_upload","flow":"QUERY","state":"MATCH","flag":"NULL
+    ","ljump":3,"rjump":2,"record_type":"FILE_TRANS","record_subtype":"FILE_DATA","r
+    ecord_num":1,"record_size":0,"expand_num":0,"expand_size":0,"msg_uuid":"c1ebee5c
+    25f7311b38239bb754a59289fdeb439e555d1f3a61f5e2a2ca2c1566"},
+"RECORD":[
+    {"uuid":"7fe15f8f075db96e5df6855a2fdc21cb48ada19b21d667477fe47d776072686f","file
+        name":"logic_bin/7fe15f8f075db96e5df6855a2fdc21cb48ada19b21d667477fe47d776072686
+        f","total_size":25528,"record_no":12,"offset":6144,"data_size":512,"file_data":"
+        x+jq+f//iUXsSItV+EiLRdhIidZIicfo5Pn//4lF7ItF7MnD8w8e+lVIieVIg+wwSIl92L8EAAAA6BL7
+        //9IiUXwSIN98AB1B7j0////62hIi0XwZscANHVIi0XwZsdAAgEAugAAAAC+BAAAAL9QEQIA6Nn5//9I
+        iUX4SIN9+AB1B7jq////6y9Ii1XwSItF+EiJ1kiJx+hU+f//iUXsSItV+EiLRdhIidZIicfoTvn//4lF
+        7ItF7MnD8w8e+lVIieVIg+wwSIl92EiJddBkSIsEJSgAAABIiUX4McBIjU3oSItF0LoAAAAASInOSInH
+        6Ov5//+JReSDfeQAeQWLReTrXUiLRehIhcB1B7jq////601Ii0XYSInH6PH4//9IiUXwSItF8A+3UAFI
+        i0XoSItAAQ+3AGY5wnUHuAAAAADrHkiLRehIi0ABD7cQSItF8GaJUAFIi0XwD7dAAQ+3wEiLVfhkSCsU
+        JSgAAAB0Bei8+P//ycPzDx76VUiJ5UiD7DBIiX3YSIl10GRIiwQlKAAAAEiJRfgxwEiNTehIi0XQugAA
+        AABIic5IicfoL/n//4lF5IN95AB5BYtF5Os+SItF6EiFwHUHuOr////rLkiLRdhIicfoNfj//0iJRfBI
+        i0XoSItAAQ+3EEiLRfBmiVADSItF8A+3QAMPt8BIi1U"}
+    ],
+"EXPAND" :[]
+}
+
+************************************************************
+{
+ "HEAD":{"tag":"MESG","version":65537,"sender_uuid":"file_dealer","receiver_uuid
+    ":":plc_client","route":"bin_upload","flow":"QUERY","state":"MATCH","flag":"NULL
+    ","ljump":3,"rjump":2,"record_type":"FILE_TRANS","record_subtype":"FILE_DATA","r
+    ecord_num":1,"record_size":0,"expand_num":0,"expand_size":0,"msg_uuid":"c1ebee5c
+    25f7311b38239bb754a59289fdeb439e555d1f3a61f5e2a2ca2c1566"},
+"RECORD":[
+    {"uuid":"7fe15f8f075db96e5df6855a2fdc21cb48ada19b21d667477fe47d776072686f","file
+        name":"logic_bin/7fe15f8f075db96e5df6855a2fdc21cb48ada19b21d667477fe47d776072686
+        f","total_size":25528,"record_no":13,"offset":6656,"data_size":512,"file_data":"
+        +GRIKxQlKAAAAHQF6B/4///Jw/MPHvpVSInlSIPsQEiJfchkSIsEJSgAAABIiUX4McDHRdAAAAAASItF
+        yEiJx+jL9///SIlF4L8EAAAA6P34//9IiUXoSIN96AB1Crj0////6csAAABIjUXYSInHuAAAAADoN/j/
+        /4lF1EiLReAPt1ABSItF4A+3QANmOcJ3FUiLRehmxwACAEiLRehmx0ACAADrE0iLRehmxwACAEiLRehm
+        x0ACAP+LFaEuAACLRdQp0IP4Cn4KSItF6GbHQAIA/7oAAAAAvgUAAAC/UBECAOhp9///SIlF8EiDffAA
+        dQe46v///+s6SItV6EiLRfBIidZIicfo5Pb//4lF0IN90AB5BYtF0OsZSItV8EiLRchIidZIicfo0/b/
+        /4lF0ItF0EiLVfhkSCsUJSgAAAB0Bejp9v//ycPzDx76VUiJ5UiD7FBIiX24ZEiLBCUoAAAASIlF+DHA
+        x0XMAAAAAEiLRbhIicfolfb//0iJReC/BAAAAOjH9///SIlF6EiDfegAdQq49P///+n8AAAASItF4A+3
+        QAEPt9BIi0XgD7dAAw+3yInQKciJRdBIi0XoZscARZxIjUXYSInHuAAAAADo2/b//4lF1IsVgi0AAItF
+        1CnQg/gKfgxIi0XoZsdAAgkA60aDfdAKfkCLRdBIY9A"}
+    ],
+"EXPAND" :[]
+}
+
+************************************************************
+{
+ "HEAD":{"tag":"MESG","version":65537,"sender_uuid":"file_dealer","receiver_uuid
+    ":":plc_client","route":"bin_upload","flow":"QUERY","state":"MATCH","flag":"NULL
+    ","ljump":3,"rjump":2,"record_type":"FILE_TRANS","record_subtype":"FILE_DATA","r
+    ecord_num":1,"record_size":0,"expand_num":0,"expand_size":0,"msg_uuid":"c1ebee5c
+    25f7311b38239bb754a59289fdeb439e555d1f3a61f5e2a2ca2c1566"},
+"RECORD":[
+    {"uuid":"7fe15f8f075db96e5df6855a2fdc21cb48ada19b21d667477fe47d776072686f","file
+        name":"logic_bin/7fe15f8f075db96e5df6855a2fdc21cb48ada19b21d667477fe47d776072686
+        f","total_size":25528,"record_no":14,"offset":7168,"data_size":512,"file_data":"
+        SGnSH4XrUUjB6iDB+gXB+B+JwYnQKciNUAFIi0XoZolQAkiLRegPt0ACZoP4CXYKSItF6GbHQAIJALoA
+        AAAAvgYAAAC/UBECAOgC9v//SIlF8EiDffAAdQe46v///+s6SItV6EiLRfBIidZIicfoffX//4lFzIN9
+        zAB5BYtFzOsZSItV8EiLRbhIidZIicfobPX//4lFzItFzEiLVfhkSCsUJSgAAAB0BeiC9f//ycPzDx76
+        SIPsCEiDxAjDAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"}
+    ],
+"EXPAND" :[]
+}
+
+************************************************************
+{
+ "HEAD":{"tag":"MESG","version":65537,"sender_uuid":"file_dealer","receiver_uuid
+    ":":plc_client","route":"bin_upload","flow":"QUERY","state":"MATCH","flag":"NULL
+    ","ljump":3,"rjump":2,"record_type":"FILE_TRANS","record_subtype":"FILE_DATA","r
+    ecord_num":1,"record_size":0,"expand_num":0,"expand_size":0,"msg_uuid":"c1ebee5c
+    25f7311b38239bb754a59289fdeb439e555d1f3a61f5e2a2ca2c1566"},
+"RECORD":[
+    {"uuid":"7fe15f8f075db96e5df6855a2fdc21cb48ada19b21d667477fe47d776072686f","file
+        name":"logic_bin/7fe15f8f075db96e5df6855a2fdc21cb48ada19b21d667477fe47d776072686
+        f","total_size":25528,"record_no":15,"offset":7680,"data_size":512,"file_data":"
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"}
+    ],
+"EXPAND" :[]
+}
+
+************************************************************
+{
+ "HEAD":{"tag":"MESG","version":65537,"sender_uuid":"file_dealer","receiver_uuid
+    ":":plc_client","route":"bin_upload","flow":"QUERY","state":"MATCH","flag":"NULL
+    ","ljump":3,"rjump":2,"record_type":"FILE_TRANS","record_subtype":"FILE_DATA","r
+    ecord_num":1,"record_size":0,"expand_num":0,"expand_size":0,"msg_uuid":"c1ebee5c
+    25f7311b38239bb754a59289fdeb439e555d1f3a61f5e2a2ca2c1566"},
+"RECORD":[
+    {"uuid":"7fe15f8f075db96e5df6855a2fdc21cb48ada19b21d667477fe47d776072686f","file
+        name":"logic_bin/7fe15f8f075db96e5df6855a2fdc21cb48ada19b21d667477fe47d776072686
+        f","total_size":25528,"record_no":16,"offset":8192,"data_size":512,"file_data":"
+        dmFsdWVfZmlsZS50eHQAc3RhcnQgdGltZSAlZAoAAABtZXNzYWdlIGZvcm1hdCAoJWQgJWQpIGlzIG5v
+        dCByZWdpc3RlcmVkIQoAIHRhcmdldCBUIGlzICVkIQoAJTVkIAAKAAEbAztgAAAACwAAALzv//98AAAA
+        bPH//6QAAAB88f//vAAAANXz///UAAAAJvT///QAAAAq9///EAEAAMD3//8wAQAAVvj//1ABAAAS+f//
+        cAEAAK/5//+QAQAA5fr//7ABAAAUAAAAAAAAAAF6UgABeBABGwwHCJABAAAkAAAAHAAAADjv//+wAQAA
+        AA4QRg4YSg8LdwiAAD8aOiozJCIAAAAAFAAAAEQAAADA8P//EAAAAAAAAAAAAAAAFAAAAFwAAAC48P//
+        oAEAAAAAAAAAAAAAHAAAAHQAAAD58v//UQAAAABFDhCGAkMNBgJIDAcIAAAYAAAAlAAAACrz//8EAwAA
+        AEUOEIYCQw0GRYMDHAAAALAAAAAS9v//lgAAAABFDhCGAkMNBgKNDAcIAAAcAAAA0AAAAIj2//+WAAAA
+        AEUOEIYCQw0GAo0MBwgAABwAAADwAAAA/vb//7wAAAAARQ4QhgJDDQYCswwHCAAAHAAAABABAACa9///
+        nQAAAABFDhCGAkMNBgKUDAcIAAAcAAAAMAEAABf4//8"}
+    ],
+"EXPAND" :[]
+}
+
+************************************************************
+{
+ "HEAD":{"tag":"MESG","version":65537,"sender_uuid":"file_dealer","receiver_uuid
+    ":":plc_client","route":"bin_upload","flow":"QUERY","state":"MATCH","flag":"NULL
+    ","ljump":3,"rjump":2,"record_type":"FILE_TRANS","record_subtype":"FILE_DATA","r
+    ecord_num":1,"record_size":0,"expand_num":0,"expand_size":0,"msg_uuid":"c1ebee5c
+    25f7311b38239bb754a59289fdeb439e555d1f3a61f5e2a2ca2c1566"},
+"RECORD":[
+    {"uuid":"7fe15f8f075db96e5df6855a2fdc21cb48ada19b21d667477fe47d776072686f","file
+        name":"logic_bin/7fe15f8f075db96e5df6855a2fdc21cb48ada19b21d667477fe47d776072686
+        f","total_size":25528,"record_no":17,"offset":8704,"data_size":512,"file_data":"
+        NgEAAABFDhCGAkMNBgMtAQwHCAAcAAAAUAEAAC35//9nAQAAAEUOEIYCQw0GA14BDAcIAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"}
+    ],
+"EXPAND" :[]
+}
+
+************************************************************
+{
+ "HEAD":{"tag":"MESG","version":65537,"sender_uuid":"file_dealer","receiver_uuid
+    ":":plc_client","route":"bin_upload","flow":"QUERY","state":"MATCH","flag":"NULL
+    ","ljump":3,"rjump":2,"record_type":"FILE_TRANS","record_subtype":"FILE_DATA","r
+    ecord_num":1,"record_size":0,"expand_num":0,"expand_size":0,"msg_uuid":"c1ebee5c
+    25f7311b38239bb754a59289fdeb439e555d1f3a61f5e2a2ca2c1566"},
+"RECORD":[
+    {"uuid":"7fe15f8f075db96e5df6855a2fdc21cb48ada19b21d667477fe47d776072686f","file
+        name":"logic_bin/7fe15f8f075db96e5df6855a2fdc21cb48ada19b21d667477fe47d776072686
+        f","total_size":25528,"record_no":18,"offset":9216,"data_size":512,"file_data":"
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"}
+    ],
+"EXPAND" :[]
+}
+
+************************************************************
+{
+ "HEAD":{"tag":"MESG","version":65537,"sender_uuid":"file_dealer","receiver_uuid
+    ":":plc_client","route":"bin_upload","flow":"QUERY","state":"MATCH","flag":"NULL
+    ","ljump":3,"rjump":2,"record_type":"FILE_TRANS","record_subtype":"FILE_DATA","r
+    ecord_num":1,"record_size":0,"expand_num":0,"expand_size":0,"msg_uuid":"c1ebee5c
+    25f7311b38239bb754a59289fdeb439e555d1f3a61f5e2a2ca2c1566"},
+"RECORD":[
+    {"uuid":"7fe15f8f075db96e5df6855a2fdc21cb48ada19b21d667477fe47d776072686f","file
+        name":"logic_bin/7fe15f8f075db96e5df6855a2fdc21cb48ada19b21d667477fe47d776072686
+        f","total_size":25528,"record_no":19,"offset":9728,"data_size":512,"file_data":"
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"}
+    ],
+"EXPAND" :[]
+}
+
+************************************************************
+{
+ "HEAD":{"tag":"MESG","version":65537,"sender_uuid":"file_dealer","receiver_uuid
+    ":":plc_client","route":"bin_upload","flow":"QUERY","state":"MATCH","flag":"NULL
+    ","ljump":3,"rjump":2,"record_type":"FILE_TRANS","record_subtype":"FILE_DATA","r
+    ecord_num":1,"record_size":0,"expand_num":0,"expand_size":0,"msg_uuid":"c1ebee5c
+    25f7311b38239bb754a59289fdeb439e555d1f3a61f5e2a2ca2c1566"},
+"RECORD":[
+    {"uuid":"7fe15f8f075db96e5df6855a2fdc21cb48ada19b21d667477fe47d776072686f","file
+        name":"logic_bin/7fe15f8f075db96e5df6855a2fdc21cb48ada19b21d667477fe47d776072686
+        f","total_size":25528,"record_no":20,"offset":10240,"data_size":512,"file_data":
+        "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"}
+    ],
+"EXPAND" :[]
+}
+
+************************************************************
+{
+ "HEAD":{"tag":"MESG","version":65537,"sender_uuid":"file_dealer","receiver_uuid
+    ":":plc_client","route":"bin_upload","flow":"QUERY","state":"MATCH","flag":"NULL
+    ","ljump":3,"rjump":2,"record_type":"FILE_TRANS","record_subtype":"FILE_DATA","r
+    ecord_num":1,"record_size":0,"expand_num":0,"expand_size":0,"msg_uuid":"c1ebee5c
+    25f7311b38239bb754a59289fdeb439e555d1f3a61f5e2a2ca2c1566"},
+"RECORD":[
+    {"uuid":"7fe15f8f075db96e5df6855a2fdc21cb48ada19b21d667477fe47d776072686f","file
+        name":"logic_bin/7fe15f8f075db96e5df6855a2fdc21cb48ada19b21d667477fe47d776072686
+        f","total_size":25528,"record_no":21,"offset":10752,"data_size":512,"file_data":
+        "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"}
+    ],
+"EXPAND" :[]
+}
+
+************************************************************
+{
+ "HEAD":{"tag":"MESG","version":65537,"sender_uuid":"file_dealer","receiver_uuid
+    ":":plc_client","route":"bin_upload","flow":"QUERY","state":"MATCH","flag":"NULL
+    ","ljump":3,"rjump":2,"record_type":"FILE_TRANS","record_subtype":"FILE_DATA","r
+    ecord_num":1,"record_size":0,"expand_num":0,"expand_size":0,"msg_uuid":"c1ebee5c
+    25f7311b38239bb754a59289fdeb439e555d1f3a61f5e2a2ca2c1566"},
+"RECORD":[
+    {"uuid":"7fe15f8f075db96e5df6855a2fdc21cb48ada19b21d667477fe47d776072686f","file
+        name":"logic_bin/7fe15f8f075db96e5df6855a2fdc21cb48ada19b21d667477fe47d776072686
+        f","total_size":25528,"record_no":22,"offset":11264,"data_size":512,"file_data":
+        "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAMBQAAAAAAADwEwAAAAAAAAEAAAAAAAAAQAIAAAAAAAABAAAAAAAAAE8CAAAAAAA
+        AAQAAAAAAAABdAgAAAAAAAAEAAAAAAAAAaQIAAAAAAAA"}
+    ],
+"EXPAND" :[]
+}
+
+************************************************************
+{
+ "HEAD":{"tag":"MESG","version":65537,"sender_uuid":"file_dealer","receiver_uuid
+    ":":plc_client","route":"bin_upload","flow":"QUERY","state":"MATCH","flag":"NULL
+    ","ljump":3,"rjump":2,"record_type":"FILE_TRANS","record_subtype":"FILE_DATA","r
+    ecord_num":1,"record_size":0,"expand_num":0,"expand_size":0,"msg_uuid":"c1ebee5c
+    25f7311b38239bb754a59289fdeb439e555d1f3a61f5e2a2ca2c1566"},
+"RECORD":[
+    {"uuid":"7fe15f8f075db96e5df6855a2fdc21cb48ada19b21d667477fe47d776072686f","file
+        name":"logic_bin/7fe15f8f075db96e5df6855a2fdc21cb48ada19b21d667477fe47d776072686
+        f","total_size":25528,"record_no":23,"offset":11776,"data_size":512,"file_data":
+        "AQAAAAAAAAB2AgAAAAAAAAEAAAAAAAAAiAIAAAAAAAAMAAAAAAAAAAAQAAAAAAAADQAAAAAAAACwHAA
+        AAAAAABkAAAAAAAAAsD0AAAAAAAAbAAAAAAAAAAgAAAAAAAAAGgAAAAAAAAC4PQAAAAAAABwAAAAAAAA
+        ACAAAAAAAAAD1/v9vAAAAAPACAAAAAAAABQAAAAAAAADgBgAAAAAAAAYAAAAAAAAAUAMAAAAAAAAKAAA
+        AAAAAAKgCAAAAAAAACwAAAAAAAAAYAAAAAAAAAAMAAAAAAAAAAEAAAAAAAAACAAAAAAAAAHACAAAAAAA
+        AFAAAAAAAAAAHAAAAAAAAABcAAAAAAAAA+AoAAAAAAAAHAAAAAAAAAAgKAAAAAAAACAAAAAAAAADwAAA
+        AAAAAAAkAAAAAAAAAGAAAAAAAAAD+//9vAAAAANgJAAAAAAAA////bwAAAAABAAAAAAAAAPD//28AAAA
+        AiAkAAAAAAAD5//9vAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"}
+    ],
+"EXPAND" :[]
+}
+
+************************************************************
+{
+ "HEAD":{"tag":"MESG","version":65537,"sender_uuid":"file_dealer","receiver_uuid
+    ":":plc_client","route":"bin_upload","flow":"QUERY","state":"MATCH","flag":"NULL
+    ","ljump":3,"rjump":2,"record_type":"FILE_TRANS","record_subtype":"FILE_DATA","r
+    ecord_num":1,"record_size":0,"expand_num":0,"expand_size":0,"msg_uuid":"c1ebee5c
+    25f7311b38239bb754a59289fdeb439e555d1f3a61f5e2a2ca2c1566"},
+"RECORD":[
+    {"uuid":"7fe15f8f075db96e5df6855a2fdc21cb48ada19b21d667477fe47d776072686f","file
+        name":"logic_bin/7fe15f8f075db96e5df6855a2fdc21cb48ada19b21d667477fe47d776072686
+        f","total_size":25528,"record_no":24,"offset":12288,"data_size":512,"file_data":
+        "wD0AAAAAAAAAAAAAAAAAAAAAAAAAAAAAMBAAAAAAAABAEAAAAAAAAFAQAAAAAAAAYBAAAAAAAABwEAA
+        AAAAAAIAQAAAAAAAAkBAAAAAAAACgEAAAAAAAALAQAAAAAAAAwBAAAAAAAADQEAAAAAAAAOAQAAAAAAA
+        A8BAAAAAAAAAAEQAAAAAAABARAAAAAAAAIBEAAAAAAAAwEQAAAAAAAEARAAAAAAAAUBEAAAAAAABgEQA
+        AAAAAAHARAAAAAAAAgBEAAAAAAACQEQAAAAAAAKARAAAAAAAAsBEAAAAAAADAEQAAAAAAAOhAAAAAAAA
+        AACAAAAAAAABHQ0M6IChVYnVudHUgMTEuNC4wLTF1YnVudHUxfjIyLjA0KSAxMS40LjAALAAAAAIAAAA
+        AAAgAAAAAADkUAAAAAAAAdwgAAAAAAAAAAAAAAAAAAAAAAAAAAAAA1QwAAAUAAQgAAAAAF0kEAAAdAAA
+        AABMAAAA5FAAAAAAAAHcIAAAAAAAAAAAAAAkBCCMHAAAJAgcOBAAACQQH3AAAAAkIB9cAAAAJAQYlBwA
+        ACQIFPAcAABgEBWludAAJCAVpAQAABnwIAAACoBpfAAAABl4JAAACoR48AAAABoADAAACoh9fAAAAGQg
+        EkQAAAAkBBiwHAAAakQAAAAZrAAAAA9EXQwAAAAkIBWQ"}
+    ],
+"EXPAND" :[]
+}
+
+************************************************************
+{
+ "HEAD":{"tag":"MESG","version":65537,"sender_uuid":"file_dealer","receiver_uuid
+    ":":plc_client","route":"bin_upload","flow":"QUERY","state":"MATCH","flag":"NULL
+    ","ljump":3,"rjump":2,"record_type":"FILE_TRANS","record_subtype":"FILE_DATA","r
+    ecord_num":1,"record_size":0,"expand_num":0,"expand_size":0,"msg_uuid":"c1ebee5c
+    25f7311b38239bb754a59289fdeb439e555d1f3a61f5e2a2ca2c1566"},
+"RECORD":[
+    {"uuid":"7fe15f8f075db96e5df6855a2fdc21cb48ada19b21d667477fe47d776072686f","file
+        name":"logic_bin/7fe15f8f075db96e5df6855a2fdc21cb48ada19b21d667477fe47d776072686
+        f","total_size":25528,"record_no":25,"offset":12800,"data_size":512,"file_data":
+        "AQAABn4IAAAEChJmAAAACgIGAAAQBQgI5AAAAAGOBgAABQ4MZgAAAAABVgkAAAUPEX4AAAAIAAkIB9I
+        AAAAG7wIAAAYOHy4AAAAGNwIAAAYPHTUAAAAU6wAAABMBAAAbQwAAAB8ABXIAAAAGFQ0DAQAACQNAQQA
+        AAAAAAAxYAAAAOAEAAAKKAAAAAAQpAQAADFgAAABRAQAAAooAAAACigAAAAAEPQEAAATrAAAACgkHAAC
+        IBzUIRgIAAAFCCAAABzcGWAAAAAABhwoAAAc4CF8CAAAIAYwKAAAHOQtzAgAAEAHvAQAABzoLcwIAABg
+        BfQYAAAc7C3MCAAAgAdcJAAAHPAiMAgAAKAG8CAAABz0IUQEAADABKQUAAAc+CDgBAAA4AfcBAAAHPwu
+        gAgAAQAGlBgAAB0AIUQEAAEgBmwEAAAdBCDgBAABQATEKAAAHQgi+AgAAWAE+BgAAB0MIvgIAAGAByAc
+        AAAdECDgBAABoAYUIAAAHRQjcAgAAcAFoBgAAB0YLoAIAAHgBmAEAAAdHCDgBAACAAAxYAAAAXwIAAAK
+        KAAAAAowAAAACjAAAAAAERgIAAAyMAAAAcwIAAAKKAAAAAARkAgAADFgAAACMAgAAAooAAAACjAAAAAA
+        EeAIAAAyKAAAAoAIAAAKKAAAAAASRAgAADFgAAAC+AgA"}
+    ],
+"EXPAND" :[]
+}
+
+************************************************************
+{
+ "HEAD":{"tag":"MESG","version":65537,"sender_uuid":"file_dealer","receiver_uuid
+    ":":plc_client","route":"bin_upload","flow":"QUERY","state":"MATCH","flag":"NULL
+    ","ljump":3,"rjump":2,"record_type":"FILE_TRANS","record_subtype":"FILE_DATA","r
+    ecord_num":1,"record_size":0,"expand_num":0,"expand_size":0,"msg_uuid":"c1ebee5c
+    25f7311b38239bb754a59289fdeb439e555d1f3a61f5e2a2ca2c1566"},
+"RECORD":[
+    {"uuid":"7fe15f8f075db96e5df6855a2fdc21cb48ada19b21d667477fe47d776072686f","file
+        name":"logic_bin/7fe15f8f075db96e5df6855a2fdc21cb48ada19b21d667477fe47d776072686
+        f","total_size":25528,"record_no":26,"offset":13312,"data_size":512,"file_data":
+        "AAKKAAAAAooAAAACnQAAAAAEpQIAAAxYAAAA1wIAAAKKAAAAAtcCAAAABLwAAAAEwwIAAAqhAwAAUAd
+        KEIsDAAABQggAAAdMBlgAAAAAAZYJAAAHTQZYAAAABAFyBgAAB04GWAAAAAgBNgEAAAdPBlgAAAAMAZA
+        BAAAHUAZYAAAAEAFEAwAAB1EJjAAAABgByAAAAAdSCYwAAAAgAc4FAAAHUwmMAAAAKAEmAgAAB1QZiwM
+        AADABgwAAAAdVCYoAAAA4Ab4KAAAHVgmKAAAAQAExCAAAB1gJigAAAEgABFsBAAAcwQIAAAoNF7wAAAA
+        StwcAADwAAAABvQMAABWmBwAAUBECABVrBwAAYBECAAASjgMAADwAAAAFFAQAAANyAQAAAQMyAAAAAgO
+        UCgAAAwOjAQAABAMMCAAABQPfCQAABgNOAwAABwP+AQAADwPIAwAAEAOSAAAAEQOUBQAAFgMwBQAAFwA
+        KzgcAAAQIGRA8BAAAATEHAAAIGgn3AAAAAAHPBgAACBsJ9wAAAAIABj4CAAAIHBoUBAAACvQDAAAECB4
+        QcAQAAAExBwAACB8J9wAAAAABzwYAAAggCfcAAAACAAYvCQAACCEaSAQAAArcBQAABAgjEKQEAAABMQc
+        AAAgkCfcAAAAAAYYFAAAIJQn3AAAAAgAGEgEAAAgmGnw"}
+    ],
+"EXPAND" :[]
+}
+
+************************************************************
+{
+ "HEAD":{"tag":"MESG","version":65537,"sender_uuid":"file_dealer","receiver_uuid
+    ":":plc_client","route":"bin_upload","flow":"QUERY","state":"MATCH","flag":"NULL
+    ","ljump":3,"rjump":2,"record_type":"FILE_TRANS","record_subtype":"FILE_DATA","r
+    ecord_num":1,"record_size":0,"expand_num":0,"expand_size":0,"msg_uuid":"c1ebee5c
+    25f7311b38239bb754a59289fdeb439e555d1f3a61f5e2a2ca2c1566"},
+"RECORD":[
+    {"uuid":"7fe15f8f075db96e5df6855a2fdc21cb48ada19b21d667477fe47d776072686f","file
+        name":"logic_bin/7fe15f8f075db96e5df6855a2fdc21cb48ada19b21d667477fe47d776072686
+        f","total_size":25528,"record_no":27,"offset":13824,"data_size":512,"file_data":
+        "BAAACnoJAAAECCgQ2AQAAAExBwAACCkJ9wAAAAABhgUAAAgqCfcAAAACAAavCQAACCsasAQAABJoCAA
+        APAAAAC07BQAAA90EAAABA8IIAAACAzYKAAADAwgKAAAEAwoGAAAFA1wFAAAGAwgAAAAHA30HAAAPA4o
+        IAAAQA0QGAAARAyEEAAAWA/wEAAAXAArsBgAACQhAEGMFAAABAQgAAAhBB+sAAAAAAY4FAAAIQglWAQA
+        AAQAGlwIAAAhDGjsFAAAK/QgAAAkIRRCXBQAAAQEIAAAIRgfrAAAAAAGOBQAACEcJVgEAAAEABgwDAAA
+        ISBpvBQAACkYHAAAHCRAQ8gUAAAFZCAAACREH6wAAAAABxQUAAAkSCfcAAAABAfMAAAAJEwn3AAAAAwF
+        cBwAACRQH6wAAAAUBTAgAAAkVB+sAAAAGAAbKAgAACRYaowUAABTrAAAADwYAAB1DAAAA/wcAC0J1ZgA
+        iDf4FAAAJA2BBAAAAAAAAExcHAAAjGzkGAAAJAyBBAAAAAAAABOECAAAeTlVNAAEkBVgAAAAJAyhBAAA
+        AAAAAEzAGAAAmBVgAAAAJAyxBAAAAAAAAE6QJAAAoCIwAAAAJA/BAAAAAAAAABfIIAAABKgxYAAAACQN
+        gSQAAAAAAAAfXBgAAC0oIigAAAKoGAAACigAAAAAQtQA"}
+    ],
+"EXPAND" :[]
+}
+
+************************************************************
+{
+ "HEAD":{"tag":"MESG","version":65537,"sender_uuid":"file_dealer","receiver_uuid
+    ":":plc_client","route":"bin_upload","flow":"QUERY","state":"MATCH","flag":"NULL
+    ","ljump":3,"rjump":2,"record_type":"FILE_TRANS","record_subtype":"FILE_DATA","r
+    ecord_num":1,"record_size":0,"expand_num":0,"expand_size":0,"msg_uuid":"c1ebee5c
+    25f7311b38239bb754a59289fdeb439e555d1f3a61f5e2a2ca2c1566"},
+"RECORD":[
+    {"uuid":"7fe15f8f075db96e5df6855a2fdc21cb48ada19b21d667477fe47d776072686f","file
+        name":"logic_bin/7fe15f8f075db96e5df6855a2fdc21cb48ada19b21d667477fe47d776072686
+        f","total_size":25528,"record_no":28,"offset":14336,"data_size":512,"file_data":
+        "AAAMBwEGWAAAAMsGAAACigAAAALLBgAAAlgAAAAABIoAAAAHZwIAAAtbBVgAAADrBgAAAooAAAACigA
+        AAAAHUQEAAAz8BlgAAAAGBwAAAooAAAACigAAAAAHawkAAAz6CIoAAAAmBwAAAlgAAAACWAAAAAKKAAA
+        AAAdaAAAADRAIigAAADwHAAACWAAAAAAQfQAAAA5mAQxYAAAAUwcAAAJYAAAAABAAAAAAD5YBDFgAAAB
+        wBwAAAlgAAAACdQcAAA0ABJgAAAAfcAcAAAeJBgAAELUMWAAAAJYHAAACcAcAAAJYAAAADQAQAQAAAA9
+        kAQxYAAAArgcAAAJwBwAADQAHsgMAABFyBVgAAADJBwAAAlgAAAACWAAAAAAHgwIAAAzvBVgAAADfBwA
+        AAooAAAAAB0ABAAAM7gVYAAAA9QcAAAKKAAAAAAezBgAAC1wFWAAAABAIAAACigAAAALLBgAAABDLAQA
+        ADuABDFgAAAAnCAAAAnIAAAAABzQDAAAKBwVYAAAAPggAAAKMAAAADQARfgIAAFgAAABNCAAADQAH/QA
+        AAAtJBVgAAABoCAAAAooAAAACigAAAAAHLwIAAA0MCIoAAACDCAAAAlgAAAACigAAAAAg0gEAAAEgAQV
+        YAAAASRsAAAAAAABnAQAAAAAAAAGcMgkAACH5BQAAASA"}
+    ],
+"EXPAND" :[]
+}
+
+************************************************************
+{
+ "HEAD":{"tag":"MESG","version":65537,"sender_uuid":"file_dealer","receiver_uuid
+    ":":plc_client","route":"bin_upload","flow":"QUERY","state":"MATCH","flag":"NULL
+    ","ljump":3,"rjump":2,"record_type":"FILE_TRANS","record_subtype":"FILE_DATA","r
+    ecord_num":1,"record_size":0,"expand_num":0,"expand_size":0,"msg_uuid":"c1ebee5c
+    25f7311b38239bb754a59289fdeb439e555d1f3a61f5e2a2ca2c1566"},
+"RECORD":[
+    {"uuid":"7fe15f8f075db96e5df6855a2fdc21cb48ada19b21d667477fe47d776072686f","file
+        name":"logic_bin/7fe15f8f075db96e5df6855a2fdc21cb48ada19b21d667477fe47d776072686
+        f","total_size":25528,"record_no":29,"offset":14848,"data_size":512,"file_data":
+        "AR+KAAAAA5GofyJyZXQAASIBCVgAAAADkbx/DsUGAAAkAQywAAAAApFIDnkCAAAmAQlYAAAAApFEDkY
+        HAAAoAS0yCQAAApFQDtwBAAApATA3CQAAApFYDpUGAAAwAQhYAAAAApFAEX4CAABYAAAAIgkAAA0ADmI
+        AAABCAQyKAAAAApFgAATyBQAABNgEAAAPYQoAAPRYAAAAExoAAAAAAAA2AQAAAAAAAAGc1AkAAAj5BQA
+        A9CGKAAAAA5G4fwtyZXQA9glYAAAAApFABUYHAAAB9y0yCQAAApFQBWsKAAAB+CzUCQAAApFYBcUGAAA
+        B/wywAAAAApFIDnkCAAAAAQlYAAAAApFEEX4CAABYAAAAxAkAAA0ADmIAAAAUAQyKAAAAApFgAASkBAA
+        AD+kAAADiWAAAAHYZAAAAAAAAnQAAAAAAAAABnEIKAAAI+QUAAOIgigAAAAKRSAh3AwAA4jCKAAAAApF
+        AC3JldADkCVgAAAACkVQFRgcAAAHmLTIJAAACkWAF5QEAAAHoMEIKAAACkVgABJcFAAAPuwUAAM9YAAA
+        AuhgAAAAAAAC8AAAAAAAAAAGcsAoAAAj5BQAAzx+KAAAAApFICHcDAADPL4oAAAACkUALcmV0ANIJWAA
+        AAAKRVAVGBwAAAdMtMgkAAAKRYAXlAQAAAdUysAoAAAI"}
+    ],
+"EXPAND" :[]
+}
+
+************************************************************
+{
+ "HEAD":{"tag":"MESG","version":65537,"sender_uuid":"file_dealer","receiver_uuid
+    ":":plc_client","route":"bin_upload","flow":"QUERY","state":"MATCH","flag":"NULL
+    ","ljump":3,"rjump":2,"record_type":"FILE_TRANS","record_subtype":"FILE_DATA","r
+    ecord_num":1,"record_size":0,"expand_num":0,"expand_size":0,"msg_uuid":"c1ebee5c
+    25f7311b38239bb754a59289fdeb439e555d1f3a61f5e2a2ca2c1566"},
+"RECORD":[
+    {"uuid":"7fe15f8f075db96e5df6855a2fdc21cb48ada19b21d667477fe47d776072686f","file
+        name":"logic_bin/7fe15f8f075db96e5df6855a2fdc21cb48ada19b21d667477fe47d776072686
+        f","total_size":25528,"record_no":30,"offset":15360,"data_size":512,"file_data":
+        "kVgABGMFAAAP9AIAALxYAAAAJBgAAAAAAACWAAAAAAAAAAGcEAsAAAj5BQAAvCSKAAAAApFIC3JldAC
+        +CVgAAAACkVwFnAYAAAG/LxALAAACkWAFYgAAAAHADIoAAAACkWgABHAEAAAPGAkAAKhYAAAAjhcAAAA
+        AAACWAAAAAAAAAAGccAsAAAj5BQAAqCOKAAAAApFIC3JldACqCVgAAAACkVwFnAYAAAGrMXALAAACkWA
+        FYgAAAAGsDIoAAAACkWgABDwEAAAP6gcAAEJYAAAAihQAAAAAAAAEAwAAAAAAAAGcggwAAAj5BQAAQiO
+        KAAAAA5GYfwi3CAAAQjOKAAAAA5GQfwtyZXQARAlYAAAAA5G0fwtyYwBFCVgAAAADkbh/FkYHAABGLTI
+        JAAAFdwMAAAFHDIoAAAACkUgWYgAAAEgMigAAAAVHCAAAAUkJWAAAAAORvH8FjwIAAAFKCVgAAAACkUA
+        FVAcAAAFLCVgAAAADkah/BcUGAAABTAywAAAAApFQBU4HAAABTglYAAAAA5GsfwXrCAAAAVIJWAAAAAO
+        RsH8RfgIAAFgAAABiDAAADQAjsxYAAAAAAACSAAAAAAAAAAtmZACMEVgAAAACkUQAACR2CgAAATQFWAA
+        AADkUAAAAAAAAUQAAAAAAAAABnAj5BQAANCKKAAAAApE"}
+    ],
+"EXPAND" :[]
+}
+
+************************************************************
+{
+ "HEAD":{"tag":"MESG","version":65537,"sender_uuid":"file_dealer","receiver_uuid
+    ":":plc_client","route":"bin_upload","flow":"QUERY","state":"MATCH","flag":"NULL
+    ","ljump":3,"rjump":2,"record_type":"FILE_TRANS","record_subtype":"FILE_DATA","r
+    ecord_num":1,"record_size":0,"expand_num":0,"expand_size":0,"msg_uuid":"c1ebee5c
+    25f7311b38239bb754a59289fdeb439e555d1f3a61f5e2a2ca2c1566"},
+"RECORD":[
+    {"uuid":"7fe15f8f075db96e5df6855a2fdc21cb48ada19b21d667477fe47d776072686f","file
+        name":"logic_bin/7fe15f8f075db96e5df6855a2fdc21cb48ada19b21d667477fe47d776072686
+        f","total_size":25528,"record_no":31,"offset":15872,"data_size":512,"file_data":
+        "WAi3CAAANDKKAAAAApFQJXJldAABNwlYAAAABUYHAAABOC0yCQAAApFoAAABDQADDjoLOws5C0kTOAs
+        AAAIFAEkTAAADKAADDhwLAAAEDwALIQhJEwAABTQAAw46CzsLOQtJEwIYAAAGFgADDjoLOws5C0kTAAA
+        HLgE/GQMOOgs7CzkLJxlJEzwZARMAAAgFAAMOOiEBOws5C0kTAhgAAAkkAAsLPgsDDgAAChMBAw4LCzo
+        LOws5CwETAAALNAADCDohATsLOQtJEwIYAAAMFQEnGUkTARMAAA0YAAAADjQAAw46IQE7BTkLSRMCGAA
+        ADy4BPxkDDjohATsLOSEFJxlJExEBEgdAGHwZARMAABAuAT8ZAw46CzsFOQsnGUkTPBkBEwAAES4BPxk
+        DDjohATsh1gA5IRJJEzwZARMAABIEAQMOPiEHCyEESRM6IQg7CzkhBgETAAATNAADDjohATsLOQtJEz8
+        ZAhgAABQBAUkTARMAABUoAAMOHAYAABY0AAMOOiEBOws5C0kTAAAXEQElDhMLAx8bHxEBEgcQFwAAGCQ
+        ACws+CwMIAAAZDwALCwAAGiYASRMAABshAEkTLwsAABw0AAMOOgs7CzkLSRM/GTwZAAAdIQBJEy8FAAA
+        eNAADCDoLOws5C0kTPxkCGAAAHzcASRMAACAuAT8ZAw4"}
+    ],
+"EXPAND" :[]
+}
+
+************************************************************
+{
+ "HEAD":{"tag":"MESG","version":65537,"sender_uuid":"file_dealer","receiver_uuid
+    ":":plc_client","route":"bin_upload","flow":"QUERY","state":"MATCH","flag":"NULL
+    ","ljump":3,"rjump":2,"record_type":"FILE_TRANS","record_subtype":"FILE_DATA","r
+    ecord_num":1,"record_size":0,"expand_num":0,"expand_size":0,"msg_uuid":"c1ebee5c
+    25f7311b38239bb754a59289fdeb439e555d1f3a61f5e2a2ca2c1566"},
+"RECORD":[
+    {"uuid":"7fe15f8f075db96e5df6855a2fdc21cb48ada19b21d667477fe47d776072686f","file
+        name":"logic_bin/7fe15f8f075db96e5df6855a2fdc21cb48ada19b21d667477fe47d776072686
+        f","total_size":25528,"record_no":32,"offset":16384,"data_size":512,"file_data":
+        "Ogs7BTkLJxlJExEBEgdAGHwZARMAACEFAAMOOgs7BTkLSRMCGAAAIjQAAwg6CzsFOQtJEwIYAAAjCwE
+        RARIHAAAkLgE/GQMOOgs7CzkLJxlJExEBEgdAGHwZAAAlNAADCDoLOws5C0kTAAAAGAMAAAUACACSAAA
+        AAQEB+w4NAAEBAQEAAAABAAABAQEfBxMAAAA6AAAAXQAAAIYAAACvAAAA2gAAAPQAAAACAR8CDxIAAAA
+        AAAAAAAAAAQEAAAEJAQAAAhIBAAADGwEAAAMsAQAABDgBAAAERAEAAAVRAQAABWMBAAAEbgEAAAR6AQA
+        ABIQBAAAEjAEAAAaVAQAABp0BAAAGpQEAAAQFAQAJAjkUAAAAAAAAAzQBBRUIQAUHCEsFEHUFBXYFDAg
+        wBQFZMQhKBQnldXp3eAUSeAUQCBIFBWcFGAixBQmsBRB1BRRMBQsCJRIFE1oFFOcFCwIiEgUSWgUUdQU
+        L5gUTaAUL5gUTaAUN5wULCFkFFKAFC0oFDpMFEeUFDeUFC+QFDQACBAFMAAIEAQIyFAULWgUlAAIEAZA
+        FEWkFDwhZBRGfBQ8IgQUQWwUqAAIEAcgFEaIFFghZBQ8I1wURaAUXCK0FE0sFFWgFGwiDBQ13BRKfBQk
+        DcHQFEAMSLgUqAAIEAZAFEmgFEJMFKgACBAHIBRKgBQ0"}
+    ],
+"EXPAND" :[]
+}
+
+************************************************************
+{
+ "HEAD":{"tag":"MESG","version":65537,"sender_uuid":"file_dealer","receiver_uuid
+    ":":plc_client","route":"bin_upload","flow":"QUERY","state":"MATCH","flag":"NULL
+    ","ljump":3,"rjump":2,"record_type":"FILE_TRANS","record_subtype":"FILE_DATA","r
+    ecord_num":1,"record_size":0,"expand_num":0,"expand_size":0,"msg_uuid":"c1ebee5c
+    25f7311b38239bb754a59289fdeb439e555d1f3a61f5e2a2ca2c1566"},
+"RECORD":[
+    {"uuid":"7fe15f8f075db96e5df6855a2fdc21cb48ada19b21d667477fe47d776072686f","file
+        name":"logic_bin/7fe15f8f075db96e5df6855a2fdc21cb48ada19b21d667477fe47d776072686
+        f","total_size":25528,"record_no":33,"offset":16896,"data_size":512,"file_data":
+        "A1O6aAUJAAIEAQNmIAUBA80AWAUQ9wUH1wUQdQUZdQUVkQUNoAUGCHUFEHUFCHUIWQUMCFkFAT0xBRD
+        3BQfXBRB1BRl1BRWRBQ2gBQYIdQUQdQUIdQhZBQwIWQUBPTAIPAUL6gUHCJ8FE2cFElkFB0oFE1l1BRX
+        zBUCCBSOCBQc8BRRZBTx1BR+CBR08BRmEBQEAAgQBrQbkBnYIPAUL6gUHCJ8FE2cFElkFB0oFE1l1BT3
+        zBSCCBR48BRmEBQEAAgQBrQbkBnfyBQnlBRN3BRD0BQfXBRB1BQ+iBRUIPwUuggUHggUfWgUikQUfvgU
+        ikQUSoAUHrAUiWgUXogUHCHUFEHUFC3YFBwhZBRNnBQtZBQwIWgUBAAIEAT0G5AZ38gUJ5QUTfAUO9AU
+        H1wUQdQUdoAU1rAUIrAUZdgUPkgUSCD4FB6wFHVoFDL0FKWgFLQi6BSE8BRSDBQuCBSRnBRehBQcIdQU
+        QdQULdgUHCFkFEGcFC1kFDAhZBQEAAgQBPQbkAgcAAQFkcHJpbnRmAFNVQlRZUEVfTU9EQlVTX0RBVEF
+        fUkVBRF9FWENFUFRJT05fU1RBVFVTAFNVQlRZUEVfTU9EQlVTX0NNRF9SRUFEX0RJU0NSRVRFX0lOUFV
+        UUwBUYWxsb2MwAHNlbmRfbXNnAHNpemVfdABFTVBUWV8"}
+    ],
+"EXPAND" :[]
+}
+
+************************************************************
+{
+ "HEAD":{"tag":"MESG","version":65537,"sender_uuid":"file_dealer","receiver_uuid
+    ":":plc_client","route":"bin_upload","flow":"QUERY","state":"MATCH","flag":"NULL
+    ","ljump":3,"rjump":2,"record_type":"FILE_TRANS","record_subtype":"FILE_DATA","r
+    ecord_num":1,"record_size":0,"expand_num":0,"expand_size":0,"msg_uuid":"c1ebee5c
+    25f7311b38239bb754a59289fdeb439e555d1f3a61f5e2a2ca2c1566"},
+"RECORD":[
+    {"uuid":"7fe15f8f075db96e5df6855a2fdc21cb48ada19b21d667477fe47d776072686f","file
+        name":"logic_bin/7fe15f8f075db96e5df6855a2fdc21cb48ada19b21d667477fe47d776072686
+        f","total_size":25528,"record_no":34,"offset":17408,"data_size":512,"file_data":
+        "VVVJRABjbG9zZQBjb25uX2Jhc2VfaW5mbwBTVUJUWVBFX01PREJVU19DTURfUkVQT1JUX1NMQVZFX0l
+        EAG1lc3NhZ2VfZ2V0X3JlY29yZABjb25uX2FkZHIAbG9uZyBsb25nIHVuc2lnbmVkIGludABwcm9jX3J
+        lYWRfY3VycmVudF90AGV4X21vZHVsZV9zZXRwb2ludGVyAHJlY29yZF9NT0RCVVNfQ01EX1dSSVRFX1N
+        JTkdMRV9DT0lMAGNvbm5fbW9kZQBtZXNzYWdlX2dldF90eXBlAG1lc3NhZ2VfYWRkX3JlY29yZABsb25
+        nIGxvbmcgaW50AFNVQlRZUEVfTU9EQlVTX0NNRF9SRUFEX0NPSUxTAGNvbm5fZmQAZGlzY29ubmVjdAB
+        TVUJUWVBFX01PREJVU19DTURfUkVBRF9JTlBVVF9SRUdJU1RFUlMAdXNsZWVwAHByb2Nfc2VuZF9nZWF
+        yX2NtZAByZWFkX2RhdGEAZ2V0YWRkcgBhY2NlcHQAU1VCVFlQRV9NT0RCVVNfQ01EX1dSSVRFX01VTFR
+        JUExFX0NPSUxTAGNvbm5fb3BzAERhbGxvYzAAVUlOVDE2AHJlY29yZF9NT0RCVVNfQ01EX1JFQURfSE9
+        MRElOR19SRUdJU1RFUlMAZXhfbW9kdWxlX3NlbmRtc2c"}
+    ],
+"EXPAND" :[]
+}
+
+************************************************************
+{
+ "HEAD":{"tag":"MESG","version":65537,"sender_uuid":"file_dealer","receiver_uuid
+    ":":plc_client","route":"bin_upload","flow":"QUERY","state":"MATCH","flag":"NULL
+    ","ljump":3,"rjump":2,"record_type":"FILE_TRANS","record_subtype":"FILE_DATA","r
+    ecord_num":1,"record_size":0,"expand_num":0,"expand_size":0,"msg_uuid":"c1ebee5c
+    25f7311b38239bb754a59289fdeb439e555d1f3a61f5e2a2ca2c1566"},
+"RECORD":[
+    {"uuid":"7fe15f8f075db96e5df6855a2fdc21cb48ada19b21d667477fe47d776072686f","file
+        name":"logic_bin/7fe15f8f075db96e5df6855a2fdc21cb48ada19b21d667477fe47d776072686
+        f","total_size":25528,"record_no":35,"offset":17920,"data_size":512,"file_data":
+        "AGNvbXBfdGltZQBtZXNzYWdlX2dldF9zdWJ0eXBlAHJlY29yZF9NT0RCVVNfREFUQV9SRUFEX0hPTER
+        JTkdfUkVHSVNURVJTAHRpbWVfdmFsAHJlY29yZF9USEVSTU9TVEFUX0RBVEFfTUFDSElORV9TVEFURQB
+        CWVRFAHByb2NfcmVhZF9jdXJyZW50X3RfY21kAHJlY29yZF9NT0RCVVNfREFUQV9SRUFEX0lOUFVUX1J
+        FR0lTVEVSUwBwcmludF9jdWJlYXVkaXQAY29ubl9uYW1lAFNVQlRZUEVfTU9EQlVTX0NNRF9SRUFEX0V
+        YQ0VQVElPTl9TVEFUVVMAcmVjdl9tc2cAX19zdXNlY29uZHNfdABzdWJ0eXBlX21vZGJ1c19jbWQAdGN
+        sb3VkX2Nvbm5lY3RvcgBtZW1kYl9maW5kX3JlY29yZHR5cGUAU1VCVFlQRV9NT0RCVVNfQ01EX1dSSVR
+        FX01VTFRJUExFX1JFR0lTVEVSUwBtb2RidXNfY21kX3JlYWRfaW5wdXRfcmVnAHNob3J0IHVuc2lnbmV
+        kIGludABTVUJUWVBFX01PREJVU19EQVRBX01BU0tfV1JJVEVfUkVHSVNURVIAR05VIEMxNyAxMS40LjA
+        gLW10dW5lPWdlbmVyaWMgLW1hcmNoPXg4Ni02NCAtZyA"}
+    ],
+"EXPAND" :[]
+}
+
+************************************************************
+{
+ "HEAD":{"tag":"MESG","version":65537,"sender_uuid":"file_dealer","receiver_uuid
+    ":":plc_client","route":"bin_upload","flow":"QUERY","state":"MATCH","flag":"NULL
+    ","ljump":3,"rjump":2,"record_type":"FILE_TRANS","record_subtype":"FILE_DATA","r
+    ecord_num":1,"record_size":0,"expand_num":0,"expand_size":0,"msg_uuid":"c1ebee5c
+    25f7311b38239bb754a59289fdeb439e555d1f3a61f5e2a2ca2c1566"},
+"RECORD":[
+    {"uuid":"7fe15f8f075db96e5df6855a2fdc21cb48ada19b21d667477fe47d776072686f","file
+        name":"logic_bin/7fe15f8f075db96e5df6855a2fdc21cb48ada19b21d667477fe47d776072686
+        f","total_size":25528,"record_no":36,"offset":18432,"data_size":512,"file_data":
+        "LWZQSUMgLWZhc3luY2hyb25vdXMtdW53aW5kLXRhYmxlcyAtZnN0YWNrLXByb3RlY3Rvci1zdHJvbmc
+        gLWZzdGFjay1jbGFzaC1wcm90ZWN0aW9uIC1mY2YtcHJvdGVjdGlvbgBTVUJUWVBFX01PREJVU19EQVR
+        BX1JFQURfQ09JTFMAU1VCVFlQRV9NT0RCVVNfREFUQV9XUklURV9BTkRfUkVBRF9SRUdJU1RFUlMAbGl
+        zdGVuAFNVQlRZUEVfTU9EQlVTX0NNRF9XUklURV9BTkRfUkVBRF9SRUdJU1RFUlMAU1VCVFlQRV9NT0R
+        CVVNfREFUQV9XUklURV9TSU5HTEVfUkVHSVNURVIAY29udmVydF92YWx1ZQBTVUJUWVBFX01PREJVU19
+        DTURfTUFTS19XUklURV9SRUdJU1RFUgBwcm9jX3JlYWRfdGFyZ2V0X3QAY29ubl9wZWVyYWRkcgBtb2R
+        idXNfY21kX3dyaXRlX3NpbmdsZV9jb2lsAHN1Yl9wcm9jAHRpbWV2YWwAU1VCVFlQRV9NT0RCVVNfREF
+        UQV9XUklURV9TSU5HTEVfQ09JTABlbnZpcm9ubWVudF9UAHdyaXRlAFNVQlRZUEVfTU9EQlVTX0RBVEF
+        fUkVQT1JUX1NMQVZFX0lEAGdldHNlcnZlcgBjb25uX3M"}
+    ],
+"EXPAND" :[]
+}
+
+************************************************************
+{
+ "HEAD":{"tag":"MESG","version":65537,"sender_uuid":"file_dealer","receiver_uuid
+    ":":plc_client","route":"bin_upload","flow":"QUERY","state":"MATCH","flag":"NULL
+    ","ljump":3,"rjump":2,"record_type":"FILE_TRANS","record_subtype":"FILE_DATA","r
+    ecord_num":1,"record_size":0,"expand_num":0,"expand_size":0,"msg_uuid":"c1ebee5c
+    25f7311b38239bb754a59289fdeb439e555d1f3a61f5e2a2ca2c1566"},
+"RECORD":[
+    {"uuid":"7fe15f8f075db96e5df6855a2fdc21cb48ada19b21d667477fe47d776072686f","file
+        name":"logic_bin/7fe15f8f075db96e5df6855a2fdc21cb48ada19b21d667477fe47d776072686
+        f","total_size":25528,"record_no":37,"offset":18944,"data_size":512,"file_data":
+        "dGF0ZQBnZXRwZWVyYWRkcgBvcGVuAHR2X3NlYwBUX2RpZmYAcmVhZF9jbWQAY2xvc2VfY2hhbm5lbAB
+        leF9tb2R1bGVfcmVjdm1zZwBjdXJyX3RpbWUAcmVnX251bQBleF9tb2R1bGVfZ2V0cG9pbnRlcgBtb2R
+        idXNfZGF0YV9yZWFkX2hvbGRpbmdfcmVnAGNvbm5lY3Rvcl9vcHMAY2xpZW50X2Nvbm4AdW5zaWduZWQ
+        gY2hhcgBzdGFydF9hZGRyAHNob3J0IGludABtYWNoaW5lX3N0YXRlAGNvdW50ZXIAaGVhdGluZ19zd2l
+        0Y2gARFRZUEVfTU9EQlVTX0RBVEEAU1VCVFlQRV9NT0RCVVNfREFUQV9XUklURV9NVUxUSVBMRV9DT0l
+        MUwBEVFlQRV9NT0RCVVNfQ01EAGR0eXBlX21vZGJ1c19jbWQAZ2V0ZmQAbW9kYnVzX2NtZF9yZWFkX2h
+        vbGRpbmdfcmVnAHRoZXJtb3N0YXRfbG9naWNfc3RhcnQAYXJlYV9ieXRlcwBTVUJUWVBFX01PREJVU19
+        DTURfV1JJVEVfU0lOR0xFX0NPSUwAY29ubl9leHRlcm5faW5mbwBjb25uX3R5cGUAaGVhdGluZ19nZWF
+        yAG1hY2hpbmVfc3dpdGNoAHN1YnR5cGVfbW9kYnVzX2Q"}
+    ],
+"EXPAND" :[]
+}
+
+************************************************************
+{
+ "HEAD":{"tag":"MESG","version":65537,"sender_uuid":"file_dealer","receiver_uuid
+    ":":plc_client","route":"bin_upload","flow":"QUERY","state":"MATCH","flag":"NULL
+    ","ljump":3,"rjump":2,"record_type":"FILE_TRANS","record_subtype":"FILE_DATA","r
+    ecord_num":1,"record_size":0,"expand_num":0,"expand_size":0,"msg_uuid":"c1ebee5c
+    25f7311b38239bb754a59289fdeb439e555d1f3a61f5e2a2ca2c1566"},
+"RECORD":[
+    {"uuid":"7fe15f8f075db96e5df6855a2fdc21cb48ada19b21d667477fe47d776072686f","file
+        name":"logic_bin/7fe15f8f075db96e5df6855a2fdc21cb48ada19b21d667477fe47d776072686
+        f","total_size":25528,"record_no":38,"offset":19456,"data_size":512,"file_data":
+        "YXRhAF9fdGltZV90AHdhaXQAU1VCVFlQRV9NT0RCVVNfREFUQV9XUklURV9NVUxUSVBMRV9SRUdJU1R
+        FUlMAcGFyYQBpb2N0bABTVUJUWVBFX01PREJVU19EQVRBX1JFQURfRElTQ1JFVEVfSU5QVVRTAG9mZnN
+        ldABzdGFydF90aW1lAG1vZGJ1c19kYXRhX3JlYWRfaW5wdXRfcmVnAHByb2NfcmVhZF90YXJnZXRfdF9
+        jbWQAcmVjb3JkX01PREJVU19DTURfUkVBRF9JTlBVVF9SRUdJU1RFUlMAdHZfdXNlYwBfX3VzZWNvbmR
+        zX3QAbWVzc2FnZV9jcmVhdGUAbW9kYnVzX2NtZF93cml0ZV9zaW5nbGVfcmVnAGNvbm5fcHJvdG9jb2w
+        AdmFsdWVfZmlsZQByZWNvcmRfTU9EQlVTX0NNRF9XUklURV9TSU5HTEVfUkVHSVNURVIAc2V0bmFtZQB
+        TVUJUWVBFX01PREJVU19DTURfV1JJVEVfU0lOR0xFX1JFR0lTVEVSAFNVQlRZUEVfTU9EQlVTX0RBVEF
+        fUkVBRF9JTlBVVF9SRUdJU1RFUlMAcmVhZABTVUJUWVBFX01PREJVU19EQVRBX1JFQURfSE9MRElOR19
+        SRUdJU1RFUlMAcHJvY19zZW5kX3N3aXRjaF9jbWQAdGg"}
+    ],
+"EXPAND" :[]
+}
+
+************************************************************
+{
+ "HEAD":{"tag":"MESG","version":65537,"sender_uuid":"file_dealer","receiver_uuid
+    ":":plc_client","route":"bin_upload","flow":"QUERY","state":"MATCH","flag":"NULL
+    ","ljump":3,"rjump":2,"record_type":"FILE_TRANS","record_subtype":"FILE_DATA","r
+    ecord_num":1,"record_size":0,"expand_num":0,"expand_size":0,"msg_uuid":"c1ebee5c
+    25f7311b38239bb754a59289fdeb439e555d1f3a61f5e2a2ca2c1566"},
+"RECORD":[
+    {"uuid":"7fe15f8f075db96e5df6855a2fdc21cb48ada19b21d667477fe47d776072686f","file
+        name":"logic_bin/7fe15f8f075db96e5df6855a2fdc21cb48ada19b21d667477fe47d776072686
+        f","total_size":25528,"record_no":39,"offset":19968,"data_size":512,"file_data":
+        "ZXJtb3N0YXRfbG9naWNfaW5pdABnZXRuYW1lAFNVQlRZUEVfTU9EQlVTX0NNRF9SRUFEX0hPTERJTkd
+        fUkVHSVNURVJTAGNvbm5fdmFyX2luZm8AdGhlcm1vc3RhdF9sb2dpYy5jAC9yb290LzIwMjRidWlsZHV
+        wL3NyYy9sb2dpYy9oYWNrX2xvZ2ljAC91c3IvaW5jbHVkZS94ODZfNjQtbGludXgtZ251L2JpdHMAL3V
+        zci9saWIvZ2NjL3g4Nl82NC1saW51eC1nbnUvMTEvaW5jbHVkZQAvdXNyL2luY2x1ZGUveDg2XzY0LWx
+        pbnV4LWdudS9iaXRzL3R5cGVzAC9yb290L2NlbnRvc2Nsb3VkL2N1YmUtMS4zL2N1YmVsaWIvaW5jbHV
+        kZQAvcm9vdC8yMDI0YnVpbGR1cC9pbmNsdWRlAC91c3IvaW5jbHVkZQB0eXBlcy5oAHN0ZGRlZi5oAHR
+        pbWVfdC5oAHN0cnVjdF90aW1ldmFsLmgAZGF0YV90eXBlLmgAY29ubmVjdG9yLmgAbW9kYnVzX2NtZC5
+        oAHRoZXJtb3N0YXRfZGF0YS5oAHN5c19mdW5jLmgAZXhfbW9kdWxlLmgAbWVzc2FnZS5oAGFsbG9jLmg
+        AdW5pc3RkLmgAc3RkaW8uaABmY250bC5oAG1lbWRiLmg"}
+    ],
+"EXPAND" :[]
+}
+
+************************************************************
+{
+ "HEAD":{"tag":"MESG","version":65537,"sender_uuid":"file_dealer","receiver_uuid
+    ":":plc_client","route":"bin_upload","flow":"QUERY","state":"MATCH","flag":"NULL
+    ","ljump":3,"rjump":2,"record_type":"FILE_TRANS","record_subtype":"FILE_DATA","r
+    ecord_num":1,"record_size":0,"expand_num":0,"expand_size":0,"msg_uuid":"c1ebee5c
+    25f7311b38239bb754a59289fdeb439e555d1f3a61f5e2a2ca2c1566"},
+"RECORD":[
+    {"uuid":"7fe15f8f075db96e5df6855a2fdc21cb48ada19b21d667477fe47d776072686f","file
+        name":"logic_bin/7fe15f8f075db96e5df6855a2fdc21cb48ada19b21d667477fe47d776072686
+        f","total_size":25528,"record_no":40,"offset":20480,"data_size":512,"file_data":
+        "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAABADx/wAAAAAAAAAAAAAAAAAAAAAMAAA
+        AAgAOAIATAAAAAAAAAAAAAAAAAAAOAAAAAgAOALATAAAAAAAAAAAAAAAAAAAhAAAAAgAOAPATAAAAAAA
+        AAAAAAAAAAAA3AAAAAQAZAABBAAAAAAAAAQAAAAAAAABDAAAAAQAUALg9AAAAAAAAAAAAAAAAAABqAAA
+        AAgAOADAUAAAAAAAAAAAAAAAAAAB2AAAAAQATALA9AAAAAAAAAAAAAAAAAACVAAAABADx/wAAAAAAAAA
+        AAAAAAAAAAACoAAAAAQAZAEBBAAAAAAAAIAAAAAAAAACzAAAAAQAZAGBBAAAAAAAAAAgAAAAAAAC3AAA
+        AAQAZAGBJAAAAAAAABAAAAAAAAAABAAAABADx/wAAAAAAAAAAAAAAAAAAAADCAAAAAQASADQiAAAAAAA
+        AAAAAAAAAAAAAAAAABADx/wAAAAAAAAAAAAAAAAAAAADQAAAAAgAPALAcAAAAAAAAAAAAAAAAAADWAAA
+        AAQAYAOhAAAAAAAAAAAAAAAAAAADjAAAAAQAVAMA9AAAAAAAAAAAAAAAAAADsAAAAAAARAGQgAAAAAAA
+        AAAAAAAAAAAD/AAAAAQAYAPhAAAAAAAAAAAAAAAAAAAA"}
+    ],
+"EXPAND" :[]
+}
+
+************************************************************
+{
+ "HEAD":{"tag":"MESG","version":65537,"sender_uuid":"file_dealer","receiver_uuid
+    ":":plc_client","route":"bin_upload","flow":"QUERY","state":"MATCH","flag":"NULL
+    ","ljump":3,"rjump":2,"record_type":"FILE_TRANS","record_subtype":"FILE_DATA","r
+    ecord_num":1,"record_size":0,"expand_num":0,"expand_size":0,"msg_uuid":"c1ebee5c
+    25f7311b38239bb754a59289fdeb439e555d1f3a61f5e2a2ca2c1566"},
+"RECORD":[
+    {"uuid":"7fe15f8f075db96e5df6855a2fdc21cb48ada19b21d667477fe47d776072686f","file
+        name":"logic_bin/7fe15f8f075db96e5df6855a2fdc21cb48ada19b21d667477fe47d776072686
+        f","total_size":25528,"record_no":41,"offset":20992,"data_size":512,"file_data":
+        "CwEAAAEAFwAAQAAAAAAAAAAAAAAAAAAAVwEAAAIACgAAEAAAAAAAAAAAAAAAAAAAIQEAABIADgBJGwA
+        AAAAAAGcBAAAAAAAANAEAABIAAAAAAAAAAAAAAAAAAAAAAAAARwEAABIADgA5FAAAAAAAAFEAAAAAAAA
+        AXQEAACAAAAAAAAAAAAAAAAAAAAAAAAAAeQEAABIAAAAAAAAAAAAAAAAAAAAAAAAAiwEAABIAAAAAAAA
+        AAAAAAAAAAAAAAAAAoAEAABAAAAAAAAAAAAAAAAAAAAAAAAAAqAEAABIAAAAAAAAAAAAAAAAAAAAAAAA
+        AwwEAABIADgB2GQAAAAAAAJ0AAAAAAAAA1wEAABIAAAAAAAAAAAAAAAAAAAAAAAAA+QEAABIAAAAAAAA
+        AAAAAAAAAAAAAAAAA5gEAABIAAAAAAAAAAAAAAAAAAAAAAAAA+AEAABIAAAAAAAAAAAAAAAAAAAAAAAA
+        ADAIAACAAAAAAAAAAAAAAAAAAAAAAAAAAGwIAABIAAAAAAAAAAAAAAAAAAAAAAAAAMAIAABIAAAAAAAA
+        AAAAAAAAAAAAAAAAAQQIAABAAAAAAAAAAAAAAAAAAAAAAAAAASgIAABIAAAAAAAAAAAAAAAAAAAAAAAA
+        AWwIAABIADgC6GAAAAAAAALwAAAAAAAAAbgIAABIADgA"}
+    ],
+"EXPAND" :[]
+}
+
+************************************************************
+{
+ "HEAD":{"tag":"MESG","version":65537,"sender_uuid":"file_dealer","receiver_uuid
+    ":":plc_client","route":"bin_upload","flow":"QUERY","state":"MATCH","flag":"NULL
+    ","ljump":3,"rjump":2,"record_type":"FILE_TRANS","record_subtype":"FILE_DATA","r
+    ecord_num":1,"record_size":0,"expand_num":0,"expand_size":0,"msg_uuid":"c1ebee5c
+    25f7311b38239bb754a59289fdeb439e555d1f3a61f5e2a2ca2c1566"},
+"RECORD":[
+    {"uuid":"7fe15f8f075db96e5df6855a2fdc21cb48ada19b21d667477fe47d776072686f","file
+        name":"logic_bin/7fe15f8f075db96e5df6855a2fdc21cb48ada19b21d667477fe47d776072686
+        f","total_size":25528,"record_no":42,"offset":21504,"data_size":512,"file_data":
+        "jhcAAAAAAACWAAAAAAAAAIUCAAASAAAAAAAAAAAAAAAAAAAAAAAAAJgCAAASAAAAAAAAAAAAAAAAAAA
+        AAAAAAKwCAAARABkAIEEAAAAAAAAIAAAAAAAAALgCAAAQAAAAAAAAAAAAAAAAAAAAAAAAAMgCAAASAA4
+        AExoAAAAAAAA2AQAAAAAAAN0CAAASAAAAAAAAAAAAAAAAAAAAAAAAAPMCAAARABgA8EAAAAAAAAAIAAA
+        AAAAAAP4CAAASAA4AihQAAAAAAAAEAwAAAAAAABUDAAARABkALEEAAAAAAAAEAAAAAAAAACMDAAASAAA
+        AAAAAAAAAAAAAAAAAAAAAADQDAAASAAAAAAAAAAAAAAAAAAAAAAAAAEYDAAAQAAAAAAAAAAAAAAAAAAA
+        AAAAAAE4DAAASAA4AJBgAAAAAAACWAAAAAAAAAGYDAAAgAAAAAAAAAAAAAAAAAAAAAAAAAIADAAARABk
+        AKEEAAAAAAAAEAAAAAAAAAIQDAAAiAAAAAAAAAAAAAAAAAAAAAAAAAJ8DAAASAAAAAAAAAAAAAAAAAAA
+        AAAAAAABjcnRzdHVmZi5jAGRlcmVnaXN0ZXJfdG1fY2xvbmVzAF9fZG9fZ2xvYmFsX2R0b3JzX2F1eAB
+        jb21wbGV0ZWQuMABfX2RvX2dsb2JhbF9kdG9yc19hdXg"}
+    ],
+"EXPAND" :[]
+}
+
+************************************************************
+{
+ "HEAD":{"tag":"MESG","version":65537,"sender_uuid":"file_dealer","receiver_uuid
+    ":":plc_client","route":"bin_upload","flow":"QUERY","state":"MATCH","flag":"NULL
+    ","ljump":3,"rjump":2,"record_type":"FILE_TRANS","record_subtype":"FILE_DATA","r
+    ecord_num":1,"record_size":0,"expand_num":0,"expand_size":0,"msg_uuid":"c1ebee5c
+    25f7311b38239bb754a59289fdeb439e555d1f3a61f5e2a2ca2c1566"},
+"RECORD":[
+    {"uuid":"7fe15f8f075db96e5df6855a2fdc21cb48ada19b21d667477fe47d776072686f","file
+        name":"logic_bin/7fe15f8f075db96e5df6855a2fdc21cb48ada19b21d667477fe47d776072686
+        f","total_size":25528,"record_no":43,"offset":22016,"data_size":512,"file_data":
+        "X2ZpbmlfYXJyYXlfZW50cnkAZnJhbWVfZHVtbXkAX19mcmFtZV9kdW1teV9pbml0X2FycmF5X2VudHJ
+        5AHRoZXJtb3N0YXRfbG9naWMuYwBFTVBUWV9VVUlEAEJ1ZgBzdGFydF90aW1lAF9fRlJBTUVfRU5EX18
+        AX2ZpbmkAX19kc29faGFuZGxlAF9EWU5BTUlDAF9fR05VX0VIX0ZSQU1FX0hEUgBfX1RNQ19FTkRfXwB
+        fR0xPQkFMX09GRlNFVF9UQUJMRV8AcHJvY19zZW5kX2dlYXJfY21kAG1lc3NhZ2VfYWRkX3JlY29yZAB
+        0aGVybW9zdGF0X2xvZ2ljX2luaXQAX0lUTV9kZXJlZ2lzdGVyVE1DbG9uZVRhYmxlAGV4X21vZHVsZV9
+        zZW5kbXNnAGV4X21vZHVsZV9nZXRwb2ludGVyAERhbGxvYzAAX19zdGFja19jaGtfZmFpbEBHTElCQ18
+        yLjQAcHJvY19yZWFkX2N1cnJlbnRfdABtZXNzYWdlX2NyZWF0ZQBjbG9zZUBHTElCQ18yLjIuNQBkcHJ
+        pbnRmQEdMSUJDXzIuMi41AF9fZ21vbl9zdGFydF9fAGV4X21vZHVsZV9zZXRwb2ludGVyAG1lc3NhZ2V
+        fZ2V0X3R5cGUAdGltZV92YWwAdGltZUBHTElCQ18yLjI"}
+    ],
+"EXPAND" :[]
+}
+
+************************************************************
+{
+ "HEAD":{"tag":"MESG","version":65537,"sender_uuid":"file_dealer","receiver_uuid
+    ":":plc_client","route":"bin_upload","flow":"QUERY","state":"MATCH","flag":"NULL
+    ","ljump":3,"rjump":2,"record_type":"FILE_TRANS","record_subtype":"FILE_DATA","r
+    ecord_num":1,"record_size":0,"expand_num":0,"expand_size":0,"msg_uuid":"c1ebee5c
+    25f7311b38239bb754a59289fdeb439e555d1f3a61f5e2a2ca2c1566"},
+"RECORD":[
+    {"uuid":"7fe15f8f075db96e5df6855a2fdc21cb48ada19b21d667477fe47d776072686f","file
+        name":"logic_bin/7fe15f8f075db96e5df6855a2fdc21cb48ada19b21d667477fe47d776072686
+        f","total_size":25528,"record_no":44,"offset":22528,"data_size":512,"file_data":
+        "LjUAcHJvY19yZWFkX3RhcmdldF90AHByb2NfcmVhZF90YXJnZXRfdF9jbWQAbWVzc2FnZV9nZXRfcmV
+        jb3JkAG1lc3NhZ2VfZ2V0X3N1YnR5cGUAY2xpZW50X2Nvbm4AcHJpbnRfY3ViZWF1ZGl0AHByb2Nfc2V
+        uZF9zd2l0Y2hfY21kAG1lbWRiX2ZpbmRfcmVjb3JkdHlwZQB2YWx1ZV9maWxlAHRoZXJtb3N0YXRfbG9
+        naWNfc3RhcnQAZW52aXJvbm1lbnRfVABvcGVuQEdMSUJDXzIuMi41AGV4X21vZHVsZV9yZWN2bXNnAFR
+        hbGxvYzAAcHJvY19yZWFkX2N1cnJlbnRfdF9jbWQAX0lUTV9yZWdpc3RlclRNQ2xvbmVUYWJsZQBOVU0
+        AX19jeGFfZmluYWxpemVAR0xJQkNfMi4yLjUAdXNsZWVwQEdMSUJDXzIuMi41AAAuc3ltdGFiAC5zdHJ
+        0YWIALnNoc3RydGFiAC5ub3RlLmdudS5wcm9wZXJ0eQAubm90ZS5nbnUuYnVpbGQtaWQALmdudS5oYXN
+        oAC5keW5zeW0ALmR5bnN0cgAuZ251LnZlcnNpb24ALmdudS52ZXJzaW9uX3IALnJlbGEuZHluAC5yZWx
+        hLnBsdAAuaW5pdAAucGx0LmdvdAAucGx0LnNlYwAudGU"}
+    ],
+"EXPAND" :[]
+}
+
+************************************************************
+{
+ "HEAD":{"tag":"MESG","version":65537,"sender_uuid":"file_dealer","receiver_uuid
+    ":":plc_client","route":"bin_upload","flow":"QUERY","state":"MATCH","flag":"NULL
+    ","ljump":3,"rjump":2,"record_type":"FILE_TRANS","record_subtype":"FILE_DATA","r
+    ecord_num":1,"record_size":0,"expand_num":0,"expand_size":0,"msg_uuid":"c1ebee5c
+    25f7311b38239bb754a59289fdeb439e555d1f3a61f5e2a2ca2c1566"},
+"RECORD":[
+    {"uuid":"7fe15f8f075db96e5df6855a2fdc21cb48ada19b21d667477fe47d776072686f","file
+        name":"logic_bin/7fe15f8f075db96e5df6855a2fdc21cb48ada19b21d667477fe47d776072686
+        f","total_size":25528,"record_no":45,"offset":23040,"data_size":512,"file_data":
+        "eHQALmZpbmkALnJvZGF0YQAuZWhfZnJhbWVfaGRyAC5laF9mcmFtZQAuaW5pdF9hcnJheQAuZmluaV9
+        hcnJheQAuZHluYW1pYwAuZ290LnBsdAAuZGF0YQAuYnNzAC5jb21tZW50AC5kZWJ1Z19hcmFuZ2VzAC5
+        kZWJ1Z19pbmZvAC5kZWJ1Z19hYmJyZXYALmRlYnVnX2xpbmUALmRlYnVnX3N0cgAuZGVidWdfbGluZV9
+        zdHIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAbAAAABwAAAAIAAAAAAAAAqAIAAAAAAACoAgAAAAAAACAAAAAAAAAAAAAAAAAAAAAIAAA
+        AAAAAAAAAAAAAAAAALgAAAAcAAAACAAAAAAAAAMgCAAAAAAAAyAIAAAAAAAAkAAAAAAAAAAAAAAAAAAA
+        ABAAAAAAAAAAAAAAAAAAAAEEAAAD2//9vAgAAAAAAAADwAgAAAAAAAPACAAAAAAAAXAAAAAAAAAAEAAA
+        AAAAAAAgAAAAAAAAAAAAAAAAAAABLAAAACwAAAAIAAAAAAAAAUAMAAAAAAABQAwAAAAAAAJADAAAAAAA
+        ABQAAAAEAAAAIAAAAAAAAABgAAAAAAAAAUwAAAAMAAAA"}
+    ],
+"EXPAND" :[]
+}
+
+************************************************************
+{
+ "HEAD":{"tag":"MESG","version":65537,"sender_uuid":"file_dealer","receiver_uuid
+    ":":plc_client","route":"bin_upload","flow":"QUERY","state":"MATCH","flag":"NULL
+    ","ljump":3,"rjump":2,"record_type":"FILE_TRANS","record_subtype":"FILE_DATA","r
+    ecord_num":1,"record_size":0,"expand_num":0,"expand_size":0,"msg_uuid":"c1ebee5c
+    25f7311b38239bb754a59289fdeb439e555d1f3a61f5e2a2ca2c1566"},
+"RECORD":[
+    {"uuid":"7fe15f8f075db96e5df6855a2fdc21cb48ada19b21d667477fe47d776072686f","file
+        name":"logic_bin/7fe15f8f075db96e5df6855a2fdc21cb48ada19b21d667477fe47d776072686
+        f","total_size":25528,"record_no":46,"offset":23552,"data_size":512,"file_data":
+        "AgAAAAAAAADgBgAAAAAAAOAGAAAAAAAAqAIAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAABbAAA
+        A////bwIAAAAAAAAAiAkAAAAAAACICQAAAAAAAEwAAAAAAAAABAAAAAAAAAACAAAAAAAAAAIAAAAAAAA
+        AaAAAAP7//28CAAAAAAAAANgJAAAAAAAA2AkAAAAAAAAwAAAAAAAAAAUAAAABAAAACAAAAAAAAAAAAAA
+        AAAAAAHcAAAAEAAAAAgAAAAAAAAAICgAAAAAAAAgKAAAAAAAA8AAAAAAAAAAEAAAAAAAAAAgAAAAAAAA
+        AGAAAAAAAAACBAAAABAAAAEIAAAAAAAAA+AoAAAAAAAD4CgAAAAAAAHACAAAAAAAABAAAABcAAAAIAAA
+        AAAAAABgAAAAAAAAAiwAAAAEAAAAGAAAAAAAAAAAQAAAAAAAAABAAAAAAAAAbAAAAAAAAAAAAAAAAAAA
+        ABAAAAAAAAAAAAAAAAAAAAIYAAAABAAAABgAAAAAAAAAgEAAAAAAAACAQAAAAAAAAsAEAAAAAAAAAAAA
+        AAAAAABAAAAAAAAAAEAAAAAAAAACRAAAAAQAAAAYAAAAAAAAA0BEAAAAAAADQEQAAAAAAABAAAAAAAAA
+        AAAAAAAAAAAAQAAAAAAAAABAAAAAAAAAAmgAAAAEAAAA"}
+    ],
+"EXPAND" :[]
+}
+
+************************************************************
+{
+ "HEAD":{"tag":"MESG","version":65537,"sender_uuid":"file_dealer","receiver_uuid
+    ":":plc_client","route":"bin_upload","flow":"QUERY","state":"MATCH","flag":"NULL
+    ","ljump":3,"rjump":2,"record_type":"FILE_TRANS","record_subtype":"FILE_DATA","r
+    ecord_num":1,"record_size":0,"expand_num":0,"expand_size":0,"msg_uuid":"c1ebee5c
+    25f7311b38239bb754a59289fdeb439e555d1f3a61f5e2a2ca2c1566"},
+"RECORD":[
+    {"uuid":"7fe15f8f075db96e5df6855a2fdc21cb48ada19b21d667477fe47d776072686f","file
+        name":"logic_bin/7fe15f8f075db96e5df6855a2fdc21cb48ada19b21d667477fe47d776072686
+        f","total_size":25528,"record_no":47,"offset":24064,"data_size":512,"file_data":
+        "BgAAAAAAAADgEQAAAAAAAOARAAAAAAAAoAEAAAAAAAAAAAAAAAAAABAAAAAAAAAAEAAAAAAAAACjAAA
+        AAQAAAAYAAAAAAAAAgBMAAAAAAACAEwAAAAAAADAJAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAA
+        AqQAAAAEAAAAGAAAAAAAAALAcAAAAAAAAsBwAAAAAAAANAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAA
+        AAAAAAK8AAAABAAAAAgAAAAAAAAAAIAAAAAAAAAAgAAAAAAAAZAAAAAAAAAAAAAAAAAAAAAgAAAAAAAA
+        AAAAAAAAAAAC3AAAAAQAAAAIAAAAAAAAAZCAAAAAAAABkIAAAAAAAAGQAAAAAAAAAAAAAAAAAAAAEAAA
+        AAAAAAAAAAAAAAAAAxQAAAAEAAAACAAAAAAAAAMggAAAAAAAAyCAAAAAAAABwAQAAAAAAAAAAAAAAAAA
+        ACAAAAAAAAAAAAAAAAAAAAM8AAAAOAAAAAwAAAAAAAACwPQAAAAAAALAtAAAAAAAACAAAAAAAAAAAAAA
+        AAAAAAAgAAAAAAAAACAAAAAAAAADbAAAADwAAAAMAAAAAAAAAuD0AAAAAAAC4LQAAAAAAAAgAAAAAAAA
+        AAAAAAAAAAAAIAAAAAAAAAAgAAAAAAAAA5wAAAAYAAAA"}
+    ],
+"EXPAND" :[]
+}
+
+************************************************************
+{
+ "HEAD":{"tag":"MESG","version":65537,"sender_uuid":"file_dealer","receiver_uuid
+    ":":plc_client","route":"bin_upload","flow":"QUERY","state":"MATCH","flag":"NULL
+    ","ljump":3,"rjump":2,"record_type":"FILE_TRANS","record_subtype":"FILE_DATA","r
+    ecord_num":1,"record_size":0,"expand_num":0,"expand_size":0,"msg_uuid":"c1ebee5c
+    25f7311b38239bb754a59289fdeb439e555d1f3a61f5e2a2ca2c1566"},
+"RECORD":[
+    {"uuid":"7fe15f8f075db96e5df6855a2fdc21cb48ada19b21d667477fe47d776072686f","file
+        name":"logic_bin/7fe15f8f075db96e5df6855a2fdc21cb48ada19b21d667477fe47d776072686
+        f","total_size":25528,"record_no":48,"offset":24576,"data_size":512,"file_data":
+        "AwAAAAAAAADAPQAAAAAAAMAtAAAAAAAAEAIAAAAAAAAFAAAAAAAAAAgAAAAAAAAAEAAAAAAAAACVAAA
+        AAQAAAAMAAAAAAAAA0D8AAAAAAADQLwAAAAAAADAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAgAAAAAAAA
+        A8AAAAAEAAAADAAAAAAAAAABAAAAAAAAAADAAAAAAAADoAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAIAAA
+        AAAAAAPkAAAABAAAAAwAAAAAAAADoQAAAAAAAAOgwAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAgAAAAAAAA
+        AAAAAAAAAAAD/AAAACAAAAAMAAAAAAAAAAEEAAAAAAAD4MAAAAAAAAGgIAAAAAAAAAAAAAAAAAAAgAAA
+        AAAAAAAAAAAAAAAAABAEAAAEAAAAwAAAAAAAAAAAAAAAAAAAA+DAAAAAAAAArAAAAAAAAAAAAAAAAAAA
+        AAQAAAAAAAAABAAAAAAAAAA0BAAABAAAAAAAAAAAAAAAAAAAAAAAAACMxAAAAAAAAMAAAAAAAAAAAAAA
+        AAAAAAAEAAAAAAAAAAAAAAAAAAAAcAQAAAQAAAAAAAAAAAAAAAAAAAAAAAABTMQAAAAAAANkMAAAAAAA
+        AAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAKAEAAAEAAAA"}
+    ],
+"EXPAND" :[]
+}
+
+************************************************************
+{
+ "HEAD":{"tag":"MESG","version":65537,"sender_uuid":"file_dealer","receiver_uuid
+    ":":plc_client","route":"bin_upload","flow":"QUERY","state":"MATCH","flag":"NULL
+    ","ljump":3,"rjump":2,"record_type":"FILE_TRANS","record_subtype":"FILE_DATA","r
+    ecord_num":1,"record_size":0,"expand_num":0,"expand_size":0,"msg_uuid":"c1ebee5c
+    25f7311b38239bb754a59289fdeb439e555d1f3a61f5e2a2ca2c1566"},
+"RECORD":[
+    {"uuid":"7fe15f8f075db96e5df6855a2fdc21cb48ada19b21d667477fe47d776072686f","file
+        name":"logic_bin/7fe15f8f075db96e5df6855a2fdc21cb48ada19b21d667477fe47d776072686
+        f","total_size":25528,"record_no":49,"offset":25088,"data_size":440,"file_data":
+        "AAAAAAAAAAAAAAAAAAAAACw+AAAAAAAAQAIAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAA2AQA
+        AAQAAAAAAAAAAAAAAAAAAAAAAAABsQAAAAAAAABwDAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAA
+        AQgEAAAEAAAAwAAAAAAAAAAAAAAAAAAAAiEMAAAAAAADMCgAAAAAAAAAAAAAAAAAAAQAAAAAAAAABAAA
+        AAAAAAE0BAAABAAAAMAAAAAAAAAAAAAAAAAAAAFROAAAAAAAArQEAAAAAAAAAAAAAAAAAAAEAAAAAAAA
+        AAQAAAAAAAAABAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAIUAAAAAAAAKAFAAAAAAAAIgAAABcAAAAIAAA
+        AAAAAABgAAAAAAAAACQAAAAMAAAAAAAAAAAAAAAAAAAAAAAAAqFUAAAAAAACyAwAAAAAAAAAAAAAAAAA
+        AAQAAAAAAAAAAAAAAAAAAABEAAAADAAAAAAAAAAAAAAAAAAAAAAAAAFpZAAAAAAAAXQEAAAAAAAAAAAA
+        AAAAAAAEAAAAAAAAAAAAAAAAAAAA"}
+    ],
+"EXPAND" :[]
+}
+
+************************************************************
+{
+ "HEAD":{"tag":"MESG","version":65537,"sender_uuid":"file_dealer","receiver_uuid
+    ":":plc_client","route":"bin_upload","flow":"QUERY","state":"MATCH","flag":"NULL
+    ","ljump":3,"rjump":2,"record_type":"PLC_ENGINEER","record_subtype":"LOGIC_UPLOA
+    D","record_num":1,"record_size":0,"expand_num":2,"expand_size":0,"msg_uuid":"c1e
+    bee5c25f7311b38239bb754a59289fdeb439e555d1f3a61f5e2a2ca2c1566"},
+"RECORD":[
+    {"plc_devname":"thermostat","logic_filename":"libthermostat_logic.so","type":"FI
+        LE_LOGIC","uuid":"7fe15f8f075db96e5df6855a2fdc21cb48ada19b21d667477fe47d77607268
+        6f","author":"zhao","uploader":"zhao","time":1720672457}
+    ],
+"EXPAND" :[
+    {"data_size":0,"type":"PLC_ENGINEER","subtype":"LOGIC_BIN","expand":
+        {"plc_devname":"thermostat","logic_filename":"libthermostat_logic.so","code_uuid
+            ":"","bin_uuid":"7fe15f8f075db96e5df6855a2fdc21cb48ada19b21d667477fe47d776072686
+            f","author":"zhao","time":1720672457}
+        },
+    {"data_size":0,"type":"GENERAL_RETURN","subtype":"BINDATA","expand":
+        {"name":"signed data","size":64,"bindata":"QvvS2WMCj8wbrNaBQ22RXIXFkUgvFTs9JUBp4
+            wuJkH9woX+oo2reJQQrJvrFXc7af0CW7oGbtAmrf4eH9ew08g"}
+        }
+    ]
+}
+
+************************************************************
+{
+ "HEAD":{"tag":"MESG","version":65537,"sender_uuid":"14e50389c921c31714a004c7312
+    55acffa8bbcc4d22be25d699bded3ede54ca0","receiver_uuid":"msg_print","route":"bin_
+    upload","flow":"QUERY","state":"RESPONSE","flag":"LOCAL","ljump":1,"rjump":2,"re
+    cord_type":"PLC_ENGINEER","record_subtype":"LOGIC_RETURN","record_num":1,"record
+    _size":79,"expand_num":1,"expand_size":30,"msg_uuid":"c1ebee5c25f7311b38239bb754
+    a59289fdeb439e555d1f3a61f5e2a2ca2c1566"},
+"RECORD":[
+    {"plc_devname":"thermostat","logic_filename":"libthermostat_logic.so","uuid":"7f
+        e15f8f075db96e5df6855a2fdc21cb48ada19b21d667477fe47d776072686f","author":"zhao",
+        "result":0,"time":1720672457}
+    ],
+"EXPAND" :[
+    {"data_size":0,"type":"GENERAL_RETURN","subtype":"INT","expand":
+        {"name":"verify result","return_value":0}
+        }
+    ]
+}
+
+************************************************************
+{
+ "HEAD":{"tag":"MESG","version":65537,"sender_uuid":"msg_print","receiver_uuid":
+    "953b0e08e059fb81d81a1dc67dd55f11079246014f5dd9be3b87bd40889ce079","route":"bin_
+    upload","flow":"QUERY","state":"RESPONSE","flag":"NULL","ljump":2,"rjump":2,"rec
+    ord_type":"PLC_ENGINEER","record_subtype":"LOGIC_RETURN","record_num":1,"record_
+    size":79,"expand_num":1,"expand_size":30,"msg_uuid":"c1ebee5c25f7311b38239bb754a
+    59289fdeb439e555d1f3a61f5e2a2ca2c1566"},
+"RECORD":[
+    {"plc_devname":"thermostat","logic_filename":"libthermostat_logic.so","uuid":"7f
+        e15f8f075db96e5df6855a2fdc21cb48ada19b21d667477fe47d776072686f","author":"zhao",
+        "result":0,"time":1720672457}
+    ],
+"EXPAND" :[
+    {"data_size":0,"type":"GENERAL_RETURN","subtype":"INT","expand":
+        {"name":"verify result","return_value":0}
+        }
+    ]
+}

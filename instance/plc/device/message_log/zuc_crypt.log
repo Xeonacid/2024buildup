@@ -1,0 +1,187 @@
+
+**************Begin new trust node proc****************************
+{
+ "HEAD":{"tag":"MESG","version":65537,"sender_uuid":"modbus_slave","receiver_uui
+    d":"modbus_zuc_crypt","route":"zuc_crypt","flow":"QUERY","state":"MATCH","flag":
+    "LOCAL","ljump":1,"rjump":1,"record_type":"MODBUS_TCP","record_subtype":"DATAGRA
+    M","record_num":1,"record_size":0,"expand_num":1,"expand_size":0,"msg_uuid":"818
+    d98a472cc6b78ff7b36373b263c6df578a1f5b16809c749d221013f58862d"},
+"RECORD":[
+    {"datasize":4,"unit_id":1,"function":"WRITE_SINGLE_COIL","data":"AgAA/w"}
+    ],
+"EXPAND" :[
+    {"data_size":0,"type":"MODBUS_TCP","subtype":"MBAP","expand":
+        {"trans_id":1,"protocol_id":0,"length_hi":0,"length_lo":0}
+        }
+    ]
+}
+
+************************************************************
+{
+ "HEAD":{"tag":"MESG","version":65537,"sender_uuid":"modbus_slave","receiver_uui
+    d":"modbus_zuc_crypt","route":"zuc_crypt","flow":"QUERY","state":"MATCH","flag":
+    "LOCAL","ljump":1,"rjump":1,"record_type":"MODBUS_TCP","record_subtype":"DATAGRA
+    M","record_num":1,"record_size":0,"expand_num":1,"expand_size":0,"msg_uuid":"47e
+    ee5043717abba51118619c149868c3156ccd7dadb770d8e0aadfc2a15840c"},
+"RECORD":[
+    {"datasize":3,"unit_id":1,"function":"READ_INPUT_REGISTERS","data":"AqMQ"}
+    ],
+"EXPAND" :[
+    {"data_size":0,"type":"MODBUS_TCP","subtype":"MBAP","expand":
+        {"trans_id":2,"protocol_id":0,"length_hi":0,"length_lo":0}
+        }
+    ]
+}
+
+************************************************************
+{
+ "HEAD":{"tag":"MESG","version":65537,"sender_uuid":"modbus_slave","receiver_uui
+    d":"modbus_zuc_crypt","route":"zuc_crypt","flow":"QUERY","state":"MATCH","flag":
+    "LOCAL","ljump":1,"rjump":1,"record_type":"MODBUS_TCP","record_subtype":"DATAGRA
+    M","record_num":1,"record_size":0,"expand_num":1,"expand_size":0,"msg_uuid":"3a7
+    af3dd810e83a86ef3c87ee3ff5f9b5dd81c142126328a00fcda655c87eff5"},
+"RECORD":[
+    {"datasize":4,"unit_id":1,"function":"WRITE_SINGLE_REGISTER","data":"Q5w8Dw"}
+    ],
+"EXPAND" :[
+    {"data_size":0,"type":"MODBUS_TCP","subtype":"MBAP","expand":
+        {"trans_id":3,"protocol_id":0,"length_hi":0,"length_lo":0}
+        }
+    ]
+}
+
+************************************************************
+{
+ "HEAD":{"tag":"MESG","version":65537,"sender_uuid":"modbus_slave","receiver_uui
+    d":"modbus_zuc_crypt","route":"zuc_crypt","flow":"QUERY","state":"MATCH","flag":
+    "LOCAL","ljump":1,"rjump":1,"record_type":"MODBUS_TCP","record_subtype":"DATAGRA
+    M","record_num":1,"record_size":0,"expand_num":1,"expand_size":0,"msg_uuid":"6cb
+    c2e135084057da8318d58d80805fdd2cb0c8ec22c299a67d831aff7eb47f0"},
+"RECORD":[
+    {"datasize":3,"unit_id":1,"function":"READ_INPUT_REGISTERS","data":"AnYa"}
+    ],
+"EXPAND" :[
+    {"data_size":0,"type":"MODBUS_TCP","subtype":"MBAP","expand":
+        {"trans_id":4,"protocol_id":0,"length_hi":0,"length_lo":0}
+        }
+    ]
+}
+
+************************************************************
+{
+ "HEAD":{"tag":"MESG","version":65537,"sender_uuid":"modbus_slave","receiver_uui
+    d":"modbus_zuc_crypt","route":"zuc_crypt","flow":"QUERY","state":"MATCH","flag":
+    "LOCAL","ljump":1,"rjump":1,"record_type":"MODBUS_TCP","record_subtype":"DATAGRA
+    M","record_num":1,"record_size":0,"expand_num":1,"expand_size":0,"msg_uuid":"08b
+    798d9f443f8e8d3578a56aed9fbc7188e49af583503f54fbcfcf7b402ce1d"},
+"RECORD":[
+    {"datasize":3,"unit_id":1,"function":"READ_HOLDING_REGISTERS","data":"AgkA"}
+    ],
+"EXPAND" :[
+    {"data_size":0,"type":"MODBUS_TCP","subtype":"MBAP","expand":
+        {"trans_id":5,"protocol_id":0,"length_hi":0,"length_lo":0}
+        }
+    ]
+}
+
+************************************************************
+{
+ "HEAD":{"tag":"MESG","version":65537,"sender_uuid":"modbus_slave","receiver_uui
+    d":"modbus_zuc_crypt","route":"zuc_crypt","flow":"QUERY","state":"MATCH","flag":
+    "LOCAL","ljump":1,"rjump":1,"record_type":"MODBUS_TCP","record_subtype":"DATAGRA
+    M","record_num":1,"record_size":0,"expand_num":1,"expand_size":0,"msg_uuid":"00b
+    9d85748db67b20a960f7ba3f9209d740435c0d1a0727db58cfa5c1fb93c7a"},
+"RECORD":[
+    {"datasize":3,"unit_id":1,"function":"READ_INPUT_REGISTERS","data":"Avkd"}
+    ],
+"EXPAND" :[
+    {"data_size":0,"type":"MODBUS_TCP","subtype":"MBAP","expand":
+        {"trans_id":6,"protocol_id":0,"length_hi":0,"length_lo":0}
+        }
+    ]
+}
+
+************************************************************
+{
+ "HEAD":{"tag":"MESG","version":65537,"sender_uuid":"modbus_slave","receiver_uui
+    d":"modbus_zuc_crypt","route":"zuc_crypt","flow":"QUERY","state":"MATCH","flag":
+    "LOCAL","ljump":1,"rjump":1,"record_type":"MODBUS_TCP","record_subtype":"DATAGRA
+    M","record_num":1,"record_size":0,"expand_num":1,"expand_size":0,"msg_uuid":"5eb
+    5747319a76f817af2fb256ef0a33b61f2cf2a82f9920692b8faec5a6df7f3"},
+"RECORD":[
+    {"datasize":3,"unit_id":1,"function":"READ_HOLDING_REGISTERS","data":"AgkA"}
+    ],
+"EXPAND" :[
+    {"data_size":0,"type":"MODBUS_TCP","subtype":"MBAP","expand":
+        {"trans_id":7,"protocol_id":0,"length_hi":0,"length_lo":0}
+        }
+    ]
+}
+
+************************************************************
+{
+ "HEAD":{"tag":"MESG","version":65537,"sender_uuid":"modbus_slave","receiver_uui
+    d":"modbus_zuc_crypt","route":"zuc_crypt","flow":"QUERY","state":"MATCH","flag":
+    "LOCAL","ljump":1,"rjump":1,"record_type":"MODBUS_TCP","record_subtype":"DATAGRA
+    M","record_num":1,"record_size":0,"expand_num":1,"expand_size":0,"msg_uuid":"c72
+    4c1aee3155f7b3306ac62fdced41bb1cb494460badc3fd18504be8d63e1b0"},
+"RECORD":[
+    {"datasize":3,"unit_id":1,"function":"READ_INPUT_REGISTERS","data":"Amcf"}
+    ],
+"EXPAND" :[
+    {"data_size":0,"type":"MODBUS_TCP","subtype":"MBAP","expand":
+        {"trans_id":8,"protocol_id":0,"length_hi":0,"length_lo":0}
+        }
+    ]
+}
+
+************************************************************
+{
+ "HEAD":{"tag":"MESG","version":65537,"sender_uuid":"modbus_slave","receiver_uui
+    d":"modbus_zuc_crypt","route":"zuc_crypt","flow":"QUERY","state":"MATCH","flag":
+    "LOCAL","ljump":1,"rjump":1,"record_type":"MODBUS_TCP","record_subtype":"DATAGRA
+    M","record_num":1,"record_size":0,"expand_num":1,"expand_size":0,"msg_uuid":"533
+    aca4ab4a9621565f576a859bb244244913f62e13c0ee78a285fcc899b8186"},
+"RECORD":[
+    {"datasize":3,"unit_id":1,"function":"READ_HOLDING_REGISTERS","data":"AgkA"}
+    ],
+"EXPAND" :[
+    {"data_size":0,"type":"MODBUS_TCP","subtype":"MBAP","expand":
+        {"trans_id":9,"protocol_id":0,"length_hi":0,"length_lo":0}
+        }
+    ]
+}
+
+************************************************************
+{
+ "HEAD":{"tag":"MESG","version":65537,"sender_uuid":"modbus_slave","receiver_uui
+    d":"modbus_zuc_crypt","route":"zuc_crypt","flow":"QUERY","state":"MATCH","flag":
+    "LOCAL","ljump":1,"rjump":1,"record_type":"MODBUS_TCP","record_subtype":"DATAGRA
+    M","record_num":1,"record_size":0,"expand_num":1,"expand_size":0,"msg_uuid":"53f
+    0c939dc4a957fa3c099028404e3212f10da9c807fc47865760edd3709a46f"},
+"RECORD":[
+    {"datasize":3,"unit_id":1,"function":"READ_INPUT_REGISTERS","data":"AhUg"}
+    ],
+"EXPAND" :[
+    {"data_size":0,"type":"MODBUS_TCP","subtype":"MBAP","expand":
+        {"trans_id":10,"protocol_id":0,"length_hi":0,"length_lo":0}
+        }
+    ]
+}
+
+************************************************************
+{
+ "HEAD":{"tag":"MESG","version":65537,"sender_uuid":"modbus_slave","receiver_uui
+    d":"modbus_zuc_crypt","route":"zuc_crypt","flow":"QUERY","state":"MATCH","flag":
+    "LOCAL","ljump":1,"rjump":1,"record_type":"MODBUS_TCP","record_subtype":"DATAGRA
+    M","record_num":1,"record_size":0,"expand_num":1,"expand_size":0,"msg_uuid":"796
+    37bff77a5433859e7dd701d9517a245ba71a9c6c146bacc8b3ea7eb0ce34c"},
+"RECORD":[
+    {"datasize":3,"unit_id":1,"function":"READ_HOLDING_REGISTERS","data":"AgkA"}
+    ],
+"EXPAND" :[
+    {"data_size":0,"type":"MODBUS_TCP","subtype":"MBAP","expand":
+        {"trans_id":11,"protocol_id":0,"length_hi":0,"length_lo":0}
+        }
+    ]
+}

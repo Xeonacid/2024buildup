@@ -1,0 +1,49 @@
+
+**************Begin new trust node proc****************************
+{
+ "HEAD":{"tag":"MESG","version":65537,"sender_uuid":"connector_proc","receiver_u
+    uid":"","route":"","flow":"FINISH","state":"MATCH","flag":"NULL","ljump":1,"rjum
+    p":1,"record_type":"MESSAGE","record_subtype":"CONN_SYNI","record_num":1,"record
+    _size":99,"expand_num":0,"expand_size":0,"msg_uuid":"008739402b658dd3c2500322f81
+    04b55f1a331ae573d4fb41c370762dc337222"},
+"RECORD":[
+    {"uuid":"e1b35687ed25f36c612db60086c20be1d516084c5d867371471348a017fe1dc9","serv
+        er_name":"center_station","service":"trust_server","server_addr":"£x","flags":0,
+        "nonce":"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"}
+    ],
+"EXPAND" :[]
+}
+
+************************************************************
+{
+ "HEAD":{"tag":"MESG","version":65537,"sender_uuid":"connector_proc","receiver_u
+    uid":"","route":"","flow":"FINISH","state":"MATCH","flag":"NULL","ljump":1,"rjum
+    p":1,"record_type":"MESSAGE","record_subtype":"CONN_ACKI","record_num":1,"record
+    _size":158,"expand_num":0,"expand_size":0,"msg_uuid":"0fed439cd3d46602ea8de0ed2f
+    5d84e46a6c92934f67c9177f55588063d08d88"},
+"RECORD":[
+    {"uuid":"e1b35687ed25f36c612db60086c20be1d516084c5d867371471348a017fe1dc9","clie
+        nt_name":"monitor","client_proc":"monitor","client_addr":"unknown addr","server_
+        uuid":"e1b35687ed25f36c612db60086c20be1d516084c5d867371471348a017fe1dc9","server
+        _name":"monitor_term","service":"trust_server","server_addr":"˜v","flags":0,"non
+        ce":""}
+    ],
+"EXPAND" :[]
+}
+
+************************************************************
+{
+ "HEAD":{"tag":"MESG","version":65537,"sender_uuid":"connector_proc","receiver_u
+    uid":"","route":"","flow":"FINISH","state":"MATCH","flag":"NULL","ljump":1,"rjum
+    p":1,"record_type":"MESSAGE","record_subtype":"CONN_ACKI","record_num":1,"record
+    _size":158,"expand_num":0,"expand_size":0,"msg_uuid":"4c62df8cc8c78dd1621fb44834
+    cacd2e6d87660587bb14bf28e00d663bad712c"},
+"RECORD":[
+    {"uuid":"e1b35687ed25f36c612db60086c20be1d516084c5d867371471348a017fe1dc9","clie
+        nt_name":"monitor","client_proc":"monitor","client_addr":"unknown addr","server_
+        uuid":"e1b35687ed25f36c612db60086c20be1d516084c5d867371471348a017fe1dc9","server
+        _name":"monitor_term","service":"trust_server","server_addr":"˜v","flags":0,"non
+        ce":""}
+    ],
+"EXPAND" :[]
+}

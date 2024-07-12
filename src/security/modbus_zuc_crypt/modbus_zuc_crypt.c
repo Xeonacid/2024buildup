@@ -24,12 +24,14 @@
 #define MAX_LINE_LEN 1024
 
 //BYTE Buf[DIGEST_SIZE*64];
-BYTE key[16];
-BYTE iv[16];
+BYTE * key;
+BYTE * iv;
 
 ZUC_STATE * zuc_state;
 int last_transid;
 
+BYTE * zuc_buf;
+BYTE * key_buf;
 
 int mode = 0;
 
@@ -44,6 +46,16 @@ int modbus_zuc_crypt_init(void * sub_proc,void * para)
     zuc_state = Dalloc0(sizeof(*zuc_state),sub_proc);
     if(zuc_state == NULL)
 	    return -ENOMEM;
+
+    key = Dalloc0(16,0);   
+    iv = Dalloc0(16,0);
+    //last_transid = Dalloc0(sizeof(int),0);
+        
+
+    key = Dalloc0(16,0);   
+    zuc_buf = Dalloc0(256,0);
+    key_buf = Dalloc0(256,0);
+
     last_transid=0;
     if(mode == 0)
     {
@@ -55,6 +67,7 @@ int modbus_zuc_crypt_init(void * sub_proc,void * para)
 	Memcpy(key,key_list->return_value,DIGEST_SIZE/2);
 	Memcpy(iv,key_list->return_value+DIGEST_SIZE/2,DIGEST_SIZE/2);
 	// server(slave) 端密钥初始化结束
+    	zuc_init(zuc_state, key, iv);
 
     }
     else if(mode ==1)
@@ -67,6 +80,7 @@ int modbus_zuc_crypt_init(void * sub_proc,void * para)
 	Memcpy(key,slave_index->slave_key,DIGEST_SIZE/2);
 	Memcpy(iv,slave_index->slave_key+DIGEST_SIZE/2,DIGEST_SIZE/2);
 	// client(master) 端密钥初始化结束
+    	zuc_init(zuc_state, key, iv);
     }
 
     return 0;
@@ -102,7 +116,8 @@ int modbus_zuc_crypt_start(void * sub_proc,void * para)
         else if((type==TYPE(MODBUS_TCP))&& (subtype  == SUBTYPE(MODBUS_TCP,DATAGRAM)))
         {
 	    char * sender = message_get_sender(recv_msg);
-    	    if(mode ==0)  // server(slave) side
+	    printf("enter zuc crypt func sender %s\n",sender);
+    	    if(mode == 0)  // server(slave) side
 	    {
 		if(Strcmp(sender,"modbus_slave")==0)
 		{
@@ -132,8 +147,6 @@ int proc_modbus_zuc_crypt(void * sub_proc,void * recv_msg)
     int ret = 0;
     RECORD(MODBUS_TCP,MBAP) * modbus_mbap;
     RECORD(MODBUS_TCP,DATAGRAM) * modbus_datagram;
-    BYTE zuc_buf[256];
-    BYTE key_buf[256];
     int segment_size=256;
 
     // get datagram from recv_msg
@@ -141,6 +154,7 @@ int proc_modbus_zuc_crypt(void * sub_proc,void * recv_msg)
     if(ret<0)
         return ret;
 
+    printf("enter proc_modbus_zuc func\n ");
     // get mbap from message
 
     MSG_EXPAND * msg_expand;
@@ -151,18 +165,6 @@ int proc_modbus_zuc_crypt(void * sub_proc,void * recv_msg)
     
     // 祖冲之加密算法开始
 
-    if(modbus_mbap->trans_id<=last_transid )
-    {
-	    print_cubeerr("modbus_zuc_crypt: transid abnormal!");
-	    return -EINVAL;
-    }	    
-    for(;last_transid < modbus_mbap->trans_id;last_transid++)
-    {
-	zuc_generate_keystream(&zuc_state,segment_size/4,key_buf);
-    }
-    gmssl_memxor(modbus_datagram->data,zuc_buf,key_buf,
-		    modbus_datagram->datasize);
-    Memcpy(modbus_datagram->data,zuc_buf,modbus_datagram->datasize);	
 
     //祖冲之加密算法结束
 
@@ -204,20 +206,9 @@ int proc_modbus_zuc_decrypt(void * sub_proc,void * recv_msg)
         return -EINVAL;
     modbus_mbap=msg_expand->expand;     
     
+    printf("enter proc_modbus_zuc func 2 last_transid %d trans_id %d\n ",last_transid,modbus_mbap->trans_id);
     // 祖冲之解密算法开始
 
-    if(modbus_mbap->trans_id<=last_transid )
-    {
-	    print_cubeerr("modbus_zuc_crypt: transid abnormal!");
-	    return -EINVAL;
-    }	    
-    for(;last_transid < modbus_mbap->trans_id;last_transid++)
-    {
-	zuc_generate_keystream(&zuc_state,segment_size/4,key_buf);
-    }
-    gmssl_memxor(modbus_datagram->data,zuc_buf,key_buf,
-		    modbus_datagram->datasize);
-    Memcpy(modbus_datagram->data,zuc_buf,modbus_datagram->datasize);	
 
     //祖冲之解密算法结束
 

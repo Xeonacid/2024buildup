@@ -1,0 +1,114 @@
+
+**************Begin new trust node proc****************************
+{
+ "HEAD":{"tag":"MESG","version":65537,"sender_uuid":"modbus_channel","receiver_u
+    uid":"","route":"","flow":"FINISH","state":"MATCH","flag":"NULL","ljump":1,"rjum
+    p":1,"record_type":"MODBUS_STATE","record_subtype":"SLAVE","record_num":1,"recor
+    d_size":0,"expand_num":0,"expand_size":0,"msg_uuid":"4c5e39d16baed5d7c335769c9d1
+    f4d2a0cfe95d836faaa9fb0476f279f71ce32"},
+"RECORD":[
+    {"slave_name":"","ip":"AAAAAA","port":0,"unit_addr":1,"state_machine":"NULL","sl
+        ave_key":""}
+    ],
+"EXPAND" :[]
+}
+
+************************************************************
+{
+ "HEAD":{"tag":"MESG","version":65537,"sender_uuid":"connector_proc","receiver_u
+    uid":"","route":"","flow":"FINISH","state":"MATCH","flag":"NULL","ljump":1,"rjum
+    p":1,"record_type":"MESSAGE","record_subtype":"CONN_SYNI","record_num":1,"record
+    _size":97,"expand_num":0,"expand_size":0,"msg_uuid":"581e2a0dc87a61558996b28b3f3
+    c46a95d9500e3f5a5a4bbc2960d35b967a877"},
+"RECORD":[
+    {"uuid":"e1b35687ed25f36c612db60086c20be1d516084c5d867371471348a017fe1dc9","serv
+        er_name":"center_station","service":"trust_server","server_addr":"","flags":0,"n
+        once":"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"}
+    ],
+"EXPAND" :[]
+}
+
+************************************************************
+{
+ "HEAD":{"tag":"MESG","version":65537,"sender_uuid":"connector_proc","receiver_u
+    uid":"","route":"","flow":"FINISH","state":"MATCH","flag":"NULL","ljump":1,"rjum
+    p":1,"record_type":"MESSAGE","record_subtype":"CONN_ACKI","record_num":1,"record
+    _size":164,"expand_num":0,"expand_size":0,"msg_uuid":"03b6d8edef93514706dbdae44b
+    fd54b6b248c62d8761d2f6a4cc8eb618b98af0"},
+"RECORD":[
+    {"uuid":"e1b35687ed25f36c612db60086c20be1d516084c5d867371471348a017fe1dc9","clie
+        nt_name":"operator","client_proc":"operator","client_addr":"unknown addr","serve
+        r_uuid":"e1b35687ed25f36c612db60086c20be1d516084c5d867371471348a017fe1dc9","serv
+        er_name":"operator_station","service":"trust_server","server_addr":"¨v","flags":
+        0,"nonce":""}
+    ],
+"EXPAND" :[]
+}
+
+************************************************************
+{
+ "HEAD":{"tag":"MESG","version":65537,"sender_uuid":"connector_proc","receiver_u
+    uid":"","route":"","flow":"FINISH","state":"MATCH","flag":"NULL","ljump":1,"rjum
+    p":1,"record_type":"MESSAGE","record_subtype":"CONN_ACKI","record_num":1,"record
+    _size":162,"expand_num":0,"expand_size":0,"msg_uuid":"9b82f5eb9a1074966ecd65905e
+    f1d2d2d6644affd8e0eba1a4a5b9b858971e93"},
+"RECORD":[
+    {"uuid":"e1b35687ed25f36c612db60086c20be1d516084c5d867371471348a017fe1dc9","clie
+        nt_name":"operator","client_proc":"operator","client_addr":"unknown addr","serve
+        r_uuid":"e1b35687ed25f36c612db60086c20be1d516084c5d867371471348a017fe1dc9","serv
+        er_name":"operator_station","service":"trust_server","server_addr":"","flags":0,
+        "nonce":""}
+    ],
+"EXPAND" :[]
+}
+
+************************************************************
+{
+ "HEAD":{"tag":"MESG","version":65537,"sender_uuid":"connector_proc","receiver_u
+    uid":"","route":"","flow":"FINISH","state":"MATCH","flag":"NULL","ljump":1,"rjum
+    p":1,"record_type":"MESSAGE","record_subtype":"CONN_ACKI","record_num":1,"record
+    _size":164,"expand_num":0,"expand_size":0,"msg_uuid":"5f47e961d8ebe88ed718748eeb
+    137d8858a2bee9a8eace87ab5a844a7cf6e813"},
+"RECORD":[
+    {"uuid":"e1b35687ed25f36c612db60086c20be1d516084c5d867371471348a017fe1dc9","clie
+        nt_name":"operator","client_proc":"operator","client_addr":"unknown addr","serve
+        r_uuid":"e1b35687ed25f36c612db60086c20be1d516084c5d867371471348a017fe1dc9","serv
+        er_name":"operator_station","service":"trust_server","server_addr":"¨v","flags":
+        0,"nonce":""}
+    ],
+"EXPAND" :[]
+}
+
+************************************************************
+{
+ "HEAD":{"tag":"MESG","version":65537,"sender_uuid":"connector_proc","receiver_u
+    uid":"","route":"","flow":"FINISH","state":"MATCH","flag":"NULL","ljump":1,"rjum
+    p":1,"record_type":"MESSAGE","record_subtype":"CONN_ACKI","record_num":1,"record
+    _size":164,"expand_num":0,"expand_size":0,"msg_uuid":"795bef857a2783e72bf2656152
+    9ffd56fddf2ad490c7ac102f919127c8bf39f2"},
+"RECORD":[
+    {"uuid":"e1b35687ed25f36c612db60086c20be1d516084c5d867371471348a017fe1dc9","clie
+        nt_name":"operator","client_proc":"operator","client_addr":"unknown addr","serve
+        r_uuid":"e1b35687ed25f36c612db60086c20be1d516084c5d867371471348a017fe1dc9","serv
+        er_name":"operator_station","service":"trust_server","server_addr":"¨v","flags":
+        0,"nonce":""}
+    ],
+"EXPAND" :[]
+}
+
+************************************************************
+{
+ "HEAD":{"tag":"MESG","version":65537,"sender_uuid":"connector_proc","receiver_u
+    uid":"","route":"","flow":"FINISH","state":"MATCH","flag":"NULL","ljump":1,"rjum
+    p":1,"record_type":"MESSAGE","record_subtype":"CONN_ACKI","record_num":1,"record
+    _size":164,"expand_num":0,"expand_size":0,"msg_uuid":"08db65d3833c6c47f18bb020bd
+    1c30932083bc403597d17a528b6002c0909adc"},
+"RECORD":[
+    {"uuid":"e1b35687ed25f36c612db60086c20be1d516084c5d867371471348a017fe1dc9","clie
+        nt_name":"operator","client_proc":"operator","client_addr":"unknown addr","serve
+        r_uuid":"e1b35687ed25f36c612db60086c20be1d516084c5d867371471348a017fe1dc9","serv
+        er_name":"operator_station","service":"trust_server","server_addr":"¨v","flags":
+        0,"nonce":""}
+    ],
+"EXPAND" :[]
+}

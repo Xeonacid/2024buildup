@@ -5,5 +5,5 @@
 }
 {
 	"name":"login",
-	"return_value":"sun:123"
+	"return_value":""
 }

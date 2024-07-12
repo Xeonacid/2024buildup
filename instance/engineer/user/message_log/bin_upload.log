@@ -1,0 +1,14 @@
+
+**************Begin new trust node proc****************************
+{
+ "HEAD":{"tag":"MESG","version":65537,"sender_uuid":"msg_send","receiver_uuid":"
+    :engineer_client","route":"bin_upload","flow":"QUERY","state":"MATCH","flag":"NU
+    LL","ljump":1,"rjump":1,"record_type":"PLC_ENGINEER","record_subtype":"LOGIC_UPL
+    OAD","record_num":1,"record_size":0,"expand_num":0,"expand_size":0,"msg_uuid":"c
+    1ebee5c25f7311b38239bb754a59289fdeb439e555d1f3a61f5e2a2ca2c1566"},
+"RECORD":[
+    {"plc_devname":"thermostat","logic_filename":"libthermostat_logic.so","type":"FI
+        LE_LOGIC","uuid":"","author":"zhao","uploader":"zhao","time":0}
+    ],
+"EXPAND" :[]
+}

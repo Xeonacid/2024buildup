@@ -1,4 +1,4 @@
-dirs= system security logic verify
+dirs= system security logic
 all:
 	$(foreach N,$(dirs),make -C $(N) || exit "$$?";)
 clean:

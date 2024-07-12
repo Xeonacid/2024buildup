@@ -1,0 +1,44 @@
+
+**************Begin new trust node proc****************************
+{
+ "HEAD":{"tag":"MESG","version":65537,"sender_uuid":"msg_send","receiver_uuid":"
+    :operator_client","route":"login","flow":"QUERY","state":"MATCH","flag":"NULL","
+    ljump":1,"rjump":1,"record_type":"GENERAL_RETURN","record_subtype":"STRING","rec
+    ord_num":1,"record_size":0,"expand_num":0,"expand_size":0,"msg_uuid":"12c016b14b
+    46a6846dc588fdb7b72547c95db01689a2c42ddf22049fbbac9651"},
+"RECORD":[
+    {"name":"login","return_value":"qian:456"}
+    ],
+"EXPAND" :[]
+}
+
+************************************************************
+{
+ "HEAD":{"tag":"MESG","version":65537,"sender_uuid":"fcd7b72ec08a804011f11bf1c31
+    a24d580c3e341fbeb65d3029741212fab3a6a","receiver_uuid":"msg_print","route":"logi
+    n","flow":"QUERY","state":"RESPONSE","flag":"LOCAL","ljump":1,"rjump":1,"record_
+    type":"USER_DEFINE","record_subtype":"RETURN","record_num":1,"record_size":57,"e
+    xpand_num":0,"expand_size":0,"msg_uuid":"12c016b14b46a6846dc588fdb7b72547c95db01
+    689a2c42ddf22049fbbac9651"},
+"RECORD":[
+    {"return_code":"SUCCEED","return_info":"qian login succeed!
+","nonce":"AAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"}
+    ],
+"EXPAND" :[]
+}
+
+************************************************************
+{
+ "HEAD":{"tag":"MESG","version":65537,"sender_uuid":"msg_print","receiver_uuid":
+    "","route":"login","flow":"FINISH","state":"RESPONSE","flag":"LOCAL","ljump":2,"
+    rjump":1,"record_type":"USER_DEFINE","record_subtype":"RETURN","record_num":1,"r
+    ecord_size":57,"expand_num":0,"expand_size":0,"msg_uuid":"12c016b14b46a6846dc588
+    fdb7b72547c95db01689a2c42ddf22049fbbac9651"},
+"RECORD":[
+    {"return_code":"SUCCEED","return_info":"qian login succeed!
+","nonce":"AAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"}
+    ],
+"EXPAND" :[]
+}

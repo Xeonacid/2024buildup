@@ -20,7 +20,7 @@
 #include "sm2sign.h"
 
 
-int mode =0;
+static int mode =0;
 BYTE prikey[DIGEST_SIZE*2];
 BYTE pubkey_XY[64];
 unsigned long prilen=DIGEST_SIZE*2;
@@ -114,6 +114,7 @@ int sm2sign_init(void * sub_proc,void * para)
 	}
 	else if(mode ==1)  //验签者初始化过程
 	{
+		printf("enter sm2 verify init!\n");
 		if(pubkeyfile == NULL)
 			return -EINVAL;
 		fd = open(pubkeyfile,O_RDONLY);
@@ -163,6 +164,7 @@ int sm2sign_start(void * sub_proc,void * para)
 		}
 		if((type==TYPE(PLC_ENGINEER)) && (subtype==SUBTYPE(PLC_ENGINEER,LOGIC_UPLOAD)))
 		{
+			printf("enter sm2 verify process mode %d!\n",mode);
 			if(mode==0)
 			{
 				proc_sm2_sign(sub_proc,recv_msg);
@@ -211,17 +213,6 @@ int proc_sm2_sign(void * sub_proc,void * recv_msg)
 		return ret;
 
 	//对命令进行签名
-	signlen=128;
-	GM_SM2Sign(SignBuf,&signlen,DataBuf,ret,
-			UserID,lenUID,prikey,prilen);
-
-	sign_data = Talloc0(sizeof(*sign_data));
-	if(sign_data == NULL)
-		return -ENOMEM;
-	sign_data->name = dup_str("signed data",0);
-	sign_data->size=signlen;
-	sign_data->bindata = Talloc0(sign_data->size);
-	Memcpy(sign_data->bindata,SignBuf,sign_data->size);
 	
 	// 签名结束，签名内容输出到sign_data中
 
@@ -272,15 +263,6 @@ int proc_sm2_verify(void * sub_proc,void * recv_msg)
 		return ret;
 
 	//对命令进行验证
-	signlen=128;
-	result = GM_SM2VerifySig(sign_data->bindata,(UINT64)sign_data->size,
-			DataBuf,ret,UserID,(UINT64)lenUID,pubkey_XY,(UINT64)64);
-
-	verify_result = Talloc0(sizeof(*verify_result));
-	if(verify_result == NULL)
-		return -ENOMEM;
-	verify_result->name = dup_str("verify result",0);
-	verify_result->return_value = result;
 	
 	
 	// 计算文件的摘要值并与bin_upload中的uuid对比
@@ -290,7 +272,7 @@ int proc_sm2_verify(void * sub_proc,void * recv_msg)
 	
 	//验证结束，验证内容输出到verify_result中
 
-	message_add_expand_data(recv_msg,TYPE_PAIR(GENERAL_RETURN,BINDATA),verify_result);
+	message_add_expand_data(recv_msg,TYPE_PAIR(GENERAL_RETURN,INT),verify_result);
 
 	ex_module_sendmsg(sub_proc,recv_msg);
 

@@ -24,7 +24,7 @@ enum enum_user_state
 	RESPONSE,
 	LOGIN,
 	CONNECT,
-  LOGOUT,
+  	LOGOUT,
 	ERROR
 };
 

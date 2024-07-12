@@ -7,6 +7,6 @@
 	"plc_devname":"thermostat",
 	"logic_filename":"thermostat_logic.c",
 	"type":"FILE_CODE",
-	"author":"qian",
+	"author":"",
 	"uploader":""
 }

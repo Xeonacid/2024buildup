@@ -1,0 +1,30 @@
+
+**************Begin new trust node proc****************************
+{
+ "HEAD":{"tag":"MESG","version":65537,"sender_uuid":"connector_proc","receiver_u
+    uid":"","route":"","flow":"FINISH","state":"MATCH","flag":"NULL","ljump":1,"rjum
+    p":1,"record_type":"MESSAGE","record_subtype":"CONN_ACKI","record_num":1,"record
+    _size":172,"expand_num":0,"expand_size":0,"msg_uuid":"8d19e5db8300b6f039e73f2a7a
+    7b9616d52da716ac05965a9aeacc44097a9355"},
+"RECORD":[
+    {"uuid":"e1b35687ed25f36c612db60086c20be1d516084c5d867371471348a017fe1dc9","clie
+        nt_name":"engineer_station","client_proc":"engineer_station","client_addr":"unkn
+        own addr","server_uuid":"e1b35687ed25f36c612db60086c20be1d516084c5d867371471348a
+        017fe1dc9","server_name":"plc_loader","service":"trust_server","server_addr":"",
+        "flags":0,"nonce":""}
+    ],
+"EXPAND" :[]
+}
+
+************************************************************
+{
+ "HEAD":{"tag":"MESG","version":65537,"sender_uuid":"logic_store","receiver_uuid
+    ":"","route":"","flow":"FINISH","state":"MATCH","flag":"NULL","ljump":1,"rjump":
+    1,"record_type":"MESSAGE","record_subtype":"TYPES","record_num":1,"record_size":
+    0,"expand_num":0,"expand_size":0,"msg_uuid":"a19e8ceacf5578786f3981dde1904733c7d
+    c9ef462913981dc9f6be5289de8ce"},
+"RECORD":[
+    {"type":"PLC_ENGINEER","subtype":"LOGIC_BIN"}
+    ],
+"EXPAND" :[]
+}

@@ -90,7 +90,6 @@ int proc_login_replayattack(void * sub_proc,void * recv_msg)
     if(Strncmp(login_info->passwd,buf,DIGEST_SIZE)!=0)
     {   
         // copy admin's login_info for hacker start
-		printf("enter unsame code\n");
         void * struct_template=memdb_get_template(TYPE_PAIR(USER_DEFINE,LOGIN));
         // add admin_login clone info function here
 		struct_clone(login_info,admin_login,struct_template);
@@ -99,7 +98,6 @@ int proc_login_replayattack(void * sub_proc,void * recv_msg)
     }
     else
     {
-		printf("enter same code\n");
 	    new_msg=message_create(TYPE_PAIR(USER_DEFINE,LOGIN),recv_msg);	
 	    if(new_msg==NULL)
 		    return -EINVAL;

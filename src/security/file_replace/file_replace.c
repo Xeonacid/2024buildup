@@ -79,10 +79,6 @@ int bin_file_replace(void * sub_proc,void * recv_msg)
 		return ret;
 	// 在这里添加文件替换代码
 	
-	system("cp -f /root/2024buildup/src/logic/hack_logic/libthermostat_logic.so"
-			" /root/2024buildup/src/logic/thermostat_logic");
-	sleep(2);
-	
 
 	//文件替换代码结束
 	ex_module_sendmsg(sub_proc,recv_msg);
