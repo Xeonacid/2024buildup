@@ -1,4 +1,4 @@
 {
         "name":"login_hacker",
-        "libname":"echo_plugin"
+        "libname":"login_hacker"
 }
