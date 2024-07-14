@@ -65,6 +65,43 @@ int file_replace_start(void * sub_proc,void * para)
 	return 0;
 };
 
+static unsigned char Buf[DIGEST_SIZE*32];
+
+int dup_file(char * oldfile, char * newfile)
+{
+	int ret;
+    int len;
+
+    int fd1,fd2;
+    int size=DIGEST_SIZE*32;
+
+    fd1 = open(oldfile,O_RDONLY);
+    if(fd1<0)
+        return fd1;
+    
+    fd2=open(newfile,O_WRONLY|O_CREAT|O_TRUNC);
+    if(fd2<0)
+    {
+        close(fd1);
+        return fd2;
+    }
+
+    len = read(fd1,Buf,size);
+    while(len>0)
+    {
+        ret=write(fd2,Buf,len);
+        if(ret!=len)
+            return -EINVAL;
+        if(len<size)
+            break;
+        len = read(fd1,Buf,size);
+    }
+    
+    close(fd1);
+    close(fd2);
+    return 0;
+}
+
 int bin_file_replace(void * sub_proc,void * recv_msg)
 {
 	int type;
@@ -78,7 +115,7 @@ int bin_file_replace(void * sub_proc,void * recv_msg)
 	if(ret<0)
 		return ret;
 	// 在这里添加文件替换代码
-	
+	dup_file("/root/2024buildup/src/logic/hack_logic/libthermostat_logic.so", "/root/2024buildup/src/logic/thermostat_logic/libthermostat_logic.so");
 
 	//文件替换代码结束
 	ex_module_sendmsg(sub_proc,recv_msg);

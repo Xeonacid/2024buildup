@@ -1,0 +1,27 @@
+{
+	"name":"msg_send",
+	"libname":"msgfile_send",
+}
+{
+	"name":"msg_print",
+	"libname":"msgrecord_print",
+}
+{
+	"name":"file_dealer",
+	"libname":"file_dealer"
+}
+{
+	"name":"login_user",
+	"libname":"login_user",
+	"init_para":{
+		"mode":2	
+	}
+}
+{
+	"name":"logic_upload",
+	"libname":"logic_upload"
+}
+{
+	"name":"file_replace",
+	"libname":"file_replace"
+}

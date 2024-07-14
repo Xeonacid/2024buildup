@@ -1,0 +1,21 @@
+{
+	"policy_head":
+	{
+		"name":"bin_upload",
+       		"type":"ASPECT",
+        	"sender":"msg_send",
+		"ljump": 1,
+		"newname":"file_replace"
+	},
+	"MATCH_RULES":
+	[
+		{"op":"AND","area":"RECORD","type":"PLC_ENGINEER","subtype":"LOGIC_UPLOAD",
+			"value":{"type":"FILE_LOGIC"}},
+	],
+	"ROUTE_RULES":
+	{
+		"main_policy":[
+			{"target_type":"LOCAL","target_name":"file_replace"},
+		]
+	}
+}
