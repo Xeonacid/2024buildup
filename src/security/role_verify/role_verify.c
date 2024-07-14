@@ -74,7 +74,13 @@ int proc_role_verify(void * sub_proc,void * recv_msg)
 	if(ret<0)
 		return ret;
 	// 在这里添加角色验证逻辑
-	
+	db_record = memdb_find_first(TYPE_PAIR(USER_DEFINE,SERVER_STATE), "user_name", user_login->user_name);
+	if(db_record)
+	{
+		user_state=db_record->record;
+		illegal_user = user_state->role == PLC_ENGINEER && Strcmp(user_login->proc_name, "engineer_station") || user_state->role == PLC_OPERATOR && Strcmp(user_login->proc_name, "operator_station") || user_state->role == PLC_MONITOR && Strcmp(user_login->proc_name, "monitor_term");
+	}
+
 	
 	// 添加角色验证逻辑结束
 
