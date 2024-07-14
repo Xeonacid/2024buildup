@@ -8,5 +8,5 @@
 	"action":"ADJUST",
 	"action_desc":"set_T",
 	"value":3900,
-	"plc_operator":""
+	"plc_operator":"qian"
 }

@@ -5,5 +5,5 @@
 }
 {
 	"name":"login",
-	"return_value":""
+	"return_value":"li:123"
 }
