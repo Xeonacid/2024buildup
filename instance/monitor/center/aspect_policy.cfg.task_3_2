@@ -1,0 +1,44 @@
+{
+	"policy_head":
+	{
+		"name":"code_upload",
+       		"type":"ASPECT",
+		"ljump":2,
+        	"sender":"file_dealer",
+		"newname":"role_access_code_upload"
+	},
+	"MATCH_RULES":
+	[
+		{
+			"op":"AND","type":"PLC_ENGINEER","subtype":"LOGIC_UPLOAD"
+		}
+	],
+	"ROUTE_RULES":
+	{
+		"main_policy":[
+			{"target_type":"LOCAL","target_name":"role_access"},
+		]
+	}
+}
+{
+	"policy_head":
+	{
+		"name":"monitor_ctrl",
+       		"type":"ASPECT",
+		"ljump":1,
+        	"sender":"connector_proc",
+		"newname":"role_access_monitor_ctrl"
+	},
+	"MATCH_RULES":
+	[
+		{
+			"op":"AND","type":"PLC_OPERATOR","subtype":"PLC_CMD"
+		}
+	],
+	"ROUTE_RULES":
+	{
+		"main_policy":[
+			{"target_type":"LOCAL","target_name":"role_access"},
+		]
+	}
+}
