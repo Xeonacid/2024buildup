@@ -1,6 +1,6 @@
 #!/bin/sh
-yes | cp -a instance/engineer/station/plugin_config.cfg.task_4_1 instance/engineer/station/plugin_config.cfg 
-yes | cp instance/engineer/station/aspect_policy.cfg.task_4_1 instance/engineer/station/aspect_policy.cfg 
+yes | cp -a instance/engineer/station/plugin_config.cfg.task_4_1_1 instance/engineer/station/plugin_config.cfg 
+yes | cp instance/engineer/station/aspect_policy.cfg.task_4_1_1 instance/engineer/station/aspect_policy.cfg 
 
 
 pkill -9 envset_proc

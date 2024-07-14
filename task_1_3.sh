@@ -1,6 +1,6 @@
 #!/bin/sh
 yes | cp instance/engineer/station/aspect_policy.cfg.task_1_3 instance/engineer/station/aspect_policy.cfg 
-yes | cp -a instance/login_hacker/plugin_config.cfg.task_1_2 instance/login_hacker/plugin_config.cfg 
+yes | cp -a instance/engineer/station/plugin_config.cfg.task_1_3 instance/engineer/station/plugin_config.cfg
 
 pkill -9 envset_proc
 sleep 1
