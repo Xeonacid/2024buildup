@@ -213,6 +213,15 @@ int proc_sm2_sign(void * sub_proc,void * recv_msg)
 		return ret;
 
 	//对命令进行签名
+	GM_SM2Sign(SignBuf, &signlen, DataBuf, ret, UserID, lenUID, prikey, prilen);
+
+	sign_data = Talloc0(sizeof(*sign_data));
+	if(sign_data == NULL)
+		return -ENOMEM;
+	sign_data->name = dup_str("signed data", 0);
+	sign_data->size = signlen;
+	sign_data->bindata = Talloc0(sign_data->size);
+	Memcpy(sign_data->bindata, SignBuf, signlen);
 	
 	// 签名结束，签名内容输出到sign_data中
 
@@ -263,7 +272,11 @@ int proc_sm2_verify(void * sub_proc,void * recv_msg)
 		return ret;
 
 	//对命令进行验证
-	
+	verify_result = Talloc0(sizeof(*verify_result));
+	if(verify_result == NULL)
+		return -ENOMEM;
+	verify_result->name = dup_str("verify result", 0);
+	verify_result->return_value = GM_SM2VerifySig(sign_data->bindata, sign_data->size, DataBuf, ret, UserID, lenUID, pubkey_XY, 64);
 	
 	// 计算文件的摘要值并与bin_upload中的uuid对比
 	

@@ -1,0 +1,29 @@
+{
+	"name":"msg_send",
+	"libname":"msgfile_send",
+}
+{
+	"name":"msg_print",
+	"libname":"msgrecord_print",
+}
+{
+	"name":"file_dealer",
+	"libname":"file_dealer",
+}
+{
+	"name":"logic_store",
+	"libname":"logic_store"
+}
+{
+	"name":"plc_upload",
+	"libname":"plc_upload"
+}
+{
+	"name":"sm2sign",
+	"libname":"sm2sign",
+	"init_para":{
+		"mode":1,
+		"privkeyfile":"Priv.key",
+		"pubkeyfile":"Pub.key",
+	}
+}

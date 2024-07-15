@@ -1,0 +1,22 @@
+{
+	"policy_head":
+	{
+		"name":"bin_upload",
+       		"type":"ASPECT",
+        	"sender":"logic_upload",
+		"ljump": 1,
+		"newname":"sm2sign_sign"
+	},
+	"MATCH_RULES":
+	[
+		{
+			"op":"AND","type":"PLC_ENGINEER","subtype":"LOGIC_UPLOAD"
+		}
+	],
+	"ROUTE_RULES":
+	{
+		"main_policy":[
+			{"target_type":"LOCAL","target_name":"sm2sign"},
+		]
+	}
+}
