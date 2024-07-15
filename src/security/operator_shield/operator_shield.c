@@ -75,7 +75,11 @@ int proc_operator_shield(void * sub_proc,void * recv_msg)
 	int illegal_cmd =0;
 
 	// 在这里添加命令验证逻辑
-	
+	char *sender = message_get_sender(recv_msg);
+	if(!Strcmp(operator_sender, sender) && message_get_subtype(recv_msg) == SUBTYPE(MODBUS_CMD,WRITE_SINGLE_REGISTER))
+		mode = 1;
+	else if(!Strcmp(plc_sender, sender) && mode == 1)
+		illegal_cmd = 1;
 
 	// 命令验证逻辑结束
 

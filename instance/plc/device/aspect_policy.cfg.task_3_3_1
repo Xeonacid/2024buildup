@@ -1,0 +1,40 @@
+{
+	"policy_head":
+	{
+		"name":"command_exec",
+       		"type":"ASPECT",
+        	"sender":"modbus_slave",
+		"ljump": 2,
+		"newname":"operator_shield_command_exec"
+	},
+	"MATCH_RULES":
+	[
+		{"op":"OR","type":"MODBUS_CMD"},
+	],
+	"ROUTE_RULES":
+	{
+		"main_policy":[
+			{"target_type":"LOCAL","target_name":"operator_shield"},
+		]
+	}
+}
+{
+	"policy_head":
+	{
+		"name":"logic_send",
+       		"type":"ASPECT",
+        	"sender":"logic",
+		"ljump": 1,
+		"newname":"operator_shield_logic_send"
+	},
+	"MATCH_RULES":
+	[
+		{"op":"OR","type":"MODBUS_CMD"},
+	],
+	"ROUTE_RULES":
+	{
+		"main_policy":[
+			{"target_type":"LOCAL","target_name":"operator_shield"},
+		]
+	}
+}
