@@ -1,0 +1,22 @@
+{
+	"policy_head":
+	{
+		"name":"command_response",
+       		"type":"ASPECT",
+        	"sender":"modbus_channel",
+		"ljump": 1,
+		"newname":"modbus_zuc_crypt_decrypt"
+	},
+	"MATCH_RULES":
+	[
+		{
+			"op":"AND","type":"MODBUS_TCP","subtype":"DATAGRAM"
+		}
+	],
+	"ROUTE_RULES":
+	{
+		"main_policy":[
+			{"target_type":"LOCAL","target_name":"modbus_zuc_crypt"},
+		]
+	}
+}

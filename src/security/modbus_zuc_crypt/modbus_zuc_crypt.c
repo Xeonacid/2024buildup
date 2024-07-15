@@ -164,7 +164,9 @@ int proc_modbus_zuc_crypt(void * sub_proc,void * recv_msg)
     modbus_mbap=msg_expand->expand;     
     
     // 祖冲之加密算法开始
-
+    for(; last_transid < modbus_mbap->trans_id; ++last_transid)
+	    zuc_generate_keystream(zuc_state, segment_size / 4, key_buf);
+    memxor(modbus_datagram->data, key_buf, modbus_datagram->datasize);
 
     //祖冲之加密算法结束
 
@@ -208,7 +210,9 @@ int proc_modbus_zuc_decrypt(void * sub_proc,void * recv_msg)
     
     printf("enter proc_modbus_zuc func 2 last_transid %d trans_id %d\n ",last_transid,modbus_mbap->trans_id);
     // 祖冲之解密算法开始
-
+    for(; last_transid < modbus_mbap->trans_id; ++last_transid)
+	    zuc_generate_keystream(zuc_state, segment_size / 4, key_buf);
+    memxor(modbus_datagram->data, key_buf, modbus_datagram->datasize);
 
     //祖冲之解密算法结束
 
