@@ -1,0 +1,4 @@
+*.log
+plugin_config.cfg
+aspect_policy.cfg
+operator_audit
