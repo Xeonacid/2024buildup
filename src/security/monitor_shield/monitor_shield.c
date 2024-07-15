@@ -81,7 +81,11 @@ int proc_monitor_shield(void * sub_proc,void * recv_msg)
 
 
 	// 在这里添加命令验证逻辑
-	
+	MSG_HEAD *msg_head = message_get_head(recv_msg);
+	if(!Strcmp(monitor_route, msg_head->route) && plc_cmd->action == ACTION_ADJUST)
+		mode = 1;
+	else if(mode == 1 && !Strcmp(operator_route, msg_head->route))
+		illegal_cmd = 1;
 
 	// 命令验证逻辑结束
 

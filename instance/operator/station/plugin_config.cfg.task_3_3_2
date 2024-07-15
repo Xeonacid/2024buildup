@@ -1,0 +1,53 @@
+{
+	"name":"modbus_channel",
+	"libname":"modbus_channel",
+	"init_para":{
+        "mode":"CLIENT",
+		"tcp_addr":"127.0.0.1",
+        	"tcp_port":1504,
+        	"unit_addr":1
+	}
+}
+{
+	"name":"modbus_master",
+	"libname":"modbus_master",
+	"init_para":{
+		"master_name":"operator",
+	}
+}
+{
+	"name":"msg_send",
+	"libname":"msgfile_send",
+}
+{
+	"name":"msg_print",
+	"libname":"msgrecord_print",
+}
+{
+	"name":"login_user",
+	"libname":"login_user",
+	"init_para":
+	{
+		"mode":1
+	}
+}
+{
+	"name":"cmd_process",
+	"libname":"cmd_process"
+}
+{
+	"name":"audit_store",
+	"libname":"audit_store"
+}
+{
+	"name":"audit_query",
+	"libname":"audit_query"
+}
+{
+	"name":"operator_probe",
+	"libname":"operator_probe"
+}
+{
+	"name":"monitor_shield",
+	"libname":"monitor_shield"
+}

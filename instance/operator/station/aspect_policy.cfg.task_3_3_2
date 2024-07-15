@@ -1,0 +1,44 @@
+{
+	"policy_head":
+	{
+		"name":"monitor_ctrl",
+       		"type":"ASPECT",
+        	"sender":"connector_proc",
+		"ljump": 1,
+		"newname":"monitor_aspect"
+	},
+	"MATCH_RULES":
+	[
+		{
+			"op":"AND","type":"PLC_OPERATOR","subtype":"PLC_CMD"
+		}
+	],
+	"ROUTE_RULES":
+	{
+		"main_policy":[
+			{"target_type":"LOCAL","target_name":"monitor_shield"},
+		]
+	}
+}
+{
+	"policy_head":
+	{
+		"name":"operator_cmd",
+       		"type":"ASPECT",
+        	"sender":"connector_proc",
+		"ljump": 1,
+		"newname":"operator_aspect"
+	},
+	"MATCH_RULES":
+	[
+		{
+			"op":"AND","type":"PLC_OPERATOR","subtype":"PLC_CMD"
+		}
+	],
+	"ROUTE_RULES":
+	{
+		"main_policy":[
+			{"target_type":"LOCAL","target_name":"monitor_shield"},
+		]
+	}
+}
